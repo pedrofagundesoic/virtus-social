@@ -1,0 +1,39 @@
+name: social-daily
+on:
+  schedule:
+    # Brasil sem horário de verão desde 2019: America/Sao_Paulo = UTC-3 o ano todo.
+    - cron: '5 21 * * *'   # 18:05 BRT
+    - cron: '5 23 * * *'   # 20:05 BRT — segunda chance se o Actions atrasar/falhar; o script posta 1×/dia
+  workflow_dispatch:       # "Run workflow" = postar agora (só para UM dia perdido)
+permissions:
+  contents: write          # para commitar social/state.json
+concurrency: social-daily
+jobs:
+  post:
+    # Desarmado até a FASE 1: crie a Variable SOCIAL_ENABLED=true quando os Secrets do Meta existirem.
+    if: ${{ vars.SOCIAL_ENABLED == 'true' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: '22' }
+      - name: tick
+        env:
+          FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
+          FB_PAGE_TOKEN: ${{ secrets.FB_PAGE_TOKEN }}
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          SOCIAL_MANIFEST_URL: ${{ vars.SOCIAL_MANIFEST_URL }}
+          SOCIAL_TZ: ${{ vars.SOCIAL_TZ || 'America/Sao_Paulo' }}
+          SOCIAL_POST_HOUR: ${{ vars.SOCIAL_POST_HOUR || '18' }}
+        run: node server/publish-once.js ${{ github.event_name == 'workflow_dispatch' && '--force' || '' }}
+      - name: persist state
+        if: ${{ always() }}
+        run: |
+          [ -f social/state.json ] || exit 0
+          git config user.name  "social-bot"
+          git config user.email "social-bot@users.noreply.github.com"
+          git add social/state.json
+          git diff --cached --quiet && exit 0
+          git commit -m "social: state $(date -u +%F) [skip ci]"
+          git pull --rebase
+          git push

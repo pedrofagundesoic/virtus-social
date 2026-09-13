@@ -1,0 +1,18 @@
+{
+  "_readme": "Identidade do Virtus usada pelo build.py. Cores tiradas do logo (Downloads\\virtus). logo_png = ícone recortado (fundo transparente).",
+  "name": "VIRTUS",
+  "logo_png": "assets/logo-icon.png",
+  "accent": "#C4944C",
+  "accent_light": "#E3BF82",
+  "bg_top": "#13271F",
+  "bg_bottom": "#070707",
+  "text": "#F3EEE4",
+  "muted": "#A9B5AE",
+  "pill_bg": "#1A2E27",
+  "web_url": "virtusapp.com.br",
+  "footer_bold": "Crie sua conta gratuita.",
+  "footer_rest": "virtusapp.com.br — link na bio.",
+  "fine_print": "Dados de amostra. Não é recomendação de investimento.",
+  "platforms": ["iphone", "android", "web"],
+  "web_dir_env": "SOCIAL_WEB_DIR"
+}

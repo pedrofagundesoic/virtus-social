@@ -1,0 +1,5 @@
+{
+ "_readme": "Fila diária. posts = datados, em ordem (postados uma vez quando vencem). evergreen = banco: nunca postado primeiro, depois o menos recente com ≥ SOCIAL_REPEAT_DAYS (21). Gerado por build.py --queue — nunca editar à mão.",
+ "posts": [],
+ "evergreen": []
+}

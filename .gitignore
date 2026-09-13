@@ -1,0 +1,8 @@
+.env
+*.env
+!.env.example
+node_modules/
+__pycache__/
+social/compose/out/
+social/compose/screens/**/*.png
+social/compose/photos/*.jpg
