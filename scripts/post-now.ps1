@@ -1,4 +1,4 @@
-# post-now.ps1 — manual test post straight to the Graph API (bypasses the publisher). Use ONCE for the first live test.
+# post-now.ps1 - manual test post straight to the Graph API (bypasses the publisher). Use ONCE for the first live test.
 # Usage: .\scripts\post-now.ps1 -ImageUrl https://pedrofagundesoic.github.io/virtus-social/social/x.png -Caption "..." [-EnvFile ...] [-SkipIG]
 param([Parameter(Mandatory)][string]$ImageUrl, [Parameter(Mandatory)][string]$Caption,
       [string]$EnvFile = "$env:USERPROFILE\.social.env", [switch]$SkipIG)

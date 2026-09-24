@@ -1,0 +1,62 @@
+[
+  {
+    "slug": "2026-09-25-provaveis-pagadores",
+    "family": "app",
+    "variant": "phone",
+    "platform": "android",
+    "shots": ["provaveis-pagadores.png"],
+    "date": "2026-09-25",
+    "kicker": "AGENDA DE PROVENTOS",
+    "headline": "Quem deve pagar <em>no próximo mês</em>",
+    "sub": "33 proventos já anunciados e 296 com alta probabilidade — cada um com valor por ação e dia de pagamento.",
+    "caption": "Esperar o extrato para saber quem pagou é tarde demais.\n\nO Virtus mostra os prováveis pagadores do mês: 33 proventos já anunciados e 296 com alta probabilidade, com o valor por ação e o dia do pagamento de cada um.\n\nDá para filtrar só por ações, só por FIIs ou só pelo que você já tem na carteira.\n\nCrie sua conta gratuita — virtusapp.com.br, link na bio.\n\nDados de amostra. Não é recomendação de investimento.\n\n#dividendos #proventos #rendapassiva #investimentos #bolsadevalores #fiis #b3"
+  },
+  {
+    "slug": "2026-09-26-proventos-recebidos",
+    "family": "app",
+    "variant": "phone",
+    "platform": "android",
+    "shots": ["proventos-recebidos.png"],
+    "date": "2026-09-26",
+    "kicker": "PROVENTOS RECEBIDOS",
+    "headline": "Todo provento que caiu, <em>somado sem planilha</em>",
+    "sub": "R$ 3.612,48 em 117 pagamentos desde a primeira compra. O Virtus soma sozinho, pagamento por pagamento.",
+    "caption": "Quanto a sua carteira já te pagou desde a primeira compra?\n\nQuase ninguém sabe responder — porque a conta está espalhada em extratos de corretora.\n\nO Virtus junta tudo: R$ 3.612,48 em 117 pagamentos recebidos, somados automaticamente conforme caem.\n\nCrie sua conta gratuita — virtusapp.com.br, link na bio.\n\nDados de amostra. Não é recomendação de investimento.\n\n#proventos #dividendos #rendapassiva #investimentos #carteiradeinvestimentos #b3"
+  },
+  {
+    "slug": "2026-09-27-proximos-pagamentos",
+    "family": "app",
+    "variant": "phone",
+    "platform": "android",
+    "shots": ["proventos-proximos.png"],
+    "date": "2026-09-27",
+    "kicker": "PRÓXIMOS PAGAMENTOS",
+    "headline": "Você sabe <em>quanto vai receber</em> este mês?",
+    "sub": "9 proventos anunciados, com data de pagamento, data ex e valor por cota — e a estimativa pela sua posição atual.",
+    "caption": "Data ex, data de pagamento, valor por cota. Três informações que decidem se o provento é seu ou não.\n\nO Virtus lista os proventos já anunciados dos seus ativos e estima quanto isso dá na sua posição atual.\n\nSem abrir o site de RI de cada empresa.\n\nCrie sua conta gratuita — virtusapp.com.br, link na bio.\n\nDados de amostra. Não é recomendação de investimento.\n\n#dividendos #proventos #dataex #rendapassiva #fiis #investimentos"
+  },
+  {
+    "slug": "2026-09-28-mapa-dividendos",
+    "family": "app",
+    "variant": "phone",
+    "platform": "android",
+    "shots": ["mapa-dividendos.png"],
+    "date": "2026-09-28",
+    "kicker": "MAPA DE DIVIDENDOS",
+    "headline": "Em quais meses cada empresa <em>costuma pagar</em>",
+    "sub": "Cinco anos de histórico, mês a mês, ação por ação. Quanto mais escuro, mais frequente o pagamento.",
+    "caption": "Montar renda mensal exige saber quando cada empresa paga — não só quanto.\n\nO Mapa de Dividendos mostra, nos últimos 5 anos, em quais meses cada empresa costuma pagar. Quanto mais forte a cor, mais frequente.\n\nDá para ver de relance quem paga mensal, quem paga trimestral e quem concentra tudo em um semestre.\n\nCrie sua conta gratuita — virtusapp.com.br, link na bio.\n\nDados de amostra. Não é recomendação de investimento.\n\n#dividendos #calendariodedividendos #rendapassiva #rendamensal #investimentos #b3"
+  },
+  {
+    "slug": "2026-09-29-melhores-pagadoras",
+    "family": "app",
+    "variant": "phone",
+    "platform": "android",
+    "shots": ["melhores-pagadoras.png"],
+    "date": "2026-09-29",
+    "kicker": "RANKING",
+    "headline": "30 anos de proventos viraram <em>um ranking</em>",
+    "sub": "716 ativos pontuados de 0 a 100 desde o Plano Real, com quantos anos seguidos cada um vem pagando.",
+    "caption": "Pagar bem em um ano é sorte. Pagar por 30 anos seguidos é outra história.\n\nO Virtus ranqueia 716 ativos por histórico de proventos desde o Plano Real, com um score de 0 a 100 e a sequência de anos pagando sem falhar.\n\nFonte B3/BRAPI + IPCA (BCB). Dá para ver só ações, só FIIs ou tudo junto.\n\nCrie sua conta gratuita — virtusapp.com.br, link na bio.\n\nDados de amostra. Não é recomendação de investimento.\n\n#dividendos #ranking #rendapassiva #investimentos #fiis #bolsadevalores #b3"
+  }
+]
