@@ -31,9 +31,9 @@ Ordenado por impacto. Cada item traz o que acontece, como reproduzir e a sugest�
 
 ---
 
-### 3. "Cotação atual" e "Valor de mercado" ficam vazios (`—`) indefinidamente em ativo recém-cadastrado
+### 3. "Cotação atual" e "Valor de mercado" ficam em `—` por cerca de uma hora depois do cadastro
 
-**O que acontece:** no detalhe do ITSA4 recém-lançado, os campos ficaram assim mesmo após vários minutos e várias reentradas na tela:
+**O que acontece:** no detalhe do ITSA4 recém-lançado, os campos ficaram assim por ~40 minutos, através de várias reentradas na tela (depois disso passaram a mostrar R$ 14,24 normalmente — ou seja, não é dado ausente, é atraso de atualização):
 
 ```
 Valor aplicado      R$ 3.680,00
@@ -46,7 +46,7 @@ Yield on cost (12m) +12,43%
 
 No **mesmo card**, logo abaixo, os "Indicadores fundamentalistas" do mesmo ativo carregaram normalmente (P/L 8.87 · P/VPA 1.72 · VPA R$ 8,36 · DY 8,00% · ROE 19,36% · Market Cap R$ 161,25 bi · *Fonte: BRAPI · atualizado 2026-09-24T03:55:42Z*). Ou seja: a cotação existe na fonte, mas não chegou nesses dois campos.
 
-**Sugestão:** investigar se a cotação só é buscada no momento do cadastro (e falhou uma vez sem retry). Enquanto não houver valor, usar *skeleton* de carregamento em vez de `—`, e mostrar erro explícito com botão "tentar de novo" se a busca falhar. Um `—` silencioso parece dado faltando no cadastro do usuário, não falha de rede.
+**Sugestão:** buscar a cotação do ativo assim que a primeira ordem dele é salva, em vez de esperar o próximo ciclo de atualização em lote. Enquanto não houver valor, usar *skeleton* de carregamento em vez de `—`. Um `—` silencioso parece dado faltando no cadastro do usuário, não atualização pendente — e é logo depois do primeiro cadastro que o usuário está mais inseguro sobre ter feito certo.
 
 ---
 
@@ -87,11 +87,21 @@ A causa nesses casos é preço médio irreal (vários FIIs com PM `R$ 10,00`), m
 
 ---
 
-### 7. Não achei a lista de movimentações nem como excluir uma posição
+### 7. "Editar ordens" está escondido atrás de um botão chamado "Adicionar movimentação"
 
-**O que acontece:** no detalhe do ativo, rolando até o fim, a tela termina nos "Indicadores fundamentalistas". Não encontrei a lista de lançamentos (compras/vendas/proventos) do ativo nem uma ação de excluir a posição. Existe "Adicionar movimentação" no topo, mas nada para ver ou desfazer o que já foi lançado.
+**O que acontece:** a funcionalidade existe e funciona bem, mas é impossível de descobrir sozinho. O caminho é:
 
-**Sugestão:** seção "Movimentações" no detalhe do ativo, listando cada lançamento (data, tipo, quantidade, preço, corretora, carteira) com editar/excluir por item, e uma ação de excluir a posição inteira. Hoje um lançamento errado parece irreversível pelo app.
+`Carteira → toca no ativo → **Adicionar movimentação** → Editar ordens → toca na ordem → Excluir ordem → Excluir`
+
+Ou seja: para **ver, corrigir ou apagar** o que já existe, é preciso clicar em um botão que diz **adicionar**. Explorando o detalhe do ativo de cima a baixo (a tela termina nos "Indicadores fundamentalistas"), não há nenhum outro sinal de que os lançamentos podem ser listados ou editados — eu só encontrei o caminho depois de alguém me explicar.
+
+**Sugestão:**
+- renomear o botão para algo neutro, como **"Movimentações"**, e deixar o menu com *Novo aporte · Resgate · Editar ordens*; ou
+- mostrar a lista de ordens direto no detalhe do ativo (seção "Movimentações", com data, tipo, quantidade, preço e corretora), com editar/excluir por item.
+
+O diálogo de confirmação ("A ordem será removida permanentemente e a posição do ativo será recalculada") e o recálculo automático estão ótimos — o problema é só chegar até lá.
+
+**Observação relacionada:** editar a ordem é justamente o caminho para corrigir os preços médios de `R$ 10,00` do item 5 — vale ter isso à mão no suporte.
 
 ---
 
@@ -137,11 +147,11 @@ Exportar carteira, lançamentos e proventos em CSV/Excel — útil para imposto 
 |---|---|---|
 | 1 | Lançamento ignora a carteira selecionada | 🔴 Bug |
 | 2 | Carteiras não podem ser renomeadas, excluídas nem definidas como padrão | 🔴 Bug |
-| 3 | "Cotação atual"/"Valor de mercado" ficam em `—` para ativo novo | 🔴 Bug |
+| 3 | "Cotação atual"/"Valor de mercado" em `—` por ~1h depois do cadastro | 🔴 Bug |
 | 4 | Campo de data rejeita separadores digitados | 🔴 Bug |
 | 5 | Percentuais de rentabilidade sem limite de outlier (`53000% do CDI`) | 🔴 Bug |
 | 6 | FAB "Adicionar" cobre conteúdo dos cards | 🔴 Bug |
-| 7 | Sem lista de movimentações nem como excluir posição | 🔴 Bug |
+| 7 | "Editar ordens" escondido atrás do botão "Adicionar movimentação" | 🟡 UX |
 | 8 | Busca, ordenação e agrupamento na lista de posições | 🟡 UX |
 | 9 | Legenda do Mapa de Dividendos contradiz a escala de cor | 🟡 UX |
 | 10 | "95% de acerto" sem link para metodologia | 🟡 UX |
