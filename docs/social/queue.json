@@ -1,5 +1,36 @@
 {
  "_readme": "Fila diária. posts = datados, em ordem (postados uma vez quando vencem). evergreen = banco: nunca postado primeiro, depois o menos recente com ≥ SOCIAL_REPEAT_DAYS (21). Gerado por build.py --queue — nunca editar à mão.",
- "posts": [],
+ "posts": [
+  {
+   "slug": "2026-09-25-provaveis-pagadores",
+   "image": "2026-09-25-provaveis-pagadores.png",
+   "caption": "Esperar o extrato para saber quem pagou é tarde demais.\n\nO Virtus mostra os prováveis pagadores do mês: 33 proventos já anunciados e 296 com alta probabilidade, com o valor por ação e o dia do pagamento de cada um.\n\nDá para filtrar só por ações, só por FIIs ou só pelo que você já tem na carteira.\n\nCrie sua conta gratuita — virtusapp.com.br, link na bio.\n\nDados de amostra. Não é recomendação de investimento.\n\n#dividendos #proventos #rendapassiva #investimentos #bolsadevalores #fiis #b3",
+   "date": "2026-09-25"
+  },
+  {
+   "slug": "2026-09-26-proventos-recebidos",
+   "image": "2026-09-26-proventos-recebidos.png",
+   "caption": "Quanto a sua carteira já te pagou desde a primeira compra?\n\nQuase ninguém sabe responder — porque a conta está espalhada em extratos de corretora.\n\nO Virtus junta tudo: R$ 3.612,48 em 117 pagamentos recebidos, somados automaticamente conforme caem.\n\nCrie sua conta gratuita — virtusapp.com.br, link na bio.\n\nDados de amostra. Não é recomendação de investimento.\n\n#proventos #dividendos #rendapassiva #investimentos #carteiradeinvestimentos #b3",
+   "date": "2026-09-26"
+  },
+  {
+   "slug": "2026-09-27-proximos-pagamentos",
+   "image": "2026-09-27-proximos-pagamentos.png",
+   "caption": "Data ex, data de pagamento, valor por cota. Três informações que decidem se o provento é seu ou não.\n\nO Virtus lista os proventos já anunciados dos seus ativos e estima quanto isso dá na sua posição atual.\n\nSem abrir o site de RI de cada empresa.\n\nCrie sua conta gratuita — virtusapp.com.br, link na bio.\n\nDados de amostra. Não é recomendação de investimento.\n\n#dividendos #proventos #dataex #rendapassiva #fiis #investimentos",
+   "date": "2026-09-27"
+  },
+  {
+   "slug": "2026-09-28-mapa-dividendos",
+   "image": "2026-09-28-mapa-dividendos.png",
+   "caption": "Montar renda mensal exige saber quando cada empresa paga — não só quanto.\n\nO Mapa de Dividendos mostra, nos últimos 5 anos, em quais meses cada empresa costuma pagar. Quanto mais forte a cor, mais frequente.\n\nDá para ver de relance quem paga mensal, quem paga trimestral e quem concentra tudo em um semestre.\n\nCrie sua conta gratuita — virtusapp.com.br, link na bio.\n\nDados de amostra. Não é recomendação de investimento.\n\n#dividendos #calendariodedividendos #rendapassiva #rendamensal #investimentos #b3",
+   "date": "2026-09-28"
+  },
+  {
+   "slug": "2026-09-29-melhores-pagadoras",
+   "image": "2026-09-29-melhores-pagadoras.png",
+   "caption": "Pagar bem em um ano é sorte. Pagar por 30 anos seguidos é outra história.\n\nO Virtus ranqueia 716 ativos por histórico de proventos desde o Plano Real, com um score de 0 a 100 e a sequência de anos pagando sem falhar.\n\nFonte B3/BRAPI + IPCA (BCB). Dá para ver só ações, só FIIs ou tudo junto.\n\nCrie sua conta gratuita — virtusapp.com.br, link na bio.\n\nDados de amostra. Não é recomendação de investimento.\n\n#dividendos #ranking #rendapassiva #investimentos #fiis #bolsadevalores #b3",
+   "date": "2026-09-29"
+  }
+ ],
  "evergreen": []
 }

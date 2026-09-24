@@ -1,4 +1,4 @@
-# meta-token.ps1 — turn the short-lived Explorer token into: long-lived user token, PAGE token (never expires), IG_USER_ID.
+# meta-token.ps1 - turn the short-lived Explorer token into: long-lived user token, PAGE token (never expires), IG_USER_ID.
 # Usage (PowerShell):  .\scripts\meta-token.ps1 -EnvFile "$env:USERPROFILE\.social.env"
 # Reads FB_APP_ID, FB_APP_SECRET, FB_PAGE_ID, FB_USER_TOKEN_SHORT from the env file; writes the derived values back.
 param([string]$EnvFile = "$env:USERPROFILE\.social.env")
@@ -13,7 +13,7 @@ $long = $ll.access_token
 
 Write-Host "2) fetching the Page token DIRECTLY (do not rely on /me/accounts)..."
 $pg = Invoke-RestMethod "$G/$($kv.FB_PAGE_ID)?fields=access_token,name,instagram_business_account&access_token=$long"
-if (-not $pg.access_token) { throw "no page token — redo the OAuth grant choosing 'only current Pages' and tick the Page" }
+if (-not $pg.access_token) { throw "no page token - redo the OAuth grant choosing 'only current Pages' and tick the Page" }
 $igId = $pg.instagram_business_account.id
 if (-not $igId) { Write-Warning "instagram_business_account empty: link the IG business account to the Page and make sure instagram_basic is in the grant" }
 
@@ -33,4 +33,4 @@ function Set-EnvLine([string]$k, [string]$v) {
 Set-EnvLine 'FB_USER_TOKEN_LONGLIVED' $long
 Set-EnvLine 'FB_PAGE_TOKEN' $pg.access_token
 if ($igId) { Set-EnvLine 'IG_USER_ID' $igId }
-Write-Host "written to $EnvFile — now copy FB_PAGE_ID, FB_PAGE_TOKEN, IG_USER_ID to the GitHub repo Secrets."
+Write-Host "written to $EnvFile - now copy FB_PAGE_ID, FB_PAGE_TOKEN, IG_USER_ID to the GitHub repo Secrets."
