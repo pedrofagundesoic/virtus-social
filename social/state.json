@@ -1,5 +1,21 @@
 {
  "social_state": {
-  "emptyNoticeDate": "2026-09-24"
+  "emptyNoticeDate": "2026-09-24",
+  "lastRunDate": "2026-09-25",
+  "lastSlug": "2026-09-25-provaveis-pagadores",
+  "startedAt": "2026-09-25T21:15:15.232Z",
+  "attempts": 0,
+  "attemptsDate": "2026-09-25"
+ },
+ "social_post_log": {
+  "2026-09-25-provaveis-pagadores": {
+   "date": "2026-09-25",
+   "at": "2026-09-25T21:15:02.370Z",
+   "image": "https://pedrofagundesoic.github.io/virtus-social/social/2026-09-25-provaveis-pagadores.png",
+   "kind": "queue",
+   "count": 1,
+   "fb": "1337364702788353_122116283031469153",
+   "ig": "18472915732116976"
+  }
  }
 }
