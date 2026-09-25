@@ -107,9 +107,11 @@ O diálogo de confirmação ("A ordem será removida permanentemente e a posiç�
 
 ## 🟡 Melhorias de usabilidade
 
-### 8. Busca e ordenação na lista de posições
+### 8. Falta busca e ordenação na lista de posições (os filtros já ajudam muito)
 
-Com 27 ativos, achar um exige rolar muito, e a ordem parece ser só alfabética. Sugestão: campo de busca no topo e ordenação por **valor de mercado**, **rentabilidade**, **proventos recebidos** e **classe**, além de agrupar por classe (Ações BR, FIIs, BDRs, ETFs) com subtotal por grupo.
+Os filtros por **classe** (Todas · Ações BR · Fundos Imobiliários · …) e por **instituição** (Todas instituições · CLEAR · INTER · NU…) já existem e resolvem bem — filtrar "Fundos Imobiliários" reduziu 28 posições para 14 na hora.
+
+O que ainda falta, com 28 ativos: **campo de busca** por ticker (a ordem é alfabética, então achar um ativo específico exige rolar bastante) e **ordenação** por valor de mercado, rentabilidade ou proventos recebidos — hoje só dá para ler na ordem do alfabeto. Um **subtotal por filtro ativo** (quanto vale o bloco de FIIs, quanto rendeu) também seria natural, já que o filtro existe.
 
 ### 9. O texto da legenda do Mapa de Dividendos contradiz a escala
 
@@ -152,7 +154,7 @@ Exportar carteira, lançamentos e proventos em CSV/Excel — útil para imposto 
 | 5 | Percentuais de rentabilidade sem limite de outlier (`53000% do CDI`) | 🔴 Bug |
 | 6 | FAB "Adicionar" cobre conteúdo dos cards | 🔴 Bug |
 | 7 | "Editar ordens" escondido atrás do botão "Adicionar movimentação" | 🟡 UX |
-| 8 | Busca, ordenação e agrupamento na lista de posições | 🟡 UX |
+| 8 | Falta busca e ordenação na lista de posições (filtros já existem) | 🟡 UX |
 | 9 | Legenda do Mapa de Dividendos contradiz a escala de cor | 🟡 UX |
 | 10 | "95% de acerto" sem link para metodologia | 🟡 UX |
 | 11 | Cabeçalho da Watchlist grande demais para poucos itens | 🟡 UX |
