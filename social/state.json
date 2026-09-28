@@ -1,11 +1,11 @@
 {
  "social_state": {
   "emptyNoticeDate": "2026-09-24",
-  "lastRunDate": "2026-09-27",
-  "lastSlug": "2026-09-27-proximos-pagamentos",
-  "startedAt": "2026-09-27T21:14:36.827Z",
+  "lastRunDate": "2026-09-28",
+  "lastSlug": "2026-09-28-mapa-dividendos",
+  "startedAt": "2026-09-28T21:15:47.854Z",
   "attempts": 0,
-  "attemptsDate": "2026-09-27"
+  "attemptsDate": "2026-09-28"
  },
  "social_post_log": {
   "2026-09-25-provaveis-pagadores": {
@@ -34,6 +34,15 @@
    "count": 1,
    "fb": "1337364702788353_122117385597469153",
    "ig": "18027782750903947"
+  },
+  "2026-09-28-mapa-dividendos": {
+   "date": "2026-09-28",
+   "at": "2026-09-28T21:15:30.581Z",
+   "image": "https://pedrofagundesoic.github.io/virtus-social/social/2026-09-28-mapa-dividendos.png",
+   "kind": "queue",
+   "count": 1,
+   "fb": "1337364702788353_122117871297469153",
+   "ig": "17946089745342594"
   }
  }
 }
