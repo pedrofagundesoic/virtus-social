@@ -1,11 +1,11 @@
 {
  "social_state": {
   "emptyNoticeDate": "2026-09-24",
-  "lastRunDate": "2026-09-28",
-  "lastSlug": "2026-09-28-mapa-dividendos",
-  "startedAt": "2026-09-28T21:15:47.854Z",
+  "lastRunDate": "2026-09-29",
+  "lastSlug": "2026-09-29-melhores-pagadoras",
+  "startedAt": "2026-09-29T21:15:38.180Z",
   "attempts": 0,
-  "attemptsDate": "2026-09-28"
+  "attemptsDate": "2026-09-29"
  },
  "social_post_log": {
   "2026-09-25-provaveis-pagadores": {
@@ -43,6 +43,15 @@
    "count": 1,
    "fb": "1337364702788353_122117871297469153",
    "ig": "17946089745342594"
+  },
+  "2026-09-29-melhores-pagadoras": {
+   "date": "2026-09-29",
+   "at": "2026-09-29T21:15:16.435Z",
+   "image": "https://pedrofagundesoic.github.io/virtus-social/social/2026-09-29-melhores-pagadoras.png",
+   "kind": "queue",
+   "count": 1,
+   "fb": "1337364702788353_122118445707469153",
+   "ig": "18021907226714532"
   }
  }
 }
