@@ -1,0 +1,123 @@
+{
+ "_readme": "Entradas do photo-screen.py: print real encaixado na tela do aparelho da foto. quad = cantos da tela na foto original (topo-esq, topo-dir, base-dir, base-esq). crop com proporção 4:5 (1080x1350).",
+ "life-patrimonio-iphone": {
+  "photo": "AtwreCnd2IU",
+  "shot": "m-carteira-topo.png",
+  "status_bar": 88,
+  "radius": 0.13,
+  "quad": [
+   [
+    1260,
+    1231
+   ],
+   [
+    2107,
+    1455
+   ],
+   [
+    1715,
+    3072
+   ],
+   [
+    903,
+    2869
+   ]
+  ],
+  "crop": [
+   155,
+   956,
+   2855,
+   4331
+  ]
+ },
+ "life-yoc-android": {
+  "photo": "zG9bNfiUeCQ",
+  "shot": "yield-on-cost-tela.png",
+  "radius": 0.08,
+  "quad": [
+   [
+    2189,
+    587
+   ],
+   [
+    2808,
+    1050
+   ],
+   [
+    1911,
+    2298
+   ],
+   [
+    1366,
+    1880
+   ]
+  ],
+  "crop": [
+   672,
+   408,
+   3000,
+   3318
+  ]
+ },
+ "life-proventos-notebook": {
+  "photo": "O4nTgxWr5Sc",
+  "shot": "d-fluxo-proventos.png",
+  "radius": 0.004,
+  "blur": 1.2,
+  "occlude": true,
+  "quad": [
+   [
+    1812,
+    2695
+   ],
+   [
+    2660,
+    2712
+   ],
+   [
+    2545,
+    3215
+   ],
+   [
+    1660,
+    3200
+   ]
+  ],
+  "crop": [
+   1200,
+   2200,
+   3000,
+   4450
+  ]
+ },
+ "life-pagamentos-iphone": {
+  "photo": "kljagr9EGSc",
+  "shot": "m-pagamentos-recentes.png",
+  "status_bar": 88,
+  "radius": 0.13,
+  "quad": [
+   [
+    1418,
+    1605
+   ],
+   [
+    2008,
+    1610
+   ],
+   [
+    2000,
+    2885
+   ],
+   [
+    1418,
+    2880
+   ]
+  ],
+  "crop": [
+   779,
+   1415,
+   2648,
+   3751
+  ]
+ }
+}
