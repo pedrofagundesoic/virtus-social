@@ -9,6 +9,7 @@ image no queue.json é relativa ao manifesto (GitHub Pages em subpasta); filtro 
 
 Famílias:  app  = cartão + screenshots reais em moldura. variant: phone | phones2 | phone-web | tablet | web
            life = foto de pessoa real + aparelho sobreposto. device: phone | browser | tablet
+                  | inphoto (print real já encaixado na tela da própria foto por photo-screen.py)
 Chaves do post: slug, family, variant/device, platform (iphone|android|web), shots[], photo, focal, kicker,
                 headline (<em> permitido, ≤ 2 linhas), sub, caption, date | evergreen:true,
                 fade, crop, shot_h, offset, url, text_top (life)
@@ -59,10 +60,11 @@ def pills(platform):
     return '<div class="pills">' + ''.join(
         f'<span class="pill{" on" if k == platform else ""}">{PILL_DEFS[k][0]}{PILL_DEFS[k][1]}</span>' for k in B['platforms']) + '</div>'
 
-def phone(src, width, left, top, extra=''):
-    inner = width - 20
+def phone(src, width, left, top, extra='', island=True):
+    inner = width - 20  # island=False nos prints Android: já vêm sem barra de status, a ilha cobriria conteúdo
+    isl = f'<div class="island" style="width:{int(inner*0.30)}px"></div>' if island else ''
     return (f'<div class="phone" style="width:{width}px;left:{left}px;top:{top}px;{extra}"><div class="scr" style="width:{inner}px">'
-            f'<div class="island" style="width:{int(inner*0.30)}px"></div><img src="{src}"></div></div>')
+            f'{isl}<img src="{src}"></div></div>')
 
 def browser(path, width, left, top, url, shot_h, img_w=None, offset_y=0, extra=''):
     img_w = img_w or width
@@ -108,9 +110,9 @@ APP_CSS = BASE_CSS + themed('''
 ''')
 
 def render_app(p):
-    v = p.get('variant', 'phone'); url = p.get('url', B['web_url'])
-    if v == 'phone':      hero = phone(scr(p['shots'][0]), 470, 305, 30)
-    elif v == 'phones2':  hero = phone(scr(p['shots'][0]), 400, 110, 60, 'transform:rotate(-4deg)') + phone(scr(p['shots'][1]), 400, 570, 20, 'transform:rotate(4deg)')
+    v = p.get('variant', 'phone'); url = p.get('url', B['web_url']); isl = p.get('platform') != 'android'
+    if v == 'phone':      hero = phone(scr(p['shots'][0]), 470, 305, 30, island=isl)
+    elif v == 'phones2':  hero = phone(scr(p['shots'][0]), 400, 110, 60, 'transform:rotate(-4deg)', isl) + phone(scr(p['shots'][1]), 400, 570, 20, 'transform:rotate(4deg)', isl)
     elif v == 'phone-web':hero = browser(scr_path(p['shots'][1]), 770, 250, 30, url, p.get('shot_h', 430), img_w=770, offset_y=p.get('offset', 0)) + phone(scr(p['shots'][0]), 286, 62, 46)
     elif v == 'tablet':   hero = tablet(scr(p['shots'][0]), 900, 90, 40, crop=p.get('crop'))
     elif v == 'web':      hero = browser(scr_path(p['shots'][0]), 960, 60, 30, url, p.get('shot_h', 600), img_w=960, offset_y=p.get('offset', 0))
@@ -146,17 +148,25 @@ def render_life(p):
         mock = phone(scr(p['shots'][0]), 330, 700, 640); hw = 610
     elif dev == 'browser':
         mock = browser(scr_path(p['shots'][0]), 460, 620, 900, url, p.get('shot_h', 420), img_w=460, offset_y=p.get('offset', 0)); hw = 545
+    elif dev == 'inphoto':  # print já encaixado na tela da foto (photo-screen.py); texto embaixo, largura toda
+        mock = ''; hw = 968
     else:
         mock = tablet(scr(p['shots'][0]), 460, 620, 920, crop=p.get('crop')); hw = 545
     kick, head, sub = (130, 164, 400) if p.get('text_top') else (700, 734, 940)
     css = LIFE_CSS.replace('__KICK__', str(kick)).replace('__HEAD__', str(head)).replace('__SUB__', str(sub)).replace('__HW__', str(hw))
+    text = f'''<div class="kicker">{p.get('kicker', '')}</div>
+<div class="headline">{p['headline']}</div>
+<div class="sub">{p['sub']}</div>'''
+    if dev == 'inphoto':  # bloco de texto empilhado, ancorado acima do rodapé
+        css += ('.shade{background:linear-gradient(180deg,rgba(5,8,7,.25) 0%,rgba(5,8,7,0) 16%,rgba(5,8,7,0) 54%,rgba(7,16,12,.82) 66%,rgba(5,8,7,.96) 78%,rgba(5,8,7,.98) 100%)}.foot{width:968px}'
+                '.txt{position:absolute;left:56px;right:56px;bottom:150px}.txt .kicker,.txt .headline,.txt .sub{position:static;width:auto}'
+                '.txt .headline{margin-top:12px}.txt .sub{margin-top:16px}')
+        text = f'<div class="txt">{text}</div>'
     return f'''<!DOCTYPE html><html><head><meta charset="utf-8">{FONTS}<style>{css}</style></head><body><div class="stage">
 <div class="bg"><img src="{photo(p['photo'])}" style="object-position:{p.get('focal', 'center')}"></div><div class="shade"></div>
 <div class="top">{lockup()}</div>
 {pills(p.get('platform', 'iphone'))}
-<div class="kicker">{p.get('kicker', '')}</div>
-<div class="headline">{p['headline']}</div>
-<div class="sub">{p['sub']}</div>
+{text}
 {mock}
 {footer()}
 </div></body></html>'''

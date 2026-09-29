@@ -4,7 +4,9 @@
     "family": "app",
     "variant": "phone",
     "platform": "android",
-    "shots": ["provaveis-pagadores.png"],
+    "shots": [
+      "provaveis-pagadores.png"
+    ],
     "date": "2026-09-25",
     "kicker": "AGENDA DE PROVENTOS",
     "headline": "Quem deve pagar <em>no próximo mês</em>",
@@ -16,7 +18,9 @@
     "family": "app",
     "variant": "phone",
     "platform": "android",
-    "shots": ["proventos-recebidos.png"],
+    "shots": [
+      "proventos-recebidos.png"
+    ],
     "date": "2026-09-26",
     "kicker": "PROVENTOS RECEBIDOS",
     "headline": "Todo provento que caiu, <em>somado sem planilha</em>",
@@ -28,7 +32,9 @@
     "family": "app",
     "variant": "phone",
     "platform": "android",
-    "shots": ["proventos-proximos.png"],
+    "shots": [
+      "proventos-proximos.png"
+    ],
     "date": "2026-09-27",
     "kicker": "PRÓXIMOS PAGAMENTOS",
     "headline": "Você sabe <em>quanto vai receber</em> este mês?",
@@ -40,7 +46,9 @@
     "family": "app",
     "variant": "phone",
     "platform": "android",
-    "shots": ["mapa-dividendos.png"],
+    "shots": [
+      "mapa-dividendos.png"
+    ],
     "date": "2026-09-28",
     "kicker": "MAPA DE DIVIDENDOS",
     "headline": "Em quais meses cada empresa <em>costuma pagar</em>",
@@ -52,11 +60,120 @@
     "family": "app",
     "variant": "phone",
     "platform": "android",
-    "shots": ["melhores-pagadoras.png"],
+    "shots": [
+      "melhores-pagadoras.png"
+    ],
     "date": "2026-09-29",
     "kicker": "RANKING",
     "headline": "30 anos de proventos viraram <em>um ranking</em>",
     "sub": "716 ativos pontuados de 0 a 100 desde o Plano Real, com quantos anos seguidos cada um vem pagando.",
     "caption": "Pagar bem em um ano é sorte. Pagar por 30 anos seguidos é outra história.\n\nO Virtus ranqueia 716 ativos por histórico de proventos desde o Plano Real, com um score de 0 a 100 e a sequência de anos pagando sem falhar.\n\nFonte B3/BRAPI + IPCA (BCB). Dá para ver só ações, só FIIs ou tudo junto.\n\nCrie sua conta gratuita — virtusapp.com.br, link na bio.\n\nDados de amostra. Não é recomendação de investimento.\n\n#dividendos #ranking #rendapassiva #investimentos #fiis #bolsadevalores #b3"
+  },
+  {
+    "slug": "2026-09-30-patrimonio-no-bolso",
+    "family": "life",
+    "device": "inphoto",
+    "platform": "web",
+    "photo": "life-patrimonio-iphone",
+    "date": "2026-09-30",
+    "kicker": "PATRIMÔNIO CONSOLIDADO",
+    "headline": "Toda a carteira <em>num número só</em>",
+    "sub": "R$ 68.441,45 de patrimônio e R$ 24.125,68 em proventos recebidos. No celular, direto pelo navegador.",
+    "caption": "Quanto você tem investido hoje, somando tudo?\n\nSe a resposta exige abrir três aplicativos de corretora, o Virtus resolve: patrimônio total, valor aplicado e proventos recebidos na mesma tela.\n\nNa imagem: R$ 68.441,45 de patrimônio, R$ 61.508,50 aplicados e R$ 24.125,68 em proventos recebidos desde a primeira compra.\n\nFunciona no navegador do celular, sem instalar nada — e também no app para iPhone e Android.\n\nCrie sua conta gratuita — virtusapp.com.br, link na bio.\n\nDados de amostra. Não é recomendação de investimento.\n\n#investimentos #carteiradeinvestimentos #dividendos #proventos #rendapassiva #b3"
+  },
+  {
+    "slug": "2026-10-01-corretoras-na-mesma-tela",
+    "family": "app",
+    "variant": "web",
+    "platform": "web",
+    "shots": [
+      "d-analises.png"
+    ],
+    "shot_h": 520,
+    "date": "2026-10-01",
+    "kicker": "CONSOLIDAÇÃO",
+    "headline": "Quatro corretoras, <em>uma carteira só</em>",
+    "sub": "Quanto está em cada instituição e em cada classe de ativo, em porcentagem e em reais.",
+    "caption": "Conta na XP, na NuInvest, no BTG e no Inter. Quanto está em cada uma?\n\nO Virtus junta tudo e mostra a distribuição da carteira: XP 38,11%, NuInvest 24,80%, BTG 22,90% e Inter 14,19% do valor aplicado.\n\nNa mesma tela, a divisão por classe: 71,44% em ações e 28,56% em fundos imobiliários.\n\nCrie sua conta gratuita — virtusapp.com.br, link na bio.\n\nDados de amostra. Não é recomendação de investimento.\n\n#investimentos #carteiradeinvestimentos #diversificacao #fiis #acoes #b3",
+    "fade": 62
+  },
+  {
+    "slug": "2026-10-02-yield-on-cost",
+    "family": "life",
+    "device": "inphoto",
+    "platform": "android",
+    "photo": "life-yoc-android",
+    "date": "2026-10-02",
+    "kicker": "YIELD ON COST",
+    "headline": "Quanto rende <em>sobre o que você pagou</em>",
+    "sub": "Comprado a R$ 27,90, pagou R$ 918,02 em 12 meses: yield on cost de 16,45% sobre o preço médio.",
+    "caption": "Dividend yield olha o preço de hoje. Yield on cost olha o preço que você pagou.\n\nNo Virtus, cada ativo mostra os dois lados: preço médio de R$ 27,90, R$ 918,02 em proventos nos últimos 12 meses e yield on cost de 16,45%.\n\nÉ o número que mostra quanto a sua compra antiga rende hoje.\n\nCrie sua conta gratuita — virtusapp.com.br, link na bio.\n\nDados de amostra. Não é recomendação de investimento.\n\n#yieldoncost #dividendos #proventos #rendapassiva #investimentos #b3"
+  },
+  {
+    "slug": "2026-10-03-preco-medio-cotacao",
+    "family": "app",
+    "variant": "phone",
+    "platform": "android",
+    "shots": [
+      "posicoes-filtros.png"
+    ],
+    "date": "2026-10-03",
+    "kicker": "POSIÇÕES",
+    "headline": "Preço médio e cotação, <em>lado a lado</em>",
+    "sub": "Quantidade, preço médio, cotação e quanto já foi investido em cada ativo. Filtre por classe ou corretora.",
+    "caption": "Preço médio de R$ 27,90, cotação de R$ 38,73. Dá para ver na hora quanto a posição andou: +38,8%.\n\nNo Virtus, cada ativo mostra quantidade, preço médio, cotação atual e valor investido — e a lista filtra por classe (ações, FIIs) ou por corretora.\n\nCrie sua conta gratuita — virtusapp.com.br, link na bio.\n\nDados de amostra. Não é recomendação de investimento.\n\n#investimentos #precomedio #carteiradeinvestimentos #acoes #fiis #b3",
+    "fade": 88
+  },
+  {
+    "slug": "2026-10-04-proventos-mes-a-mes",
+    "family": "life",
+    "device": "inphoto",
+    "platform": "web",
+    "photo": "life-proventos-notebook",
+    "date": "2026-10-04",
+    "kicker": "FLUXO DE PROVENTOS",
+    "headline": "Quanto a carteira pagou <em>em cada mês</em>",
+    "sub": "Doze meses de proventos em barras, com a média mensal marcada. No computador, sem instalar nada.",
+    "caption": "Renda passiva não cai igual todo mês. Tem mês forte, tem mês fraco.\n\nO Virtus mostra os últimos 12 meses de proventos em barras, com a linha da média mensal — dá para ver de relance onde estão os buracos do seu calendário.\n\nAbre no navegador do computador em virtusapp.com.br, com a mesma conta do app.\n\nCrie sua conta gratuita — virtusapp.com.br, link na bio.\n\nDados de amostra. Não é recomendação de investimento.\n\n#proventos #dividendos #rendapassiva #rendamensal #investimentos #b3"
+  },
+  {
+    "slug": "2026-10-05-nova-aplicacao",
+    "family": "app",
+    "variant": "phone",
+    "platform": "android",
+    "shots": [
+      "nova-aplicacao.png"
+    ],
+    "date": "2026-10-05",
+    "kicker": "CADASTRO",
+    "headline": "Sua primeira compra <em>em poucos toques</em>",
+    "sub": "Escolha a corretora e a carteira, comece a digitar o ticker e o Virtus sugere o código certo.",
+    "caption": "Começar a acompanhar a carteira não precisa de planilha.\n\nNo Virtus, você escolhe onde o ativo está (XP, Inter, Nubank…), em qual carteira ele entra e começa a digitar o ticker — o app sugere o código certo.\n\nDepois é só data, quantidade e preço. Os proventos passam a ser somados sozinhos.\n\nCrie sua conta gratuita — virtusapp.com.br, link na bio.\n\nDados de amostra. Não é recomendação de investimento.\n\n#investimentos #carteiradeinvestimentos #dividendos #organizacaofinanceira #b3"
+  },
+  {
+    "slug": "2026-10-06-cada-pagamento",
+    "family": "life",
+    "device": "inphoto",
+    "platform": "web",
+    "photo": "life-pagamentos-iphone",
+    "date": "2026-10-06",
+    "kicker": "PAGAMENTOS RECEBIDOS",
+    "headline": "Dividendo, JCP ou rendimento: <em>cada um no seu lugar</em>",
+    "sub": "Todo pagamento aparece com o tipo, a data e o valor, na ordem em que caiu na conta.",
+    "caption": "Caiu um valor na corretora. Foi dividendo, JCP ou rendimento de FII?\n\nFaz diferença na declaração do imposto de renda: cada tipo entra numa ficha diferente.\n\nO Virtus lista cada pagamento com o tipo, a data e o valor — sem precisar abrir extrato.\n\nCrie sua conta gratuita — virtusapp.com.br, link na bio.\n\nDados de amostra. Não é recomendação de investimento.\n\n#dividendos #jcp #proventos #fiis #rendapassiva #investimentos"
+  },
+  {
+    "slug": "2026-10-07-fluxo-de-renda",
+    "family": "app",
+    "variant": "web",
+    "platform": "web",
+    "shots": [
+      "d-sankey.png"
+    ],
+    "kicker": "FLUXO DE RENDA",
+    "headline": "De onde vem <em>a sua renda passiva</em>",
+    "sub": "R$ 5,8 mil em 12 meses: R$ 2,2 mil em dividendos, R$ 1,4 mil em JCP e R$ 2,2 mil em rendimentos.",
+    "caption": "Renda passiva de R$ 5,8 mil em 12 meses. Mas de onde veio cada real?\n\nO Fluxo de Renda do Virtus separa por tipo — R$ 2,2 mil em dividendos, R$ 1,4 mil em JCP e R$ 2,2 mil em rendimentos — e mostra quais ativos mais contribuíram.\n\nÉ o jeito mais rápido de ver se a renda está concentrada em poucos pagadores.\n\nCrie sua conta gratuita — virtusapp.com.br, link na bio.\n\nDados de amostra. Não é recomendação de investimento.\n\n#rendapassiva #dividendos #jcp #proventos #fiis #investimentos",
+    "date": "2026-10-07"
   }
 ]
