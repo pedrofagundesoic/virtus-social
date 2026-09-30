@@ -1,11 +1,11 @@
 {
  "social_state": {
   "emptyNoticeDate": "2026-09-24",
-  "lastRunDate": "2026-09-29",
-  "lastSlug": "2026-09-29-melhores-pagadoras",
-  "startedAt": "2026-09-29T21:15:38.180Z",
+  "lastRunDate": "2026-09-30",
+  "lastSlug": "2026-09-30-patrimonio-no-bolso",
+  "startedAt": "2026-09-30T21:15:36.453Z",
   "attempts": 0,
-  "attemptsDate": "2026-09-29"
+  "attemptsDate": "2026-09-30"
  },
  "social_post_log": {
   "2026-09-25-provaveis-pagadores": {
@@ -52,6 +52,15 @@
    "count": 1,
    "fb": "1337364702788353_122118445707469153",
    "ig": "18021907226714532"
+  },
+  "2026-09-30-patrimonio-no-bolso": {
+   "date": "2026-09-30",
+   "at": "2026-09-30T21:15:14.601Z",
+   "image": "https://pedrofagundesoic.github.io/virtus-social/social/2026-09-30-patrimonio-no-bolso.png",
+   "kind": "queue",
+   "count": 1,
+   "fb": "1337364702788353_122118936537469153",
+   "ig": "17905686924340314"
   }
  }
 }
