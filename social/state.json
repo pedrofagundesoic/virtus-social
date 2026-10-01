@@ -1,11 +1,11 @@
 {
  "social_state": {
   "emptyNoticeDate": "2026-09-24",
-  "lastRunDate": "2026-09-30",
-  "lastSlug": "2026-09-30-patrimonio-no-bolso",
-  "startedAt": "2026-09-30T21:15:36.453Z",
+  "lastRunDate": "2026-10-01",
+  "lastSlug": "2026-10-01-corretoras-na-mesma-tela",
+  "startedAt": "2026-10-01T21:15:51.388Z",
   "attempts": 0,
-  "attemptsDate": "2026-09-30"
+  "attemptsDate": "2026-10-01"
  },
  "social_post_log": {
   "2026-09-25-provaveis-pagadores": {
@@ -61,6 +61,15 @@
    "count": 1,
    "fb": "1337364702788353_122118936537469153",
    "ig": "17905686924340314"
+  },
+  "2026-10-01-corretoras-na-mesma-tela": {
+   "date": "2026-10-01",
+   "at": "2026-10-01T21:15:35.443Z",
+   "image": "https://pedrofagundesoic.github.io/virtus-social/social/2026-10-01-corretoras-na-mesma-tela.png",
+   "kind": "queue",
+   "count": 1,
+   "fb": "1337364702788353_122119379241469153",
+   "ig": "18429915292146892"
   }
  }
 }
