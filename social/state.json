@@ -1,11 +1,11 @@
 {
  "social_state": {
   "emptyNoticeDate": "2026-09-24",
-  "lastRunDate": "2026-10-01",
-  "lastSlug": "2026-10-01-corretoras-na-mesma-tela",
-  "startedAt": "2026-10-01T21:15:51.388Z",
+  "lastRunDate": "2026-10-02",
+  "lastSlug": "2026-10-02-yield-on-cost",
+  "startedAt": "2026-10-02T21:15:30.693Z",
   "attempts": 0,
-  "attemptsDate": "2026-10-01"
+  "attemptsDate": "2026-10-02"
  },
  "social_post_log": {
   "2026-09-25-provaveis-pagadores": {
@@ -70,6 +70,15 @@
    "count": 1,
    "fb": "1337364702788353_122119379241469153",
    "ig": "18429915292146892"
+  },
+  "2026-10-02-yield-on-cost": {
+   "date": "2026-10-02",
+   "at": "2026-10-02T21:15:13.177Z",
+   "image": "https://pedrofagundesoic.github.io/virtus-social/social/2026-10-02-yield-on-cost.png",
+   "kind": "queue",
+   "count": 1,
+   "fb": "1337364702788353_122119881963469153",
+   "ig": "18121448509785442"
   }
  }
 }
