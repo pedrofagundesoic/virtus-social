@@ -1,11 +1,11 @@
 {
  "social_state": {
   "emptyNoticeDate": "2026-09-24",
-  "lastRunDate": "2026-10-02",
-  "lastSlug": "2026-10-02-yield-on-cost",
-  "startedAt": "2026-10-02T21:15:30.693Z",
+  "lastRunDate": "2026-10-04",
+  "lastSlug": "2026-10-03-preco-medio-cotacao",
+  "startedAt": "2026-10-04T21:33:48.276Z",
   "attempts": 0,
-  "attemptsDate": "2026-10-02"
+  "attemptsDate": "2026-10-04"
  },
  "social_post_log": {
   "2026-09-25-provaveis-pagadores": {
@@ -79,6 +79,15 @@
    "count": 1,
    "fb": "1337364702788353_122119881963469153",
    "ig": "18121448509785442"
+  },
+  "2026-10-03-preco-medio-cotacao": {
+   "date": "2026-10-04",
+   "at": "2026-10-04T21:33:34.417Z",
+   "image": "https://pedrofagundesoic.github.io/virtus-social/social/2026-10-03-preco-medio-cotacao.png",
+   "kind": "queue",
+   "count": 1,
+   "fb": "1337364702788353_122120828331469153",
+   "ig": "18081877052705401"
   }
  }
 }
