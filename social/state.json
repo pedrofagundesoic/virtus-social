@@ -1,8 +1,8 @@
 {
  "social_state": {
   "emptyNoticeDate": "2026-09-24",
-  "lastRunDate": "2026-10-04",
-  "lastSlug": "2026-10-03-preco-medio-cotacao",
+  "lastRunDate": "2026-10-05",
+  "lastSlug": "2026-10-04-proventos-mes-a-mes",
   "startedAt": "2026-10-04T21:33:48.276Z",
   "attempts": 0,
   "attemptsDate": "2026-10-04"
@@ -88,6 +88,15 @@
    "count": 1,
    "fb": "1337364702788353_122120828331469153",
    "ig": "18081877052705401"
+  },
+  "2026-10-04-proventos-mes-a-mes": {
+   "date": "2026-10-05",
+   "at": "2026-10-05T21:38:57.864Z",
+   "image": "https://pedrofagundesoic.github.io/virtus-social/social/2026-10-04-proventos-mes-a-mes.png",
+   "kind": "queue",
+   "count": 1,
+   "fb": "1337364702788353_122121326877469153",
+   "ig": "18118234330990360"
   }
  }
 }
