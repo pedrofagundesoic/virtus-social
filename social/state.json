@@ -1,11 +1,11 @@
 {
  "social_state": {
   "emptyNoticeDate": "2026-09-24",
-  "lastRunDate": "2026-10-05",
-  "lastSlug": "2026-10-04-proventos-mes-a-mes",
-  "startedAt": "2026-10-04T21:33:48.276Z",
+  "lastRunDate": "2026-10-06",
+  "lastSlug": "2026-10-05-nova-aplicacao",
+  "startedAt": "2026-10-06T21:15:18.358Z",
   "attempts": 0,
-  "attemptsDate": "2026-10-04"
+  "attemptsDate": "2026-10-06"
  },
  "social_post_log": {
   "2026-09-25-provaveis-pagadores": {
@@ -97,6 +97,15 @@
    "count": 1,
    "fb": "1337364702788353_122121326877469153",
    "ig": "18118234330990360"
+  },
+  "2026-10-05-nova-aplicacao": {
+   "date": "2026-10-06",
+   "at": "2026-10-06T21:15:08.502Z",
+   "image": "https://pedrofagundesoic.github.io/virtus-social/social/2026-10-05-nova-aplicacao.png",
+   "kind": "queue",
+   "count": 1,
+   "fb": "1337364702788353_122121807333469153",
+   "ig": "17976582837134596"
   }
  }
 }
