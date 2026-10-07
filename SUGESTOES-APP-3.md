@@ -9,6 +9,8 @@ Este documento tem três partes:
 2. o que **ainda não foi**, com o estado atual;
 3. **pontos novos**, incluindo uma regressão.
 
+**Conferido e descartado:** os números de Análises → Rentabilidade → **Mês** do Android estão **corretos**. A carteira subiu `+7.00% / +R$ 4.867,00` de 01/10 a 07/10, e pelas cotações reais a conta dá **+6,96% / +R$ 4.836**. O Ibovespa subiu **+9,66%** desde o fechamento de 30/09 (o app mostra +9,99%), com alta de 7,7% em 05/10. O dólar caiu −3,24% (app: −3,62%) e o S&P 500 subiu +1,96% (app: +1,91%). As pequenas diferenças são de horário da cotação. Nessa tela continuam valendo só o item 4 do doc 2 (proventos do mês R$ 0,00) e a formatação (ponto e data ISO).
+
 "Não verificado" quer dizer que o teste exigiria criar ou apagar lançamentos, o que não fiz desta vez.
 
 ---
@@ -60,38 +62,35 @@ Este documento tem três partes:
 
 ### A. 🔴 Regressão: o gráfico "Rentabilidade · 12 meses" da web agora também tem o degrau
 
-**Onde:** Web → Carteira → **Rentabilidade · 12 meses**.
+**Onde:** Web → Carteira → **Rentabilidade · 12 meses** (e o mesmo gráfico no Android).
 
 **O que acontece:**
 - **Em 29/09** o gráfico da web era contínuo e mostrava **+11,46%**.
-- **Hoje** ele tem um salto vertical no meio do período e mostra **+59,37%**.
-- O Android mostra o mesmo salto, perto de **07/04/2026** (no tooltip, a carteira passa de +18,51% para algo perto de +50% em um dia).
+- **Hoje** ele tem um salto vertical no meio do período e mostra **+59,37%** (Android: **+59,34% / R$ 34.276,35**, "**411% do CDI**").
+- O salto fica perto de **07/04/2026**. No tooltip do Android a carteira está em **+18,51%** nesse dia e, logo depois, perto de **+50%**.
 
-Todas as compras da carteira são de 2022 e 2023. Nenhum aporte acontece no período do gráfico, então a carteira não poderia saltar desse jeito.
+**Conferência com cotações reais:** recalculei o valor da carteira de testes dia a dia, com as cotações de fechamento da B3 (Yahoo Finance) e as quantidades da conta.
+
+| | Valor real calculado | O que o Virtus mostra |
+|---|---|---|
+| Variação de preço em 12 meses (07/10/2025 → 07/10/2026) | **+22,99%** (+R$ 13.890) | +59,34% (+R$ 34.276) |
+| Mesmo somando os R$ 5.843 de proventos de 12 meses | ≈ +32,7% (+R$ 19.733) | |
+| Carteira em 07/04/2026 | +19,5% | +18,51% (bate) |
+| Maior alta de um dia no período | +4,43% (19/01/2026) | salto de ~30 p.p. perto de 07/04 |
+| De 06/04 a 08/04/2026 | +0,6% | ~+30 p.p. |
+
+Até o salto a série confere com o mercado. No salto não aconteceu nada no mercado nem na carteira, já que todas as compras são de 2022 e 2023.
 
 **Por que é crítico:**
 - É o primeiro gráfico da tela inicial.
-- O número inflado alimenta o "**411% do CDI**" do Android.
-- O usuário vê um rendimento que não existiu.
+- O valor final mostra quase o triplo do rendimento real.
+- Esse valor alimenta o "% do CDI".
 
-**Pista:** a série parece misturar duas bases (antes e depois de abril). Vale conferir se algum ativo entra na série só a partir dessa data, por exemplo por falta de cotação histórica de um ticker, e passa a contar como "ganho".
-
----
-
-### B. 🔴 Análises → Rentabilidade → **Mês** (Android) mostra números implausíveis para 7 dias
-
-**Onde:** app Android → Análises → Rentabilidade → **Mês** (de 01/10 a 07/10).
-
-**O que acontece:**
-- **Carteira:** `+7.00%` / `+R$ 4.867,00` em uma semana.
-- **Comparação:** IBOV `+9.99%`, USD/BRL `-3.62%`, S&P 500 `+1.91%`.
-- **"Gráfico de rentabilidade":** a linha do IBOV sobe quase tudo logo no primeiro ponto e depois fica plana.
-
-**Por que é crítico:** o IBOV subir 10% em uma semana seria notícia, e o card "Hoje" da mesma conta mostra +0,73%. Tudo indica que o ponto inicial do período "Mês" está errado (data de base antiga ou valor zerado), e isso distorce todas as comparações da tela.
+**Hipótese para investigar:** o tamanho do salto (~30 p.p. de ~R$ 60 mil, ou seja, ~R$ 18 mil) é próximo dos **R$ 18.888 em proventos recebidos antes da janela de 12 meses** (R$ 24.906,88 no histórico − R$ 6.018,94 nos últimos 12 meses). Pode ser que, a partir de algum ponto, a série passe a somar todos os proventos desde a 1ª compra, e não só os do período.
 
 ---
 
-### C. 🟡 Formato de número misturado nos "Indicadores fundamentalistas"
+### B. 🟡 Formato de número misturado nos "Indicadores fundamentalistas"
 
 **Onde:** Android → detalhe do ativo → **Indicadores fundamentalistas**, e o card de indicadores no detalhe do ativo na web.
 
@@ -103,7 +102,7 @@ Todas as compras da carteira são de 2022 e 2023. Nenhum aporte acontece no per�
 
 ---
 
-### D. 🟡 "Prováveis Pagadores" tem uma página muito longa no celular
+### C. 🟡 "Prováveis Pagadores" tem uma página muito longa no celular
 
 **Onde:** web no celular → Proventos → **Prováveis Pagadores**.
 
@@ -117,6 +116,6 @@ Todas as compras da carteira são de 2022 e 2023. Nenhum aporte acontece no per�
 
 ## 📌 Prioridade sugerida
 
-1. **A** (regressão do gráfico, que afeta também o "% do CDI") e **B** (base do período "Mês").
+1. **A** (regressão do gráfico, que afeta também o "% do CDI").
 2. **Doc 2 #1, #2, #3 e #6:** números de proventos que não batem entre si (YoC, Virtus IR, "Recebido 12M", R$ 5.843,01 × R$ 6.018,94). Provavelmente têm causa comum: algumas consultas ignoram proventos de compras lançadas com data retroativa.
 3. Layout: sankey no celular, calendário do Android, data cortada, botão "+" e formato de números.
