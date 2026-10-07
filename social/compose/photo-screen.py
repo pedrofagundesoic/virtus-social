@@ -10,7 +10,8 @@ photos/screens.json: { "<out-id>": { "photo": "<id da foto>", "shot": "<arquivo 
     "radius": 0.12 (canto arredondado, fração da largura do print), "status_bar": 0 (px pretos no topo do print),
     "crop": [x0,y0,x1,y1] (recorte final da foto, px originais), "shade": 0.93 (brilho do print),
     "blur": 0 (px de desfoque, para casar com a nitidez da foto),
-    "occlude": false (true = devolve os pixels da foto que não parecem tela: manga, dedos na frente) } }
+    "occlude": false (true = devolve os pixels da foto que não parecem tela: manga, dedos na frente),
+    "occlude_box": [x0,y0,x1,y1] (opcional: só procura oclusão dentro desta caixa — evita trazer de volta imagens escuras da tela antiga) } }
 Saída: photos/<out-id>.jpg — referenciar no posts.json com "photo": "<out-id>".
 """
 import json, os, sys
@@ -59,10 +60,13 @@ def make(out_id, e):
     if e.get('occlude'):
         # dentro do quad, o que é claro e pouco saturado é tela; o resto (braço, mão) fica na frente
         hsv = np.asarray(photo.convert('HSV')).astype(float) / 255
-        occ = ~((hsv[..., 2] > 0.55) & (hsv[..., 1] < 0.35))
+        occ = ~((hsv[..., 2] > e.get('screen_v', 0.55)) & (hsv[..., 1] < e.get('screen_sat', 0.35)))  # pele clara pede screen_sat menor
         occ = Image.fromarray((occ * 255).astype('uint8'))
         k = e.get('occlude_min', 25)  # abertura morfológica: some com ícones soltos da tela antiga, fica braço/mão
         occ = occ.filter(ImageFilter.MinFilter(k)).filter(ImageFilter.MaxFilter(k)).filter(ImageFilter.MaxFilter(5))
+        if e.get('occlude_box'):
+            box = Image.new('L', photo.size, 0); ImageDraw.Draw(box).rectangle(e['occlude_box'], fill=255)
+            occ = Image.fromarray(np.minimum(np.asarray(occ), np.asarray(box)))
         keep = Image.fromarray(255 - np.asarray(occ)).filter(ImageFilter.GaussianBlur(2))
         layer.putalpha(Image.fromarray((np.asarray(layer.getchannel('A')).astype(float) * np.asarray(keep) / 255).astype('uint8')))
     warped.alpha_composite(layer)

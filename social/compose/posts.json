@@ -175,5 +175,124 @@
     "sub": "R$ 5,8 mil em 12 meses: R$ 2,2 mil em dividendos, R$ 1,4 mil em JCP e R$ 2,2 mil em rendimentos.",
     "caption": "Renda passiva de R$ 5,8 mil em 12 meses. Mas de onde veio cada real?\n\nO Fluxo de Renda do Virtus separa por tipo — R$ 2,2 mil em dividendos, R$ 1,4 mil em JCP e R$ 2,2 mil em rendimentos — e mostra quais ativos mais contribuíram.\n\nÉ o jeito mais rápido de ver se a renda está concentrada em poucos pagadores.\n\nCrie sua conta gratuita — virtusapp.com.br, link na bio.\n\nDados de amostra. Não é recomendação de investimento.\n\n#rendapassiva #dividendos #jcp #proventos #fiis #investimentos",
     "date": "2026-10-07"
+  },
+  {
+    "slug": "2026-10-09-score-ranking",
+    "family": "app",
+    "variant": "web",
+    "platform": "web",
+    "shots": [
+      "d-ranking.png"
+    ],
+    "shot_h": 600,
+    "fade": 70,
+    "date": "2026-10-09",
+    "kicker": "MELHORES PAGADORAS",
+    "headline": "Como nasce <em>o score</em> do ranking",
+    "sub": "Consistência, crescimento real, resiliência em crises, regularidade e yield — tudo desde o Plano Real.",
+    "caption": "Um ranking só vale se você souber como ele é calculado.\n\nNo Virtus, o score de 0 a 100 das Melhores Pagadoras soma cinco componentes: consistência (30%), crescimento real (25%), resiliência em crises (20%), regularidade (15%) e yield histórico (10%).\n\nOs proventos são ajustados por desdobramentos e corrigidos pelo IPCA, com dados desde o Plano Real. E a própria tela avisa: rentabilidade passada não garante resultados futuros.\n\nCrie sua conta gratuita — virtusapp.com.br, link na bio.\n\nDados de amostra. Não é recomendação de investimento.\n\n#dividendos #ranking #proventos #rendapassiva #investimentos #b3"
+  },
+  {
+    "slug": "2026-10-10-pagadores-do-mes",
+    "family": "life",
+    "device": "inphoto",
+    "platform": "web",
+    "photo": "life-pagadores-iphone",
+    "date": "2026-10-10",
+    "kicker": "PROVÁVEIS PAGADORES",
+    "headline": "Quem deve pagar <em>em outubro</em>",
+    "sub": "26 pagamentos já anunciados e 277 com alta probabilidade histórica, direto no navegador do celular.",
+    "caption": "Outubro começou. Quem deve pagar proventos este mês?\n\nO Virtus separa o que já foi anunciado do que é provável: 26 pagamentos anunciados e 277 com alta probabilidade histórica, cada um com valor por ação e dia de pagamento.\n\nNa mesma tela, o histórico de acerto das previsões (95% nos últimos 12 meses, backtest + publicados) e o link para a metodologia.\n\nCrie sua conta gratuita — virtusapp.com.br, link na bio.\n\nDados de amostra. Não é recomendação de investimento.\n\n#dividendos #proventos #rendapassiva #investimentos #acoes #b3"
+  },
+  {
+    "slug": "2026-10-11-indicadores",
+    "family": "app",
+    "variant": "phone",
+    "platform": "android",
+    "shots": [
+      "indicadores.png"
+    ],
+    "fade": 97,
+    "date": "2026-10-11",
+    "kicker": "INDICADORES",
+    "headline": "Os fundamentos <em>junto da sua posição</em>",
+    "sub": "P/L, P/VPA, VPA, dividend yield, ROE, EV/EBITDA e valor de mercado no detalhe de cada ativo.",
+    "caption": "Comprou, e agora? Os números da empresa continuam mudando.\n\nNo detalhe de cada ativo, o Virtus mostra os indicadores fundamentalistas logo abaixo da sua posição. Na imagem: P/L 8.66, P/VPA 7.31, dividend yield 11.00% e ROE 84.38%, com fonte BRAPI e data da atualização.\n\nE logo acima, as suas movimentações — toque numa ordem para corrigir ou excluir.\n\nCrie sua conta gratuita — virtusapp.com.br, link na bio.\n\nDados de amostra. Não é recomendação de investimento.\n\n#investimentos #analisefundamentalista #dividendos #acoes #b3"
+  },
+  {
+    "slug": "2026-10-12-mapa-no-computador",
+    "family": "app",
+    "platform": "web",
+    "date": "2026-10-12",
+    "kicker": "MAPA DE DIVIDENDOS",
+    "headline": "O calendário do Ibovespa <em>numa tela só</em>",
+    "sub": "Em quais meses cada empresa costuma pagar, com cinco anos de histórico. No computador, sem instalar nada.",
+    "caption": "Quais empresas do Ibovespa costumam pagar em cada mês do ano?\n\nO Mapa de Dividendos do Virtus mostra, empresa por empresa, em quais meses do ano ela costuma pagar — com base nos últimos cinco anos. Quanto mais vivo o verde, mais frequente o pagamento naquele mês.\n\nNo computador, em virtusapp.com.br, com a mesma conta do app.\n\nCrie sua conta gratuita — virtusapp.com.br, link na bio.\n\nDados de amostra. Não é recomendação de investimento.\n\n#dividendos #calendariodedividendos #rendamensal #rendapassiva #investimentos #b3",
+    "variant": "web",
+    "shots": [
+      "d-mapa.png"
+    ],
+    "shot_h": 600,
+    "fade": 72
+  },
+  {
+    "slug": "2026-10-13-watchlist",
+    "family": "app",
+    "variant": "phone",
+    "platform": "android",
+    "shots": [
+      "watchlist.png"
+    ],
+    "fade": 82,
+    "date": "2026-10-13",
+    "kicker": "WATCHLIST",
+    "headline": "Ativos que você <em>ainda não comprou</em>",
+    "sub": "Cotações de ações brasileiras e americanas fora dos cálculos da carteira. Toque num ativo para registrar a compra.",
+    "caption": "Nem todo ativo que você acompanha está na carteira.\n\nA Watchlist do Virtus guarda os que você quer observar, com cotação de ações brasileiras (BRAPI PRO, cerca de 5 minutos) e americanas (Yahoo Finance, cerca de 15 minutos) — fora das contas da carteira.\n\nNa imagem, 5 ativos monitorados. Quando decidir comprar, é só tocar no ativo para registrar a operação.\n\nCrie sua conta gratuita — virtusapp.com.br, link na bio.\n\nDados de amostra. Não é recomendação de investimento.\n\n#investimentos #watchlist #acoes #bolsadevalores #b3"
+  },
+  {
+    "slug": "2026-10-14-historico-por-ativo",
+    "family": "life",
+    "device": "inphoto",
+    "platform": "web",
+    "photo": "life-historico-mesa",
+    "date": "2026-10-14",
+    "kicker": "HISTÓRICO DE PROVENTOS",
+    "headline": "Tudo que um ativo <em>já te pagou</em>",
+    "sub": "Cada dividendo, JCP e rendimento, com data e valor, desde a sua primeira compra.",
+    "caption": "Quanto aquela ação já te pagou desde que você comprou?\n\nNo Virtus, cada ativo tem o próprio histórico de proventos: tipo, data e valor de cada pagamento, do mais recente ao primeiro.\n\nSem somar extrato por extrato — a lista se monta sozinha a partir dos seus lançamentos.\n\nCrie sua conta gratuita — virtusapp.com.br, link na bio.\n\nDados de amostra. Não é recomendação de investimento.\n\n#proventos #dividendos #jcp #rendapassiva #investimentos #b3"
+  },
+  {
+    "slug": "2026-10-15-claro-ou-escuro",
+    "family": "app",
+    "variant": "phones2",
+    "platform": "web",
+    "shots": [
+      "m-proventos-claro.png",
+      "m-proventos-escuro.png"
+    ],
+    "fade": 78,
+    "date": "2026-10-15",
+    "kicker": "TEMA CLARO E ESCURO",
+    "headline": "De dia ou de noite, <em>do seu jeito</em>",
+    "sub": "Um toque no ícone da lua troca o tema. Os mesmos R$ 6.018,94 dos últimos 12 meses, nos dois.",
+    "caption": "Tem quem confira a carteira de manhã, com o sol batendo na tela. Tem quem confira à noite, antes de dormir.\n\nNo Virtus para web, um toque no ícone da lua troca entre o tema claro e o escuro.\n\nNa imagem, a mesma tela de proventos nos dois temas: R$ 6.018,94 nos últimos 12 meses e R$ 24.906,88 recebidos no histórico.\n\nCrie sua conta gratuita — virtusapp.com.br, link na bio.\n\nDados de amostra. Não é recomendação de investimento.\n\n#investimentos #proventos #dividendos #rendapassiva #b3"
+  },
+  {
+    "slug": "2026-10-16-exportar-csv",
+    "family": "app",
+    "variant": "web",
+    "platform": "web",
+    "shots": [
+      "d-conta-export.png"
+    ],
+    "shot_h": 660,
+    "fade": 96,
+    "date": "2026-10-16",
+    "kicker": "EXPORTAR DADOS",
+    "headline": "Seus dados <em>numa planilha</em>",
+    "sub": "Posições, lançamentos e proventos recebidos em CSV — abrem no Excel, Numbers e Google Sheets.",
+    "caption": "Os dados são seus. Dá para levar para onde quiser.\n\nNa tela Conta do Virtus, três botões exportam planilhas CSV: posições, lançamentos (ordens) e proventos recebidos. Abrem no Excel, no Numbers e no Google Sheets, com decimais em vírgula.\n\nÚtil para conferir as contas fora do app ou para organizar o imposto de renda com o seu contador.\n\nNa mesma tela, as sub-carteiras: renomeie, troque a padrão ou exclua sem perder lançamentos.\n\nCrie sua conta gratuita — virtusapp.com.br, link na bio.\n\nDados de amostra. Não é recomendação de investimento.\n\n#investimentos #impostoderenda #planilha #organizacaofinanceira #b3",
+    "offset": 410
   }
 ]
