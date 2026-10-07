@@ -47,7 +47,7 @@ BASE_CSS = themed('''*{margin:0;padding:0;box-sizing:border-box}html,body{width:
 .urlbar{margin-left:14px;flex:1;height:26px;border-radius:13px;background:#fff;border:1px solid #E2E8F0;font-size:13px;color:#64748B;display:flex;align-items:center;padding:0 14px}
 .shot{overflow:hidden;position:relative;line-height:0}.shot img{display:block}
 .tablet{border-radius:30px;background:#050807;padding:14px;box-shadow:0 30px 80px rgba(0,0,0,.55),0 0 0 1px rgba(196,148,76,.25);position:absolute}.tablet .scr{border-radius:18px;overflow:hidden;line-height:0;background:#fff}.tablet .scr img{width:100%;display:block}
-.pills{display:flex;justify-content:center;gap:16px}.pill{display:inline-flex;align-items:center;gap:9px;border-radius:999px;padding:13px 26px;font-size:19px;font-weight:600;background:__PILL_BG__;color:__TEXT__;border:1px solid rgba(243,238,228,.12)}.pill.on{background:__ACCENT__;color:#0B0F0D;border-color:__ACCENT__}
+.pills{display:flex;justify-content:center;gap:16px}.pill{display:inline-flex;align-items:center;gap:9px;border-radius:999px;padding:13px 26px;font-size:20px;font-weight:600;background:__PILL_BG__;color:__TEXT__;border:1px solid rgba(243,238,228,.12)}.pill.on{background:__ACCENT__;color:#0B0F0D;border-color:__ACCENT__}
 ''')
 
 def fileurl(p):  # Windows-safe file:// URL
@@ -100,13 +100,13 @@ def footer():
 APP_CSS = BASE_CSS + themed('''
 .stage{background:radial-gradient(120% 70% at 50% 0%,__BG_TOP__ 0%,__BG_BOTTOM__ 78%);color:__TEXT__}
 .top{position:absolute;top:44px;left:0;right:0;display:flex;justify-content:center}
-.headline{position:absolute;top:122px;left:70px;right:70px;text-align:center;font-family:'Lora',serif;font-weight:700;font-size:64px;line-height:1.1;color:__TEXT__}
+.headline{position:absolute;top:122px;left:70px;right:70px;text-align:center;font-family:'Lora',serif;font-weight:700;font-size:68px;line-height:1.1;color:__TEXT__}
 .headline em{font-style:italic;color:__ACCENT__;font-weight:600}
-.sub{position:absolute;top:304px;left:120px;right:120px;text-align:center;font-size:25px;line-height:1.45;color:__MUTED__}
+.sub{position:absolute;top:304px;left:110px;right:110px;text-align:center;font-size:27px;line-height:1.45;color:__MUTED__}
 .hero{position:absolute;top:400px;left:0;right:0;height:690px;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 __FADE__%,transparent 100%);mask-image:linear-gradient(180deg,#000 0,#000 __FADE__%,transparent 100%)}
 .pillrow{position:absolute;top:1108px;left:0;right:0}
-.foot{position:absolute;top:1194px;left:0;right:0;text-align:center;font-size:25px}.foot b{color:__ACCENT_LIGHT__;font-weight:700}.foot span{color:__MUTED__;font-weight:500}
-.fine{position:absolute;top:1244px;left:0;right:0;text-align:center;font-size:15.5px;color:rgba(243,238,228,.45)}
+.foot{position:absolute;top:1194px;left:0;right:0;text-align:center;font-size:27px}.foot b{color:__ACCENT_LIGHT__;font-weight:700}.foot span{color:__MUTED__;font-weight:500}
+.fine{position:absolute;top:1244px;left:0;right:0;text-align:center;font-size:17px;color:rgba(243,238,228,.5)}
 ''')
 
 def render_app(p):
@@ -133,12 +133,12 @@ LIFE_CSS = BASE_CSS + themed('''
 .bg{position:absolute;inset:0}.bg img{width:100%;height:100%;object-fit:cover;display:block}
 .shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(5,8,7,.20) 0%,rgba(5,8,7,0) 28%,rgba(7,16,12,.25) 52%,rgba(7,16,12,.88) 78%,rgba(5,8,7,.95) 100%)}
 .top{position:absolute;top:44px;left:56px}.top .lockup{background:rgba(7,16,12,.45);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(227,191,130,.35);border-radius:999px;padding:8px 22px 8px 10px}.badge{width:40px;height:40px}.bp{font-size:24px;letter-spacing:5px}
-.kicker{position:absolute;left:56px;top:__KICK__px;font-size:15px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:__ACCENT_LIGHT__}
-.headline{position:absolute;left:56px;top:__HEAD__px;width:__HW__px;font-family:'Lora',serif;font-weight:700;font-size:54px;line-height:1.12;color:#fff;text-shadow:0 2px 24px rgba(0,0,0,.35)}
+.kicker{position:absolute;left:56px;top:__KICK__px;font-size:16.5px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:__ACCENT_LIGHT__}
+.headline{position:absolute;left:56px;top:__HEAD__px;width:__HW__px;font-family:'Lora',serif;font-weight:700;font-size:58px;line-height:1.12;color:#fff;text-shadow:0 2px 24px rgba(0,0,0,.35)}
 .headline em{font-style:italic;color:__ACCENT_LIGHT__;font-weight:600}
-.sub{position:absolute;left:56px;top:__SUB__px;width:__HW__px;font-size:23px;line-height:1.45;color:rgba(255,255,255,.86)}
-.foot{position:absolute;left:56px;bottom:84px;width:620px;font-size:21px;line-height:1.4;color:#fff;z-index:2}.foot b{font-weight:700;color:__ACCENT_LIGHT__}.foot span{color:rgba(255,255,255,.72);font-weight:500}
-.fine{position:absolute;left:56px;bottom:40px;font-size:14px;color:rgba(255,255,255,.55)}
+.sub{position:absolute;left:56px;top:__SUB__px;width:__HW__px;font-size:25px;line-height:1.45;color:rgba(255,255,255,.86)}
+.foot{position:absolute;left:56px;bottom:84px;width:620px;font-size:23px;line-height:1.4;color:#fff;z-index:2}.foot b{font-weight:700;color:__ACCENT_LIGHT__}.foot span{color:rgba(255,255,255,.72);font-weight:500}
+.fine{position:absolute;left:56px;bottom:40px;font-size:15.5px;color:rgba(255,255,255,.55)}
 .pills{position:absolute;right:56px;top:52px;gap:10px}.pill{padding:10px 18px;font-size:16px;background:rgba(7,16,12,.45);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.22);color:#fff}.pill.on{background:__ACCENT__;border-color:__ACCENT__;color:#0B0F0D}
 ''')
 

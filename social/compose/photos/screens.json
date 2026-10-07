@@ -119,5 +119,75 @@
    2648,
    3751
   ]
+ },
+ "life-pagadores-iphone": {
+  "photo": "voRfgeyiBKA",
+  "shot": "m-pagadores-topo.png",
+  "status_bar": 70,
+  "radius": 0.1,
+  "occlude": true,
+  "quad": [
+   [
+    1228,
+    676
+   ],
+   [
+    2321,
+    628
+   ],
+   [
+    2289,
+    3076
+   ],
+   [
+    1172,
+    3068
+   ]
+  ],
+  "crop": [
+   0,
+   300,
+   3000,
+   4050
+  ],
+  "screen_sat": 0.12,
+  "screen_v": 0.4
+ },
+ "life-historico-mesa": {
+  "photo": "p0Sn8X2htRs",
+  "shot": "m-bbse3-proventos.png",
+  "status_bar": 70,
+  "radius": 0.12,
+  "occlude": true,
+  "occlude_box": [
+   1650,
+   2420,
+   2050,
+   2700
+  ],
+  "quad": [
+   [
+    1002,
+    1696
+   ],
+   [
+    1596,
+    1558
+   ],
+   [
+    2026,
+    2818
+   ],
+   [
+    1488,
+    3071
+   ]
+  ],
+  "crop": [
+   300,
+   1300,
+   2700,
+   4300
+  ]
  }
 }
