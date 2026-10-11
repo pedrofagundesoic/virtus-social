@@ -1,11 +1,11 @@
 {
  "social_state": {
   "emptyNoticeDate": "2026-09-24",
-  "lastRunDate": "2026-10-10",
-  "lastSlug": "2026-10-10-pagadores-do-mes",
-  "startedAt": "2026-10-10T21:14:19.090Z",
+  "lastRunDate": "2026-10-11",
+  "lastSlug": "2026-10-11-indicadores",
+  "startedAt": "2026-10-11T21:15:21.124Z",
   "attempts": 0,
-  "attemptsDate": "2026-10-10"
+  "attemptsDate": "2026-10-11"
  },
  "social_post_log": {
   "2026-09-25-provaveis-pagadores": {
@@ -142,6 +142,15 @@
    "count": 1,
    "fb": "1337364702788353_122123691189469153",
    "ig": "18169141654463783"
+  },
+  "2026-10-11-indicadores": {
+   "date": "2026-10-11",
+   "at": "2026-10-11T21:14:55.310Z",
+   "image": "https://pedrofagundesoic.github.io/virtus-social/social/2026-10-11-indicadores.png",
+   "kind": "queue",
+   "count": 1,
+   "fb": "1337364702788353_122124187335469153",
+   "ig": "17951115441295243"
   }
  }
 }
