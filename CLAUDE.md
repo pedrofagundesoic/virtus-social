@@ -23,6 +23,7 @@ Publisher = GitHub Actions (Opção B). Fila pública = GitHub Pages (`docs/soci
 2. Se `social_state.attempts ≥ 1` hoje → ler `lastError` e corrigir antes de tudo.
 3. `queue.future < 3` → produzir 3–7 datados. `bank ≤ 21` → produzir evergreens até ≥ 24.
 4. Nunca editar `docs/social/queue.json` à mão; sempre `build.py --queue`.
+5. Antes de montar um lote, ler `social/compose/QUALIDADE.md` (falhas já publicadas e como evitar).
 
 ## Pipeline de reabastecimento
 ```powershell
