@@ -71,9 +71,9 @@ Web → Conta → **Posições · CSV**:
 
 **Sugestão:** fonte responsiva (`clamp`) ou 1 coluna abaixo de ~400 px.
 
-### B. 🟡 IPCA do período "Mês" (Android) parece alto
+### B. ⚪ IPCA do período "Mês" (Android): valor correto, falta dizer de qual mês é
 
-Análises → Rentabilidade → **Mês** (01/10 a 13/10): `IPCA +0.82%`. O IPCA de outubro ainda não foi divulgado e nenhum mês recente chegou perto disso. Vale conferir qual série e período estão sendo usados. CDI `+0.41%` em 9 dias úteis está coerente.
+Análises → Rentabilidade → **Mês** (01/10 a 13/10) mostra `IPCA +0.82%`. **O número está certo:** é o IPCA de setembro/2026 divulgado pelo IBGE (0,82%, conferido na série 433 do Banco Central), já que o de outubro ainda não saiu. Só falta deixar isso claro, por exemplo com o rótulo "IPCA set/26 (último divulgado)", para o usuário não achar que é a inflação dos 13 dias de outubro.
 
 ### C. 🟡 Gráfico de comparação do período "Mês" (Android) começa com salto
 
@@ -89,4 +89,4 @@ O novo rodapé da barra lateral mostra `Premium · <e-mail>`. Não é bug, mas a
 
 1. **Itens 1 e 2:** totais de 12 meses que não batem e projeção abaixo do histórico. São os números que o usuário compara.
 2. **Item 4:** CSV de posições com "Proventos recebidos" zerado. O CSV é vendido como apoio ao imposto de renda.
-3. **A, B, C e item 3:** layout e formatação.
+3. **A, C e item 3:** layout e formatação. B é só um rótulo.
