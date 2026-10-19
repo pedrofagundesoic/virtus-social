@@ -13,7 +13,7 @@ Famílias:  app  = cartão + screenshots reais em moldura. variant: phone | phon
 Chaves do post: slug, family, variant/device, platform (iphone|android|web), shots[], photo, focal, kicker,
                 headline (<em> permitido, ≤ 2 linhas), sub, caption, date | evergreen:true,
                 fade, crop, shot_h, offset, url, text_top (life)
-Rodar:  py -3.12 build.py            py -3.12 build.py --queue
+Rodar:  py -3.12 build.py            py -3.12 build.py --queue      py -3.12 build.py --prune
 """
 import json, os, re, sys, shutil
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -190,17 +190,30 @@ def validate(posts):
 
 def build(posts):
     os.makedirs(OUT, exist_ok=True)
+    done = published()
+    posts = [p for p in posts if p.get('evergreen') or p['slug'] not in done]   # publicados não são re-renderizados
     for p in posts:
         h = render_app(p) if p['family'] == 'app' else render_life(p)
         open(os.path.join(OUT, p['slug'] + '.html'), 'w', encoding='utf-8').write(h)
     print('html written:', len(posts), '→', OUT)
 
+def published():
+    """Slugs já publicados (social/state.json, commitado pelo workflow)."""
+    st = os.path.join(HERE, '..', 'state.json')
+    try: return set(json.load(open(st, encoding='utf-8')).get('social_post_log', {}))
+    except FileNotFoundError: return set()
+
 def queue(posts):
-    if not WEB: raise SystemExit('set SOCIAL_WEB_DIR (C:\\dev\\Virtus\\docs\\social)')
+    """Fila pública só com o que falta publicar: datados ainda não postados + todo o banco evergreen.
+    posts.json continua com o histórico completo (é a memória). PNGs que saíram da fila são apagados de docs/social."""
+    if not WEB: raise SystemExit(r'set SOCIAL_WEB_DIR (C:\dev\Virtus\docs\social)')
     os.makedirs(WEB, exist_ok=True)
-    man = {'_readme': 'Fila diária. posts = datados, em ordem (postados uma vez quando vencem). evergreen = banco: nunca postado primeiro, depois o menos recente com ≥ SOCIAL_REPEAT_DAYS (21). Gerado por build.py --queue — nunca editar à mão.',
+    done = published()
+    man = {'_readme': 'Fila diária. posts = datados ainda não publicados, em ordem (postados uma vez quando vencem). evergreen = banco: nunca postado primeiro, depois o menos recente com ≥ SOCIAL_REPEAT_DAYS (21). Já publicados ficam só em social/compose/posts.json. Gerado por build.py --queue — nunca editar à mão.',
            'posts': [], 'evergreen': []}
+    skipped = 0
     for p in posts:
+        if not p.get('evergreen') and p['slug'] in done: skipped += 1; continue
         png = os.path.join(OUT, p['slug'] + '.png')
         if not os.path.exists(png): raise SystemExit('missing render ' + png + ' (run render.py)')
         shutil.copy(png, os.path.join(WEB, p['slug'] + '.png'))
@@ -208,12 +221,44 @@ def queue(posts):
         if p.get('date'): e['date'] = p['date']
         (man['evergreen'] if p.get('evergreen') else man['posts']).append(e)
     json.dump(man, open(os.path.join(WEB, 'queue.json'), 'w', encoding='utf-8'), indent=1, ensure_ascii=False)
-    print('queue:', len(man['posts']), 'datados +', len(man['evergreen']), 'evergreen →', WEB)
+    keep = {e['image'] for e in man['posts'] + man['evergreen']}
+    gone = [f for f in os.listdir(WEB) if f.endswith('.png') and f not in keep]
+    for f in gone: os.remove(os.path.join(WEB, f))
+    print('queue:', len(man['posts']), 'datados +', len(man['evergreen']), 'evergreen →', WEB,
+          f'({skipped} já publicados fora da fila, {len(gone)} PNGs antigos removidos)')
     if len(man['evergreen']) <= 21: print('ATENÇÃO: banco evergreen ≤ 21 → vai surgir dia sem post quando a fila datada acabar')
+
+def prune(posts):
+    """Apaga arquivos LOCAIS pesados (gitignored) de posts já publicados: out/*.html|png, prints, fotos e compostas
+    que nenhum post pendente usa. Memória preservada: posts.json, photos/credits.json, photos/screens.json, QUALIDADE.md."""
+    done = published()
+    live = [p for p in posts if p.get('evergreen') or p['slug'] not in done]
+    spec = json.load(open(os.path.join(PHO, 'screens.json'), encoding='utf-8'))
+    need_comp = {p['photo'] for p in live if p.get('photo')}
+    need_photo = {spec[c]['photo'] for c in need_comp if c in spec} | {c for c in need_comp if c not in spec}
+    need_shot = {s for p in live for s in p.get('shots', [])} | {spec[c]['shot'] for c in need_comp if c in spec}
+    freed = 0; n = 0
+    def rm(path):
+        nonlocal freed, n
+        freed += os.path.getsize(path); n += 1; os.remove(path)
+    for f in os.listdir(OUT):
+        if os.path.splitext(f)[0] in done: rm(os.path.join(OUT, f))
+    for f in os.listdir(PHO):
+        stem, ext = os.path.splitext(f)
+        if ext == '.jpg' and stem not in need_comp and stem not in need_photo: rm(os.path.join(PHO, f))
+    qa = os.path.join(PHO, 'qa')
+    if os.path.isdir(qa):
+        for f in os.listdir(qa): rm(os.path.join(qa, f))
+    for root, _, files in os.walk(SCR):
+        for f in files:
+            if f not in need_shot and not f.startswith('.'): rm(os.path.join(root, f))
+    print(f'prune: {n} arquivos locais removidos, {freed / 1e6:.1f} MB liberados (posts pendentes intactos)')
 
 if __name__ == '__main__':
     src = os.path.join(HERE, 'posts.json')
     if not os.path.exists(src): raise SystemExit('posts.json não existe ainda')
     posts = json.load(open(src, encoding='utf-8'))
     validate(posts)
-    queue(posts) if '--queue' in sys.argv else build(posts)
+    if '--prune' in sys.argv: prune(posts)
+    elif '--queue' in sys.argv: queue(posts)
+    else: build(posts)

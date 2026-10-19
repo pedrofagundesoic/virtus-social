@@ -9,6 +9,7 @@ Publisher = GitHub Actions (Opção B). Fila pública = GitHub Pages (`docs/soci
 - Telas de identidade/segurança do Meta (login, checkpoints, Central de Contas, permissões, revelar App Secret): o DONO clica. O Claude descreve o clique, nunca automatiza.
 - UM post por dia via API. Nunca postar em lote, nunca "recuperar" vários dias.
 - Nunca inventar números, depoimentos, seguidores ou avaliações. Dados demo sempre com "Dados de amostra".
+- Antes de apontar um número do app como erro, conferir na fonte oficial (BCB, B3/Yahoo, CSV exportado).
 - Nada com tema IA (conteúdo, telas ou hashtags).
 - Nunca recomendar compra/venda de ativo específico nem prometer rentabilidade. Preço-alvo e ranking são mostrados como recurso do app, com "Não é recomendação de investimento".
 - Legendas citam só números visíveis na imagem.
@@ -29,10 +30,19 @@ Publisher = GitHub Actions (Opção B). Fila pública = GitHub Pages (`docs/soci
 ```powershell
 cd C:\dev\Virtus\social\compose
 py -3.12 build.py ; py -3.12 render.py      # HTML → PNG; abrir e revisar cada PNG; mostrar ao dono
-py -3.12 build.py --queue                   # PNGs + queue.json → docs\social
+py -3.12 build.py --queue                   # só pendentes → docs\social (PNGs já publicados saem da fila)
+py -3.12 build.py --prune                   # apaga arquivos locais pesados de posts já publicados
 cd C:\dev\Virtus ; git add -A ; git commit -m "social: refill" ; git push
 ```
+Fotos com aparelho (família life, `device: inphoto`): `photo-screen.py --detect <foto> x y` (ou `--detect-green` para tela verde) sugere o quad;
+`photo-screen.py <id>` compõe e avisa SOBRA DE TELA; `qa-photo.py <id>` gera a folha de cantos ampliados. Regras em `QUALIDADE.md`.
 Evidência antes de "pronto": `curl.exe "https://pedrofagundesoic.github.io/virtus-social/social/queue.json"` mostra os slugs novos e cada PNG abre pela URL pública.
+
+## Memória do projeto
+- `social/compose/posts.json` = histórico completo de todos os posts (legenda, data, tela usada). A fila pública só tem os pendentes.
+- `social/compose/photos/credits.json` + `screens.json` = de onde veio cada foto e como foi composta (dá para regerar).
+- `social/compose/QUALIDADE.md` = falhas já publicadas e regras para não repetir.
+- `APP-CORRECOES.md` = documento único de correções do app (em aberto / resolvido / descartado). Atualizar a cada verificação.
 
 ## Windows
 - `curl.exe`, nunca `curl`. URLs entre aspas duplas.
