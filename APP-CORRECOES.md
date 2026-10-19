@@ -21,7 +21,21 @@ O CSV "Proventos recebidos" tem grupos com o **mesmo ativo, data-com, tipo e val
 
 - **Total provável a mais:** **R$ 498,79** dos R$ 25.043,61 exibidos. Isso afeta "Total recebido", "Proventos (total)" de cada ativo, Top 5, calendário e YoC.
 - **Não é erro:** PETR4 (dividendos e JCP de 2024–2026) e KLBN11 pagam **em parcelas** com a mesma data-com. O total do evento na Yahoo bate com a soma das parcelas.
-- **Inconclusivo:** 4 grupos de ITSA4 de 2023–2025, com R$ 140,76.
+- **Inconclusivo, para o desenvolvedor conferir na fonte oficial (B3/FNET, avisos da Itaúsa):** 4 grupos de ITSA4 com o mesmo JCP em duas datas, R$ 140,76 no total. As linhas estão abaixo, como vêm no CSV, com 600 ações.
+
+  | Data-com | Valor/cota | Pago em | Pago de novo em | Por linha |
+  |---|---|---|---|---|
+  | 21/09/2023 | 0,1165 | 08/03/2024 | 30/12/2024 | R$ 69,90 |
+  | 19/10/2023 | 0,0515 | 08/03/2024 | 30/12/2024 | R$ 30,90 |
+  | 19/09/2024 | 0,0484 | 07/03/2025 | 30/04/2025 | R$ 29,04 |
+  | 09/12/2025 | 0,0182 | 06/03/2026 | 30/04/2026 | R$ 10,92 |
+
+  **O que consegui ver:**
+  - Na Yahoo, cada data-com tem **um único evento**, com valor próximo do líquido de IR: 0,103143 para 0,1165 e 0,045596 para 0,0515. Isso sugere que o mesmo provento foi lançado duas vezes.
+  - O padrão de datas (março e abril/dezembro) também pode ser JCP pago em duas parcelas, e a Yahoo pode juntar parcelas num evento só.
+  - Não tenho como confirmar daqui.
+
+  **Pergunta para o desenvolvedor:** a fonte (BRAPI) traz esses JCPs como duas parcelas de valor igual, ou como um evento só que foi gravado duas vezes, por exemplo uma data provisória e outra definitiva?
 
 **Sugestão:**
 - deduplicar por (ativo, data-com, tipo, valor/cota, data de pagamento ±10 dias);

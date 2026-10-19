@@ -1,144 +1,6 @@
 {
- "_readme": "Fila diária. posts = datados, em ordem (postados uma vez quando vencem). evergreen = banco: nunca postado primeiro, depois o menos recente com ≥ SOCIAL_REPEAT_DAYS (21). Gerado por build.py --queue — nunca editar à mão.",
+ "_readme": "Fila diária. posts = datados ainda não publicados, em ordem (postados uma vez quando vencem). evergreen = banco: nunca postado primeiro, depois o menos recente com ≥ SOCIAL_REPEAT_DAYS (21). Já publicados ficam só em social/compose/posts.json. Gerado por build.py --queue — nunca editar à mão.",
  "posts": [
-  {
-   "slug": "2026-09-25-provaveis-pagadores",
-   "image": "2026-09-25-provaveis-pagadores.png",
-   "caption": "Esperar o extrato para saber quem pagou é tarde demais.\n\nO Virtus mostra os prováveis pagadores do mês: 33 proventos já anunciados e 296 com alta probabilidade, com o valor por ação e o dia do pagamento de cada um.\n\nDá para filtrar só por ações, só por FIIs ou só pelo que você já tem na carteira.\n\nCrie sua conta gratuita — virtusapp.com.br, link na bio.\n\nDados de amostra. Não é recomendação de investimento.\n\n#dividendos #proventos #rendapassiva #investimentos #bolsadevalores #fiis #b3",
-   "date": "2026-09-25"
-  },
-  {
-   "slug": "2026-09-26-proventos-recebidos",
-   "image": "2026-09-26-proventos-recebidos.png",
-   "caption": "Quanto a sua carteira já te pagou desde a primeira compra?\n\nQuase ninguém sabe responder — porque a conta está espalhada em extratos de corretora.\n\nO Virtus junta tudo: R$ 3.612,48 em 117 pagamentos recebidos, somados automaticamente conforme caem.\n\nCrie sua conta gratuita — virtusapp.com.br, link na bio.\n\nDados de amostra. Não é recomendação de investimento.\n\n#proventos #dividendos #rendapassiva #investimentos #carteiradeinvestimentos #b3",
-   "date": "2026-09-26"
-  },
-  {
-   "slug": "2026-09-27-proximos-pagamentos",
-   "image": "2026-09-27-proximos-pagamentos.png",
-   "caption": "Data ex, data de pagamento, valor por cota. Três informações que decidem se o provento é seu ou não.\n\nO Virtus lista os proventos já anunciados dos seus ativos e estima quanto isso dá na sua posição atual.\n\nSem abrir o site de RI de cada empresa.\n\nCrie sua conta gratuita — virtusapp.com.br, link na bio.\n\nDados de amostra. Não é recomendação de investimento.\n\n#dividendos #proventos #dataex #rendapassiva #fiis #investimentos",
-   "date": "2026-09-27"
-  },
-  {
-   "slug": "2026-09-28-mapa-dividendos",
-   "image": "2026-09-28-mapa-dividendos.png",
-   "caption": "Montar renda mensal exige saber quando cada empresa paga — não só quanto.\n\nO Mapa de Dividendos mostra, nos últimos 5 anos, em quais meses cada empresa costuma pagar. Quanto mais forte a cor, mais frequente.\n\nDá para ver de relance quem paga mensal, quem paga trimestral e quem concentra tudo em um semestre.\n\nCrie sua conta gratuita — virtusapp.com.br, link na bio.\n\nDados de amostra. Não é recomendação de investimento.\n\n#dividendos #calendariodedividendos #rendapassiva #rendamensal #investimentos #b3",
-   "date": "2026-09-28"
-  },
-  {
-   "slug": "2026-09-29-melhores-pagadoras",
-   "image": "2026-09-29-melhores-pagadoras.png",
-   "caption": "Pagar bem em um ano é sorte. Pagar por 30 anos seguidos é outra história.\n\nO Virtus ranqueia 716 ativos por histórico de proventos desde o Plano Real, com um score de 0 a 100 e a sequência de anos pagando sem falhar.\n\nFonte B3/BRAPI + IPCA (BCB). Dá para ver só ações, só FIIs ou tudo junto.\n\nCrie sua conta gratuita — virtusapp.com.br, link na bio.\n\nDados de amostra. Não é recomendação de investimento.\n\n#dividendos #ranking #rendapassiva #investimentos #fiis #bolsadevalores #b3",
-   "date": "2026-09-29"
-  },
-  {
-   "slug": "2026-09-30-patrimonio-no-bolso",
-   "image": "2026-09-30-patrimonio-no-bolso.png",
-   "caption": "Quanto você tem investido hoje, somando tudo?\n\nSe a resposta exige abrir três aplicativos de corretora, o Virtus resolve: patrimônio total, valor aplicado e proventos recebidos na mesma tela.\n\nNa imagem: R$ 68.441,45 de patrimônio, R$ 61.508,50 aplicados e R$ 24.125,68 em proventos recebidos desde a primeira compra.\n\nFunciona no navegador do celular, sem instalar nada — e também no app para iPhone e Android.\n\nCrie sua conta gratuita — virtusapp.com.br, link na bio.\n\nDados de amostra. Não é recomendação de investimento.\n\n#investimentos #carteiradeinvestimentos #dividendos #proventos #rendapassiva #b3",
-   "date": "2026-09-30"
-  },
-  {
-   "slug": "2026-10-01-corretoras-na-mesma-tela",
-   "image": "2026-10-01-corretoras-na-mesma-tela.png",
-   "caption": "Conta na XP, na NuInvest, no BTG e no Inter. Quanto está em cada uma?\n\nO Virtus junta tudo e mostra a distribuição da carteira: XP 38,11%, NuInvest 24,80%, BTG 22,90% e Inter 14,19% do valor aplicado.\n\nNa mesma tela, a divisão por classe: 71,44% em ações e 28,56% em fundos imobiliários.\n\nCrie sua conta gratuita — virtusapp.com.br, link na bio.\n\nDados de amostra. Não é recomendação de investimento.\n\n#investimentos #carteiradeinvestimentos #diversificacao #fiis #acoes #b3",
-   "date": "2026-10-01"
-  },
-  {
-   "slug": "2026-10-02-yield-on-cost",
-   "image": "2026-10-02-yield-on-cost.png",
-   "caption": "Dividend yield olha o preço de hoje. Yield on cost olha o preço que você pagou.\n\nNo Virtus, cada ativo mostra os dois lados: preço médio de R$ 27,90, R$ 918,02 em proventos nos últimos 12 meses e yield on cost de 16,45%.\n\nÉ o número que mostra quanto a sua compra antiga rende hoje.\n\nCrie sua conta gratuita — virtusapp.com.br, link na bio.\n\nDados de amostra. Não é recomendação de investimento.\n\n#yieldoncost #dividendos #proventos #rendapassiva #investimentos #b3",
-   "date": "2026-10-02"
-  },
-  {
-   "slug": "2026-10-03-preco-medio-cotacao",
-   "image": "2026-10-03-preco-medio-cotacao.png",
-   "caption": "Preço médio de R$ 27,90, cotação de R$ 38,73. Dá para ver na hora quanto a posição andou: +38,8%.\n\nNo Virtus, cada ativo mostra quantidade, preço médio, cotação atual e valor investido — e a lista filtra por classe (ações, FIIs) ou por corretora.\n\nCrie sua conta gratuita — virtusapp.com.br, link na bio.\n\nDados de amostra. Não é recomendação de investimento.\n\n#investimentos #precomedio #carteiradeinvestimentos #acoes #fiis #b3",
-   "date": "2026-10-03"
-  },
-  {
-   "slug": "2026-10-04-proventos-mes-a-mes",
-   "image": "2026-10-04-proventos-mes-a-mes.png",
-   "caption": "Renda passiva não cai igual todo mês. Tem mês forte, tem mês fraco.\n\nO Virtus mostra os últimos 12 meses de proventos em barras, com a linha da média mensal — dá para ver de relance onde estão os buracos do seu calendário.\n\nAbre no navegador do computador em virtusapp.com.br, com a mesma conta do app.\n\nCrie sua conta gratuita — virtusapp.com.br, link na bio.\n\nDados de amostra. Não é recomendação de investimento.\n\n#proventos #dividendos #rendapassiva #rendamensal #investimentos #b3",
-   "date": "2026-10-04"
-  },
-  {
-   "slug": "2026-10-05-nova-aplicacao",
-   "image": "2026-10-05-nova-aplicacao.png",
-   "caption": "Começar a acompanhar a carteira não precisa de planilha.\n\nNo Virtus, você escolhe onde o ativo está (XP, Inter, Nubank…), em qual carteira ele entra e começa a digitar o ticker — o app sugere o código certo.\n\nDepois é só data, quantidade e preço. Os proventos passam a ser somados sozinhos.\n\nCrie sua conta gratuita — virtusapp.com.br, link na bio.\n\nDados de amostra. Não é recomendação de investimento.\n\n#investimentos #carteiradeinvestimentos #dividendos #organizacaofinanceira #b3",
-   "date": "2026-10-05"
-  },
-  {
-   "slug": "2026-10-06-cada-pagamento",
-   "image": "2026-10-06-cada-pagamento.png",
-   "caption": "Caiu um valor na corretora. Foi dividendo, JCP ou rendimento de FII?\n\nFaz diferença na declaração do imposto de renda: cada tipo entra numa ficha diferente.\n\nO Virtus lista cada pagamento com o tipo, a data e o valor — sem precisar abrir extrato.\n\nCrie sua conta gratuita — virtusapp.com.br, link na bio.\n\nDados de amostra. Não é recomendação de investimento.\n\n#dividendos #jcp #proventos #fiis #rendapassiva #investimentos",
-   "date": "2026-10-06"
-  },
-  {
-   "slug": "2026-10-07-fluxo-de-renda",
-   "image": "2026-10-07-fluxo-de-renda.png",
-   "caption": "Renda passiva de R$ 5,8 mil em 12 meses. Mas de onde veio cada real?\n\nO Fluxo de Renda do Virtus separa por tipo — R$ 2,2 mil em dividendos, R$ 1,4 mil em JCP e R$ 2,2 mil em rendimentos — e mostra quais ativos mais contribuíram.\n\nÉ o jeito mais rápido de ver se a renda está concentrada em poucos pagadores.\n\nCrie sua conta gratuita — virtusapp.com.br, link na bio.\n\nDados de amostra. Não é recomendação de investimento.\n\n#rendapassiva #dividendos #jcp #proventos #fiis #investimentos",
-   "date": "2026-10-07"
-  },
-  {
-   "slug": "2026-10-09-score-ranking",
-   "image": "2026-10-09-score-ranking.png",
-   "caption": "Um ranking só vale se você souber como ele é calculado.\n\nNo Virtus, o score de 0 a 100 das Melhores Pagadoras soma cinco componentes: consistência (30%), crescimento real (25%), resiliência em crises (20%), regularidade (15%) e yield histórico (10%).\n\nOs proventos são ajustados por desdobramentos e corrigidos pelo IPCA, com dados desde o Plano Real. E a própria tela avisa: rentabilidade passada não garante resultados futuros.\n\nCrie sua conta gratuita — virtusapp.com.br, link na bio.\n\nDados de amostra. Não é recomendação de investimento.\n\n#dividendos #ranking #proventos #rendapassiva #investimentos #b3",
-   "date": "2026-10-09"
-  },
-  {
-   "slug": "2026-10-10-pagadores-do-mes",
-   "image": "2026-10-10-pagadores-do-mes.png",
-   "caption": "Outubro começou. Quem deve pagar proventos este mês?\n\nO Virtus separa o que já foi anunciado do que é provável: 26 pagamentos anunciados e 277 com alta probabilidade histórica, cada um com valor por ação e dia de pagamento.\n\nNa mesma tela, o histórico de acerto das previsões (95% nos últimos 12 meses, backtest + publicados) e o link para a metodologia.\n\nCrie sua conta gratuita — virtusapp.com.br, link na bio.\n\nDados de amostra. Não é recomendação de investimento.\n\n#dividendos #proventos #rendapassiva #investimentos #acoes #b3",
-   "date": "2026-10-10"
-  },
-  {
-   "slug": "2026-10-11-indicadores",
-   "image": "2026-10-11-indicadores.png",
-   "caption": "Comprou, e agora? Os números da empresa continuam mudando.\n\nNo detalhe de cada ativo, o Virtus mostra os indicadores fundamentalistas logo abaixo da sua posição. Na imagem: P/L 8.66, P/VPA 7.31, dividend yield 11.00% e ROE 84.38%, com fonte BRAPI e data da atualização.\n\nE logo acima, as suas movimentações — toque numa ordem para corrigir ou excluir.\n\nCrie sua conta gratuita — virtusapp.com.br, link na bio.\n\nDados de amostra. Não é recomendação de investimento.\n\n#investimentos #analisefundamentalista #dividendos #acoes #b3",
-   "date": "2026-10-11"
-  },
-  {
-   "slug": "2026-10-12-mapa-no-computador",
-   "image": "2026-10-12-mapa-no-computador.png",
-   "caption": "Quais empresas do Ibovespa costumam pagar em cada mês do ano?\n\nO Mapa de Dividendos do Virtus mostra, empresa por empresa, em quais meses do ano ela costuma pagar — com base nos últimos cinco anos. Quanto mais vivo o verde, mais frequente o pagamento naquele mês.\n\nNo computador, em virtusapp.com.br, com a mesma conta do app.\n\nCrie sua conta gratuita — virtusapp.com.br, link na bio.\n\nDados de amostra. Não é recomendação de investimento.\n\n#dividendos #calendariodedividendos #rendamensal #rendapassiva #investimentos #b3",
-   "date": "2026-10-12"
-  },
-  {
-   "slug": "2026-10-13-watchlist",
-   "image": "2026-10-13-watchlist.png",
-   "caption": "Nem todo ativo que você acompanha está na carteira.\n\nA Watchlist do Virtus guarda os que você quer observar, com cotação de ações brasileiras (BRAPI PRO, cerca de 5 minutos) e americanas (Yahoo Finance, cerca de 15 minutos) — fora das contas da carteira.\n\nNa imagem, 5 ativos monitorados. Quando decidir comprar, é só tocar no ativo para registrar a operação.\n\nCrie sua conta gratuita — virtusapp.com.br, link na bio.\n\nDados de amostra. Não é recomendação de investimento.\n\n#investimentos #watchlist #acoes #bolsadevalores #b3",
-   "date": "2026-10-13"
-  },
-  {
-   "slug": "2026-10-14-historico-por-ativo",
-   "image": "2026-10-14-historico-por-ativo.png",
-   "caption": "Quanto aquela ação já te pagou desde que você comprou?\n\nNo Virtus, cada ativo tem o próprio histórico de proventos: tipo, data e valor de cada pagamento, do mais recente ao primeiro.\n\nSem somar extrato por extrato — a lista se monta sozinha a partir dos seus lançamentos.\n\nCrie sua conta gratuita — virtusapp.com.br, link na bio.\n\nDados de amostra. Não é recomendação de investimento.\n\n#proventos #dividendos #jcp #rendapassiva #investimentos #b3",
-   "date": "2026-10-14"
-  },
-  {
-   "slug": "2026-10-15-claro-ou-escuro",
-   "image": "2026-10-15-claro-ou-escuro.png",
-   "caption": "Tem quem confira a carteira de manhã, com o sol batendo na tela. Tem quem confira à noite, antes de dormir.\n\nNo Virtus para web, um toque no ícone da lua troca entre o tema claro e o escuro.\n\nNa imagem, a mesma tela de proventos nos dois temas: R$ 6.018,94 nos últimos 12 meses e R$ 24.906,88 recebidos no histórico.\n\nCrie sua conta gratuita — virtusapp.com.br, link na bio.\n\nDados de amostra. Não é recomendação de investimento.\n\n#investimentos #proventos #dividendos #rendapassiva #b3",
-   "date": "2026-10-15"
-  },
-  {
-   "slug": "2026-10-16-exportar-csv",
-   "image": "2026-10-16-exportar-csv.png",
-   "caption": "Os dados são seus. Dá para levar para onde quiser.\n\nNa tela Conta do Virtus, três botões exportam planilhas CSV: posições, lançamentos (ordens) e proventos recebidos. Abrem no Excel, no Numbers e no Google Sheets, com decimais em vírgula.\n\nÚtil para conferir as contas fora do app ou para organizar o imposto de renda com o seu contador.\n\nNa mesma tela, as sub-carteiras: renomeie, troque a padrão ou exclua sem perder lançamentos.\n\nCrie sua conta gratuita — virtusapp.com.br, link na bio.\n\nDados de amostra. Não é recomendação de investimento.\n\n#investimentos #impostoderenda #planilha #organizacaofinanceira #b3",
-   "date": "2026-10-16"
-  },
-  {
-   "slug": "2026-10-17-metas",
-   "image": "2026-10-17-metas.png",
-   "caption": "Investir sem meta é andar sem saber para onde.\n\nNa nova tela de Metas do Virtus você define quanto quer ter investido e quanto quer receber de proventos por ano — e o app mostra quanto falta.\n\nNa imagem: meta de R$ 150.000,00 em patrimônio e R$ 12.000,00 de renda passiva até dezembro de 2030. Para chegar lá, R$ 1.505,63 de aporte por mês, numa conta conservadora que não considera valorização.\n\nCrie sua conta gratuita — virtusapp.com.br, link na bio.\n\nDados de amostra. Não é recomendação de investimento.\n\n#metasfinanceiras #investimentos #rendapassiva #dividendos #planejamentofinanceiro",
-   "date": "2026-10-17"
-  },
-  {
-   "slug": "2026-10-18-so-minha-carteira",
-   "image": "2026-10-18-so-minha-carteira.png",
-   "caption": "A lista de prováveis pagadores do mês tem mais de 300 ativos. Mas você quer saber dos seus.\n\nNo Virtus, um toque em “Só minha carteira” filtra só o que você tem. Na imagem, 7 ativos — e o ITSA4 já com JCP anunciado: 600 cotas, cerca de R$ 29,09 esperados.\n\nCrie sua conta gratuita — virtusapp.com.br, link na bio.\n\nDados de amostra. Não é recomendação de investimento.\n\n#dividendos #proventos #jcp #rendapassiva #investimentos #b3",
-   "date": "2026-10-18"
-  },
   {
    "slug": "2026-10-19-proximos-pagamentos",
    "image": "2026-10-19-proximos-pagamentos.png",
@@ -174,6 +36,54 @@
    "image": "2026-10-24-crie-sua-conta.png",
    "caption": "Começar leva menos de um minuto.\n\nNo virtusapp.com.br, você cria a conta com nome, e-mail e senha — ou com a sua conta Google ou Apple. Sem cartão.\n\nDepois é só lançar as compras e o Virtus passa a somar os proventos, acompanhar as datas de pagamento e comparar a carteira com o mercado. A mesma conta funciona no site e nos apps para iPhone e Android.\n\nCrie sua conta gratuita — virtusapp.com.br, link na bio.\n\nDados de amostra. Não é recomendação de investimento.\n\n#investimentos #dividendos #rendapassiva #carteiradeinvestimentos #b3",
    "date": "2026-10-24"
+  },
+  {
+   "slug": "2026-10-25-ficha-do-ativo",
+   "image": "2026-10-25-ficha-do-ativo.png",
+   "caption": "Quanto aquele ativo já te pagou? E quanto rende sobre o preço que você pagou?\n\nNo Virtus, cada ativo da carteira tem uma ficha. Na imagem: posição de R$ 8.282,00 em 200 ações, preço médio de R$ 27,90, cotação de R$ 41,41, R$ 3.205,37 em proventos recebidos e yield on cost de 16,45%.\n\nLogo abaixo, as suas movimentações — para corrigir ou excluir uma compra com um toque.\n\nCrie sua conta gratuita — virtusapp.com.br, link na bio.\n\nDados de amostra. Não é recomendação de investimento.\n\n#investimentos #dividendos #yieldoncost #proventos #acoes #b3",
+   "date": "2026-10-25"
+  },
+  {
+   "slug": "2026-10-26-tributacao-2026",
+   "image": "2026-10-26-tributacao-2026.png",
+   "caption": "Desde 1º de janeiro de 2026, a Lei 15.270/2025 prevê retenção de 10% de IR sobre lucros e dividendos acima de R$ 50.000 por mês pagos por uma mesma empresa — e o valor retido é creditável na declaração anual.\n\nO Virtus acompanha isso por você. Na imagem: IRRF estimado em 2026 de R$ 0,00, porque nenhum mês teve dividendos acima de R$ 50.000 da mesma empresa.\n\nEstimativa automática com base nos seus lançamentos — confira sempre com o seu contador.\n\nCrie sua conta gratuita — virtusapp.com.br, link na bio.\n\nDados de amostra. Não é recomendação de investimento.\n\n#dividendos #impostoderenda #lei15270 #ir #investimentos #b3",
+   "date": "2026-10-26"
+  },
+  {
+   "slug": "2026-10-27-como-calculamos",
+   "image": "2026-10-27-como-calculamos.png",
+   "caption": "Número de acerto sem explicação não vale muito. Por isso o Virtus mostra a conta.\n\nNos Prováveis Pagadores, o “como calculamos” abre a metodologia: são avaliados os últimos 12 relatórios mensais, conta como acerto quando o ativo pagou de fato algum provento dentro do mês, e a taxa é acertos ÷ previsões = 3345 ÷ 3512.\n\nA própria tela avisa: acerto passado não garante pagamento futuro.\n\nCrie sua conta gratuita — virtusapp.com.br, link na bio.\n\nDados de amostra. Não é recomendação de investimento.\n\n#dividendos #proventos #transparencia #investimentos #b3",
+   "date": "2026-10-27"
+  },
+  {
+   "slug": "2026-10-28-calendario-12-meses",
+   "image": "2026-10-28-calendario-12-meses.png",
+   "caption": "Tem mês que a renda passiva vem forte, tem mês que vem fraca. O calendário mostra o padrão.\n\nNo app do Virtus, o calendário de proventos tem um quadrado por mês. Na imagem, de nov/25 a out/26: R$ 5.979,72 no total, com dezembro em R$ 993,20 e março em R$ 968,53.\n\nUm toque no mês abre a lista dos pagamentos.\n\nCrie sua conta gratuita — virtusapp.com.br, link na bio.\n\nDados de amostra. Não é recomendação de investimento.\n\n#proventos #dividendos #rendamensal #rendapassiva #fiis #investimentos",
+   "date": "2026-10-28"
+  },
+  {
+   "slug": "2026-10-29-distribuicao",
+   "image": "2026-10-29-distribuicao.png",
+   "caption": "Ações demais? Concentrado numa corretora só? Dá para ver numa tela.\n\nA tela de Análises do Virtus mostra a carteira por classe e por instituição. Na imagem: 72,2% em ações e 27,8% em fundos imobiliários, com a XP Investimentos concentrando 38,1% do valor aplicado.\n\nNo computador, em virtusapp.com.br, com a mesma conta do app.\n\nCrie sua conta gratuita — virtusapp.com.br, link na bio.\n\nDados de amostra. Não é recomendação de investimento.\n\n#investimentos #diversificacao #carteiradeinvestimentos #fiis #acoes #b3",
+   "date": "2026-10-29"
+  },
+  {
+   "slug": "2026-10-30-ordenar-posicoes",
+   "image": "2026-10-30-ordenar-posicoes.png",
+   "caption": "Com 15 ativos na carteira, rolar a lista em ordem alfabética cansa.\n\nNo app do Virtus dá para buscar pelo ticker ou pelo nome e ordenar as posições por valor, rentabilidade ou proventos. Na imagem, ordenado por valor: PETR4 com R$ 11.660,00 e ITSA4 com R$ 9.240,00.\n\nOs filtros por classe e por corretora continuam ali em cima.\n\nCrie sua conta gratuita — virtusapp.com.br, link na bio.\n\nDados de amostra. Não é recomendação de investimento.\n\n#investimentos #carteiradeinvestimentos #acoes #fiis #b3",
+   "date": "2026-10-30"
+  },
+  {
+   "slug": "2026-10-31-comparacao-mes",
+   "image": "2026-10-31-comparacao-mes.png",
+   "caption": "Ganhar ou perder do mercado depende da régua escolhida. O Virtus mostra seis.\n\nNa tela de Análises, a carteira é comparada no mesmo período com CDI, Ibovespa, IPCA, Selic, dólar e S&P 500. Na imagem, de 1º a 19 de outubro: +6,05 p.p. acima do CDI e −3,51 p.p. abaixo do Ibovespa, que subiu 10,17%.\n\nO IPCA usado é o último divulgado (setembro/26).\n\nCrie sua conta gratuita — virtusapp.com.br, link na bio.\n\nDados de amostra. Não é recomendação de investimento.\n\n#investimentos #ibovespa #cdi #ipca #carteiradeinvestimentos #b3",
+   "date": "2026-10-31"
+  },
+  {
+   "slug": "2026-11-01-renda-passiva",
+   "image": "2026-11-01-renda-passiva.png",
+   "caption": "Novembro começou. Quanto a sua carteira te pagou no último ano?\n\nNo Virtus, a tela de proventos responde em quatro números. Na imagem: R$ 6.022,47 nos últimos 12 meses (média de R$ 501,87 por mês), R$ 25.043,61 desde a primeira compra, melhor mês em dezembro de 2025 com R$ 993,20 e MXRF11 como maior pagador do período, com R$ 956,00.\n\nNo celular, direto pelo navegador.\n\nCrie sua conta gratuita — virtusapp.com.br, link na bio.\n\nDados de amostra. Não é recomendação de investimento.\n\n#rendapassiva #dividendos #proventos #fiis #investimentos #b3",
+   "date": "2026-11-01"
   }
  ],
  "evergreen": []
