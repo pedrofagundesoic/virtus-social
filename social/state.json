@@ -1,8 +1,8 @@
 {
  "social_state": {
   "emptyNoticeDate": "2026-09-24",
-  "lastRunDate": "2026-10-19",
-  "lastSlug": "2026-10-19-proximos-pagamentos",
+  "lastRunDate": "2026-10-20",
+  "lastSlug": "2026-10-20-visao-geral",
   "startedAt": "2026-10-20T00:10:28.091Z",
   "attempts": 0,
   "attemptsDate": "2026-10-19"
@@ -223,6 +223,15 @@
    "count": 1,
    "fb": "1337364702788353_122127237909469153",
    "ig": "18468347524142794"
+  },
+  "2026-10-20-visao-geral": {
+   "date": "2026-10-20",
+   "at": "2026-10-20T23:26:29.404Z",
+   "image": "https://pedrofagundesoic.github.io/virtus-social/social/2026-10-20-visao-geral.png",
+   "kind": "queue",
+   "count": 1,
+   "fb": "1337364702788353_122127560553469153",
+   "ig": "18092991281657456"
   }
  }
 }
