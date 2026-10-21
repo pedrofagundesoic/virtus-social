@@ -1,11 +1,11 @@
 {
  "social_state": {
   "emptyNoticeDate": "2026-09-24",
-  "lastRunDate": "2026-10-20",
-  "lastSlug": "2026-10-20-visao-geral",
-  "startedAt": "2026-10-20T00:10:28.091Z",
+  "lastRunDate": "2026-10-21",
+  "lastSlug": "2026-10-21-de-onde-vem",
+  "startedAt": "2026-10-21T23:57:10.698Z",
   "attempts": 0,
-  "attemptsDate": "2026-10-19"
+  "attemptsDate": "2026-10-21"
  },
  "social_post_log": {
   "2026-09-25-provaveis-pagadores": {
@@ -232,6 +232,15 @@
    "count": 1,
    "fb": "1337364702788353_122127560553469153",
    "ig": "18092991281657456"
+  },
+  "2026-10-21-de-onde-vem": {
+   "date": "2026-10-21",
+   "at": "2026-10-21T23:56:23.695Z",
+   "image": "https://pedrofagundesoic.github.io/virtus-social/social/2026-10-21-de-onde-vem.png",
+   "kind": "queue",
+   "count": 1,
+   "fb": "1337364702788353_122127909825469153",
+   "ig": "18133892374750790"
   }
  }
 }
