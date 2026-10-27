@@ -1,11 +1,11 @@
 {
  "social_state": {
   "emptyNoticeDate": "2026-09-24",
-  "lastRunDate": "2026-10-25",
-  "lastSlug": "2026-10-25-ficha-do-ativo",
-  "startedAt": "2026-10-25T23:06:45.521Z",
+  "lastRunDate": "2026-10-26",
+  "lastSlug": "2026-10-26-tributacao-2026",
+  "startedAt": "2026-10-27T00:18:31.672Z",
   "attempts": 0,
-  "attemptsDate": "2026-10-25"
+  "attemptsDate": "2026-10-26"
  },
  "social_post_log": {
   "2026-09-25-provaveis-pagadores": {
@@ -277,6 +277,15 @@
    "count": 1,
    "fb": "1337364702788353_122129114511469153",
    "ig": "18110759582229357"
+  },
+  "2026-10-26-tributacao-2026": {
+   "date": "2026-10-26",
+   "at": "2026-10-27T00:17:56.401Z",
+   "image": "https://pedrofagundesoic.github.io/virtus-social/social/2026-10-26-tributacao-2026.png",
+   "kind": "queue",
+   "count": 1,
+   "fb": "1337364702788353_122129432919469153",
+   "ig": "17913624351544894"
   }
  }
 }
