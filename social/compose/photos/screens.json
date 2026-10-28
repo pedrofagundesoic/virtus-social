@@ -393,5 +393,96 @@
     2460
    ]
   ]
+ },
+ "life-metas-celular": {
+  "photo": "cGt31qWTT-A",
+  "shot": "m-metas.png",
+  "radius": 0.07,
+  "chroma": true,
+  "quad": [
+   [
+    955,
+    232
+   ],
+   [
+    1493,
+    232
+   ],
+   [
+    1503,
+    1330
+   ],
+   [
+    963,
+    1339
+   ]
+  ],
+  "crop": [
+   325,
+   0,
+   2126,
+   1688
+  ]
+ },
+ "life-mapa-celular": {
+  "photo": "7I9FWM61wKk",
+  "shot": "m-mapa.png",
+  "radius": 0.07,
+  "chroma": true,
+  "quad": [
+   [
+    1440,
+    190
+   ],
+   [
+    2084,
+    185
+   ],
+   [
+    2112,
+    1518
+   ],
+   [
+    1485,
+    1565
+   ]
+  ],
+  "crop": [
+   870,
+   0,
+   2671,
+   1688
+  ]
+ },
+ "life-ranking-notebook": {
+  "photo": "t6C97mhKcBg",
+  "shot": "d-ranking.png",
+  "radius": 0.004,
+  "chroma": true,
+  "blur": 0.6,
+  "quad": [
+   [
+    960,
+    999
+   ],
+   [
+    2891,
+    1180
+   ],
+   [
+    2751,
+    2378
+   ],
+   [
+    902,
+    2088
+   ]
+  ],
+  "crop": [
+   0,
+   600,
+   3000,
+   4350
+  ]
  }
 }

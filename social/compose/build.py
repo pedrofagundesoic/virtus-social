@@ -11,7 +11,7 @@ Famílias:  app  = cartão + screenshots reais em moldura. variant: phone | phon
            life = foto de pessoa real + aparelho sobreposto. device: phone | browser | tablet
                   | inphoto (print real já encaixado na tela da própria foto por photo-screen.py)
 Chaves do post: slug, family, variant/device, platform (iphone|android|web), shots[], photo, focal, kicker,
-                headline (<em> permitido, ≤ 2 linhas), sub, caption, date | evergreen:true,
+                headline (<em> permitido, ≤ 2 linhas), sub, caption, date | evergreen:true, photo_h (inphoto: altura px da foto no topo),
                 fade, crop, shot_h, offset, url, text_top (life)
 Rodar:  py -3.12 build.py            py -3.12 build.py --queue      py -3.12 build.py --prune
 """
@@ -162,6 +162,11 @@ def render_life(p):
                 '.txt{position:absolute;left:56px;right:56px;bottom:150px}.txt .kicker,.txt .headline,.txt .sub{position:static;width:auto}'
                 '.txt .headline{margin-top:12px}.txt .sub{margin-top:16px}')
         text = f'<div class="txt">{text}</div>'
+        if p.get('photo_h'):  # foto só no topo (fotos horizontais em que o aparelho ocupa a altura toda); embaixo, fundo escuro p/ o texto
+            h = p['photo_h']
+            css += (f'.bg{{inset:auto;top:0;left:0;right:0;height:{h}px;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 82%,transparent 100%);'
+                    f'mask-image:linear-gradient(180deg,#000 0,#000 82%,transparent 100%)}}'
+                    f'.shade{{background:linear-gradient(180deg,rgba(5,8,7,.25) 0%,rgba(5,8,7,0) 14%,rgba(5,8,7,0) {int(h/13.5*0.8)}%,rgba(5,8,7,.9) {int(h/13.5)}%,rgba(5,8,7,.98) 100%)}}')
     return f'''<!DOCTYPE html><html><head><meta charset="utf-8">{FONTS}<style>{css}</style></head><body><div class="stage">
 <div class="bg"><img src="{photo(p['photo'])}" style="object-position:{p.get('focal', 'center')}"></div><div class="shade"></div>
 <div class="top">{lockup()}</div>
