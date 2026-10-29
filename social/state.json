@@ -1,11 +1,11 @@
 {
  "social_state": {
   "emptyNoticeDate": "2026-09-24",
-  "lastRunDate": "2026-10-27",
-  "lastSlug": "2026-10-27-como-calculamos",
-  "startedAt": "2026-10-28T00:21:44.148Z",
+  "lastRunDate": "2026-10-28",
+  "lastSlug": "2026-10-28-calendario-12-meses",
+  "startedAt": "2026-10-29T00:41:41.585Z",
   "attempts": 0,
-  "attemptsDate": "2026-10-27"
+  "attemptsDate": "2026-10-28"
  },
  "social_post_log": {
   "2026-09-25-provaveis-pagadores": {
@@ -295,6 +295,15 @@
    "count": 1,
    "fb": "1337364702788353_122129751951469153",
    "ig": "18637419937041203"
+  },
+  "2026-10-28-calendario-12-meses": {
+   "date": "2026-10-28",
+   "at": "2026-10-29T00:41:25.224Z",
+   "image": "https://pedrofagundesoic.github.io/virtus-social/social/2026-10-28-calendario-12-meses.png",
+   "kind": "queue",
+   "count": 1,
+   "fb": "1337364702788353_122130053295469153",
+   "ig": "17926873242200474"
   }
  }
 }
