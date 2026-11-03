@@ -30,7 +30,7 @@ ficam em `%USERPROFILE%\.social.env` e nos Secrets do GitHub.
 ## D — Regras de publicação
 | # | Resposta |
 |---|---|
-| 13 | **18:00 `America/Sao_Paulo`** (janela 18:00–21:59). |
+| 13 | **18:00 `America/Sao_Paulo`** (janela 18:00–23:59; o GitHub atrasa os agendamentos, o post pode sair mais tarde). |
 | 14 | Temas: proventos recebidos · consolidação de carteiras de várias corretoras · calendário de dividendos · yield on cost · preço-alvo · ranking de dividendos · notificações de dividendos.<br>Proibidos: IA; recomendação de compra/venda de ativo específico; promessa de rentabilidade. |
 | 15 | Verde-escuro + preto, destaque dourado (do logo). Preto `#070707` · verde `#13271F` · verde barras `#1C4C3C` · dourado `#C4944C`. Logo PNG em `compose/assets/`. |
 | 16 | **Sim**: aprovar cada lote antes da fila. Automatizar depois. |

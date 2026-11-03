@@ -2,12 +2,16 @@ name: social-daily
 on:
   schedule:
     # Brasil sem horário de verão desde 2019: America/Sao_Paulo = UTC-3 o ano todo.
-    # O GitHub às vezes descarta agendamentos (20/10 perdeu dois): 4 tentativas na janela 18:00–21:59.
-    # O script posta 1×/dia (lastRunDate + janela em America/Sao_Paulo), então as repetições não duplicam post.
-    - cron: '5 21 * * *'   # 18:05 BRT
-    - cron: '5 22 * * *'   # 19:05 BRT
-    - cron: '5 23 * * *'   # 20:05 BRT
-    - cron: '5 0 * * *'    # 21:05 BRT (00:05 UTC do dia seguinte)
+    # O GitHub atrasa agendamentos em horas (02/11: 5h45) e às vezes os descarta. Por isso há tentativas antes da janela:
+    # no horário fazem nada; atrasadas, caem nela. O script posta 1×/dia, só de 18:00 a 23:59 de America/Sao_Paulo.
+    - cron: '37 18 * * *'  # 15:37 BRT
+    - cron: '37 19 * * *'  # 16:37 BRT
+    - cron: '37 20 * * *'  # 17:37 BRT
+    - cron: '37 21 * * *'  # 18:37 BRT
+    - cron: '37 22 * * *'  # 19:37 BRT
+    - cron: '37 23 * * *'  # 20:37 BRT
+    - cron: '37 0 * * *'   # 21:37 BRT (00:37 UTC do dia seguinte)
+    - cron: '37 9 * * *'   # 06:37 BRT: confere ontem; se ficou sem post, a execução falha e o GitHub avisa por e-mail
   workflow_dispatch:       # "Run workflow" = postar agora (só para UM dia perdido)
 permissions:
   contents: write          # para commitar social/state.json

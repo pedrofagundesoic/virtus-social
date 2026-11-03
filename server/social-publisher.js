@@ -26,17 +26,19 @@ export function createFileStore(file) {
   };
 }
 
-export function localNow(tz) {
+export function localNow(tz, now = new Date()) {
   const parts = new Intl.DateTimeFormat('en-US', {
     timeZone: tz, hourCycle: 'h23',
     year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit',
-  }).formatToParts(new Date()).reduce((o, p) => (o[p.type] = p.value, o), {});
+  }).formatToParts(now).reduce((o, p) => (o[p.type] = p.value, o), {});
   return { date: `${parts.year}-${parts.month}-${parts.day}`, hour: parseInt(parts.hour, 10), minute: parseInt(parts.minute, 10) };
 }
 
 export function createPublisher({ loadData, saveData, env = process.env, log = console }) {
   const TZ = env.SOCIAL_TZ || 'America/Sao_Paulo';
   const POST_HOUR = parseInt(env.SOCIAL_POST_HOUR || '18', 10);
+  const WINDOW_HOURS = 6;        // GitHub delays schedules by hours: accept anything until local midnight
+  const ALERT_BEFORE_HOUR = 15;  // morning runs check yesterday; the day's first attempt is 15:37
   const MANIFEST_URL = env.SOCIAL_MANIFEST_URL || '';
   const FB_PAGE_ID = env.FB_PAGE_ID || '';
   const FB_TOKEN = env.FB_PAGE_TOKEN || '';
@@ -117,9 +119,9 @@ export function createPublisher({ loadData, saveData, env = process.env, log = c
   }
 
   // One tick of the daily loop. Returns true when something was posted. Safe to call every minute.
-  async function tick() {
-    const { date, hour } = localNow(TZ);
-    if (hour < POST_HOUR || hour >= POST_HOUR + 4) return false;              // 18:00–21:59 window
+  async function tick(now = new Date()) {
+    const { date, hour } = localNow(TZ, now);
+    if (hour < POST_HOUR || hour >= POST_HOUR + WINDOW_HOURS) return false;   // 18:00–23:59 window
     const state = (await loadData('social_state')) || {};
     if (state.lastRunDate === date) return false;                              // already posted today
     if (state.attemptsDate === date && (state.attempts || 0) >= MAX_ATTEMPTS) return false;
@@ -135,6 +137,17 @@ export function createPublisher({ loadData, saveData, env = process.env, log = c
     return !!r.posted;
   }
 
+  // Returns yesterday's local date once if it ended without a post, so the run can fail and GitHub emails the owner.
+  async function checkMissed(now = new Date()) {
+    const { date, hour } = localNow(TZ, now);
+    if (hour >= ALERT_BEFORE_HOUR) return null;
+    const yesterday = new Date(Date.parse(`${date}T00:00:00Z`) - 86400000).toISOString().slice(0, 10);
+    const state = (await loadData('social_state')) || {};
+    if ((state.lastRunDate || '') >= yesterday || state.missAlertDate === yesterday) return null;
+    await saveData('social_state', { ...state, missAlertDate: yesterday });
+    return yesterday;
+  }
+
   const configured = !!(FB_PAGE_ID && FB_TOKEN && IG_USER_ID && MANIFEST_URL);
-  return { publish, tick, localNow: () => localNow(TZ), configured, TZ, POST_HOUR, MANIFEST_URL };
+  return { publish, tick, checkMissed, localNow: () => localNow(TZ), configured, TZ, POST_HOUR, MANIFEST_URL };
 }

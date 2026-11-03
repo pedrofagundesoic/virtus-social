@@ -23,4 +23,6 @@ if (arg === '--dry') {
 } else {
   const posted = await pub.tick();
   console.log(posted ? 'posted' : `nothing to do at ${JSON.stringify(pub.localNow())}`);
+  const missed = posted ? null : await pub.checkMissed();
+  if (missed) { console.error(`NO POST on ${missed}: every attempt missed the window or failed`); process.exitCode = 1; }
 }
