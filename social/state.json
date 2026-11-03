@@ -1,8 +1,8 @@
 {
  "social_state": {
   "emptyNoticeDate": "2026-09-24",
-  "lastRunDate": "2026-11-01",
-  "lastSlug": "2026-11-01-renda-passiva",
+  "lastRunDate": "2026-11-03",
+  "lastSlug": "2026-11-02-preco-justo",
   "startedAt": "2026-11-02T00:27:56.914Z",
   "attempts": 0,
   "attemptsDate": "2026-11-01"
@@ -340,6 +340,15 @@
    "count": 1,
    "fb": "1337364702788353_122131185879469153",
    "ig": "18100649486413594"
+  },
+  "2026-11-02-preco-justo": {
+   "date": "2026-11-03",
+   "at": "2026-11-03T23:32:17.921Z",
+   "image": "https://pedrofagundesoic.github.io/virtus-social/social/2026-11-02-preco-justo.png",
+   "kind": "queue",
+   "count": 1,
+   "fb": "1337364702788353_122131767915469153",
+   "ig": "18169284619485737"
   }
  }
 }
