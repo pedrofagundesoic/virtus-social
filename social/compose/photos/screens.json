@@ -484,5 +484,126 @@
    3000,
    4350
   ]
+ },
+ "life-ibov-celular": {
+  "photo": "9pU79inr60E",
+  "shot": "m-carteira-ibov.png",
+  "radius": 0.08,
+  "chroma": true,
+  "quad": [
+   [
+    1100,
+    1191
+   ],
+   [
+    1836,
+    1026
+   ],
+   [
+    2167,
+    2557
+   ],
+   [
+    1468,
+    2726
+   ]
+  ],
+  "crop": [
+   458,
+   700,
+   2801,
+   3000
+  ]
+ },
+ "life-precojusto-notebook": {
+  "photo": "aXIshKbMgno",
+  "shot": "d-precojusto.png",
+  "radius": 0.004,
+  "chroma": true,
+  "blur": 0.6,
+  "quad": [
+   [
+    1616,
+    119
+   ],
+   [
+    2846,
+    488
+   ],
+   [
+    2574,
+    1429
+   ],
+   [
+    1420,
+    956
+   ]
+  ],
+  "crop": [
+   713,
+   0,
+   3000,
+   2143
+  ]
+ },
+ "life-proximos-sofa": {
+  "photo": "qBFyprJYWi4",
+  "shot": "m-proximos.png",
+  "radius": 0.08,
+  "chroma": true,
+  "quad": [
+   [
+    686,
+    328
+   ],
+   [
+    1127,
+    203
+   ],
+   [
+    1458,
+    1138
+   ],
+   [
+    1046,
+    1312
+   ]
+  ],
+  "crop": [
+   0,
+   0,
+   1801,
+   1688
+  ]
+ },
+ "life-story-precojusto": {
+  "photo": "hBsW-NocIZY",
+  "shot": "m-precojusto.png",
+  "radius": 0.075,
+  "chroma": true,
+  "quad": [
+   [
+    907,
+    1332
+   ],
+   [
+    1834,
+    1320
+   ],
+   [
+    1821,
+    3288
+   ],
+   [
+    915,
+    3288
+   ]
+  ],
+  "crop": [
+   143,
+   148,
+   2597,
+   4511
+  ]
  }
 }

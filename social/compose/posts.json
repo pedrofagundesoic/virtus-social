@@ -633,5 +633,120 @@
     "headline": "De um mês <em>a cinco anos</em>",
     "sub": "O gráfico de cotação de cada ativo, com preço diário, logo acima da sua posição.",
     "caption": "Uma queda de uma semana assusta. Em cinco anos, ela pode nem aparecer.\n\nNo app do Virtus, cada ativo tem o gráfico de cotação com preço diário e cinco janelas: 1M, 3M, 6M, 1A e 5A. Logo abaixo, a sua posição, os proventos e as movimentações.\n\nCrie sua conta gratuita — virtusapp.com.br, link na bio.\n\nDados de amostra. Não é recomendação de investimento.\n\n#investimentos #acoes #bolsadevalores #longoprazo #b3"
+  },
+  {
+    "slug": "2026-11-11-radar-insiders",
+    "family": "app",
+    "variant": "web",
+    "platform": "web",
+    "shots": [
+      "d-radar.png"
+    ],
+    "shot_h": 600,
+    "fade": 82,
+    "date": "2026-11-11",
+    "kicker": "RADAR DE INSIDERS · PREMIUM",
+    "headline": "Quem administra <em>está comprando?</em>",
+    "sub": "Negociações de diretores e conselheiros nas próprias empresas, com dados da CVM, em 251 empresas.",
+    "caption": "Diretores e conselheiros precisam informar à CVM quando negociam ações da própria empresa. A informação é pública, mas fica espalhada.\n\nO Radar de insiders do Virtus junta tudo em uma lista: 251 empresas acompanhadas, janela de 6 meses, com filtros para quem está comprando ou vendendo e para a sua carteira.\n\nNegociações podem ter motivos pessoais e não indicam, por si só, a direção do preço.\n\nCrie sua conta gratuita — virtusapp.com.br, link na bio.\n\nDados de amostra. Não é recomendação de investimento.\n\n#insiders #cvm #investimentos #acoes #bolsadevalores #b3"
+  },
+  {
+    "slug": "2026-11-12-o-que-vai-cair",
+    "family": "life",
+    "device": "inphoto",
+    "platform": "web",
+    "photo": "life-proximos-sofa",
+    "photo_h": 1010,
+    "date": "2026-11-12",
+    "kicker": "PRÓXIMOS PAGAMENTOS",
+    "headline": "O que cai <em>na sua conta</em>",
+    "sub": "Proventos já anunciados, com data, tipo, valor por cota e a estimativa pela sua posição.",
+    "caption": "Você sabe o que vai cair na sua conta nas próximas semanas?\n\nNo Virtus, os proventos já anunciados aparecem em ordem de data, com tipo, valor por cota e estimativa pela sua posição. Na imagem: 9 anunciados, cerca de R$ 466,41 no total.\n\nNo celular, direto pelo navegador.\n\nCrie sua conta gratuita — virtusapp.com.br, link na bio.\n\nDados de amostra. Não é recomendação de investimento.\n\n#proventos #dividendos #rendapassiva #fiis #investimentos #b3"
+  },
+  {
+    "slug": "2026-11-13-comparacao-pares",
+    "family": "app",
+    "variant": "phone",
+    "platform": "android",
+    "shots": [
+      "pares-safety.png"
+    ],
+    "fade": 92,
+    "date": "2026-11-13",
+    "kicker": "COMPARAÇÃO COM PARES · PREMIUM",
+    "headline": "A empresa <em>ao lado do setor</em>",
+    "sub": "P/L, P/VP, dividend yield e ROE das empresas do mesmo setor, na tela do próprio ativo.",
+    "caption": "Um P/L sozinho diz pouco. Ao lado das outras empresas do setor, diz bem mais.\n\nNo Virtus, a aba Fundamentos de cada ativo traz a comparação com pares: P/L, P/VP, dividend yield e ROE, lado a lado. Na imagem, o setor de energia.\n\nLogo abaixo, o Safety score, que na imagem marca 83, com 9 anos consecutivos pagando.\n\nCrie sua conta gratuita — virtusapp.com.br, link na bio.\n\nDados de amostra. Não é recomendação de investimento.\n\n#analisefundamentalista #acoes #dividendos #investimentos #b3"
+  },
+  {
+    "slug": "2026-11-14-preco-justo-site",
+    "family": "life",
+    "device": "inphoto",
+    "platform": "web",
+    "photo": "life-precojusto-notebook",
+    "photo_h": 1010,
+    "date": "2026-11-14",
+    "kicker": "PREÇO JUSTO · PREMIUM",
+    "headline": "Bazin, Graham e Gordon <em>no site</em>",
+    "sub": "O preço justo pelos três métodos, com a fórmula aberta, agora também no computador.",
+    "caption": "O preço justo pelos métodos de Bazin, Graham e Gordon agora também está no site do Virtus.\n\nNa imagem, os três métodos para o mesmo ativo: R$ 76,50, R$ 24,44 e R$ 67,54. Métodos diferentes chegam a números diferentes, e por isso cada um vem com a fórmula e os dados usados.\n\nNa mesma página, Snowflake, Safety score e a movimentação da diretoria.\n\nCrie sua conta gratuita — virtusapp.com.br, link na bio.\n\nDados de amostra. Não é recomendação de investimento.\n\n#precojusto #bazin #graham #valuation #dividendos #b3"
+  },
+  {
+    "slug": "2026-11-15-movimentacao-diretoria",
+    "family": "app",
+    "variant": "phone",
+    "platform": "web",
+    "shots": [
+      "m-diretoria.png"
+    ],
+    "fade": 90,
+    "date": "2026-11-15",
+    "kicker": "MOVIMENTAÇÃO DA DIRETORIA · PREMIUM",
+    "headline": "Compras e vendas <em>de quem administra</em>",
+    "sub": "Um selo diz se a diretoria está comprando ou vendendo, e se o movimento é relevante.",
+    "caption": "Comprou ou vendeu não basta. Também importa o tamanho.\n\nNo detalhe de cada ação, o Virtus mostra as negociações da administração divulgadas à CVM, mês a mês, e compara com o valor de mercado. Na imagem: R$ 254,3 mil em compras, R$ 33,4 mil em vendas e o selo \"pouco relevante\".\n\nNegociações podem ter motivos pessoais e não indicam, por si só, a direção do preço.\n\nCrie sua conta gratuita — virtusapp.com.br, link na bio.\n\nDados de amostra. Não é recomendação de investimento.\n\n#insiders #cvm #acoes #investimentos #b3"
+  },
+  {
+    "slug": "2026-11-16-ganhando-do-ibovespa",
+    "family": "life",
+    "device": "inphoto",
+    "platform": "web",
+    "photo": "life-ibov-celular",
+    "photo_h": 1060,
+    "date": "2026-11-16",
+    "kicker": "CARTEIRA × IBOVESPA",
+    "headline": "Está ganhando <em>do Ibovespa?</em>",
+    "sub": "O gráfico de 12 meses compara a sua carteira com o índice, dia a dia. Grátis.",
+    "caption": "Sua carteira está ganhando do Ibovespa? Dá para responder sem planilha.\n\nNo Virtus, o gráfico de 12 meses mostra a sua rentabilidade contra o índice. Na imagem: carteira +13,86% e Ibovespa +11,11%.\n\nEssa comparação faz parte do plano grátis.\n\nCrie sua conta gratuita — virtusapp.com.br, link na bio.\n\nDados de amostra. Não é recomendação de investimento.\n\n#ibovespa #investimentos #carteiradeinvestimentos #dividendos #b3"
+  },
+  {
+    "slug": "2026-11-17-como-usar",
+    "family": "app",
+    "variant": "phone",
+    "platform": "android",
+    "shots": [
+      "playbook.png"
+    ],
+    "fade": 92,
+    "date": "2026-11-17",
+    "kicker": "COMECE POR AQUI",
+    "headline": "O Virtus <em>em quatro passos</em>",
+    "sub": "Cadastrar ativos, registrar proventos, separar aportes e acompanhar a rentabilidade.",
+    "caption": "Por onde começar?\n\nO guia \"Como usar o Virtus\" fica na aba Conta e resume o caminho em quatro passos: cadastrar os ativos, registrar proventos e eventos, separar o aporte próprio do rendimento e acompanhar a rentabilidade.\n\nE em qualquer card, o ícone (i) explica como o número é calculado.\n\nCrie sua conta gratuita — virtusapp.com.br, link na bio.\n\nDados de amostra. Não é recomendação de investimento.\n\n#investimentos #carteiradeinvestimentos #organizacaofinanceira #dividendos #b3"
+  },
+  {
+    "slug": "2026-11-18-bateu-o-cdi",
+    "family": "app",
+    "variant": "phone",
+    "platform": "android",
+    "shots": [
+      "home-cdi.png"
+    ],
+    "fade": 92,
+    "date": "2026-11-18",
+    "kicker": "CARTEIRA × CDI",
+    "headline": "Sua carteira <em>bateu o CDI?</em>",
+    "sub": "A tela inicial mostra quanto a carteira rendeu em 12 meses e quanto isso representa do CDI.",
+    "caption": "Correr risco na bolsa e ficar atrás da renda fixa acontece.\n\nNo app do Virtus, a tela inicial responde: na imagem, R$ 8.657,65 em 12 meses, +13,88%, o que dá 97% do CDI. Essa carteira ficou um pouco atrás.\n\nCom o número na tela, fica mais fácil avaliar a própria carteira.\n\nCrie sua conta gratuita — virtusapp.com.br, link na bio.\n\nDados de amostra. Não é recomendação de investimento.\n\n#cdi #rendafixa #investimentos #carteiradeinvestimentos #b3"
   }
 ]

@@ -111,10 +111,15 @@ def make(out_id, e):
         sel = np.asarray(sel.filter(ImageFilter.GaussianBlur(6))).astype(float) / 255
         keep = sel * np.asarray(gm) / 255 + (1 - sel)
         layer.putalpha(Image.fromarray((np.asarray(layer.getchannel('A')).astype(float) * keep).astype('uint8')))
-        # despill: tira o reflexo verde da tela na pele/moldura em volta
-        arr = np.asarray(warped).astype(float); r, gg, b = arr[..., 0], arr[..., 1], arr[..., 2]
-        lim = np.maximum(r, b) * 1.04; spill = gg > lim
-        arr[..., 1] = np.where(spill, lim, gg); warped = Image.fromarray(arr.clip(0, 255).astype('uint8'), 'RGBA')
+        # despill só em volta da tela e só em tons quentes (pele): tira o reflexo verde sem mexer no resto da foto
+        arr = np.asarray(warped).astype(float); r, gg, bl = arr[..., 0], arr[..., 1], arr[..., 2]
+        xs, ys = [p[0] for p in quad], [p[1] for p in quad]; m = 220
+        near = np.zeros(r.shape, bool); near[max(0, min(ys) - m):max(ys) + m, max(0, min(xs) - m):max(xs) + m] = True
+        f = e.get('despill', 0.86)
+        spill = near & (gg > r) & (r > bl * 1.15) & (r > 60)   # só pixel de fato esverdeado: g > r; neutros e fundo ficam intactos
+        arr[..., 1] = np.where(spill, r * f, gg)
+        arr[..., 2] = np.where(spill, np.maximum(bl, r * f * 0.72), bl)   # devolve o azul que o verde "comeu" (senão fica laranja)
+        warped = Image.fromarray(arr.clip(0, 255).astype('uint8'), 'RGBA')
     warped.alpha_composite(layer)
     leftover_check(photo, quad, layer.getchannel('A'))
     img = warped.convert('RGB')

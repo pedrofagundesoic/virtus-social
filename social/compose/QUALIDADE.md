@@ -36,3 +36,11 @@ O dono aprovou pelo volume, mas pediu registro.
 
 **Achado retroativo (19/10):** a checagem nova também acusou `life-patrimonio-iphone` (post de 30/09): fresta da
 barra roxa da tela original na base do aparelho. Já publicado; fica como evidência de que a revisão no olho não basta.
+
+## 2026-11-04 · Aprendizados deste lote (não chegou a publicar)
+
+- **Tela verde é o melhor caminho:** `--detect-green` + `chroma: true`. Dedos e notch ficam exatos.
+- **Reflexo verde na pele:** o despill só pode tocar pixel com `g > r` e tom quente. A primeira versão (`g > r*0.86`) pintou de rosa os fundos neutros num retângulo em volta da tela. Conferir o fundo, não só o aparelho.
+- **Não mostrar "Recomendada" nos prints:** o nome está em troca (`APP-CORRECOES.md`, item 1.1). No site, capturar com largura ≤ 1000 px, que esconde a barra lateral, ou no celular.
+- **Conferir o print antes:** "Todos" quebrado no Android e "BVAR11 >999%" apareciam em telas candidatas. Se o defeito é do app, trocar a tela ou a plataforma.
+

@@ -2,11 +2,11 @@
 
 Substitui `SUGESTOES-APP.md`, `-2`, `-3` e `-4` (rodadas de 24/09, 29/09, 07/10 e 13/10/2026; o texto completo de cada uma está no histórico do git).
 
-**Última verificação:** 28/10/2026.
+**Última verificação:** 04/11/2026.
 - **Web:** desktop 1440×900 e celular 390×844.
-- **Android:** **v1.4.1** (Galaxy S25).
+- **Android:** **v1.5.0** (Galaxy S25).
 - **Conta de testes:** 15 ativos em 4 corretoras, compras de 2022–2023.
-- **Fontes de conferência:** CSV exportado pelo próprio app, Yahoo Finance, Banco Central (séries 433, 4389 e 13522) e API da BRAPI.
+- **Fontes de conferência:** CSV exportado pelo próprio app, Yahoo Finance, Banco Central (séries 432, 433, 4389 e 13522) e API da BRAPI.
 
 **Como usar:**
 1. **Seção 1:** o que falta corrigir.
@@ -17,59 +17,74 @@ Substitui `SUGESTOES-APP.md`, `-2`, `-3` e `-4` (rodadas de 24/09, 29/09, 07/10 
 
 ## 1. Em aberto
 
-### 🔴 1.1 Preço justo, Snowflake e Safety score existem no Android, mas não no site (novo, 28/10)
+### 🔴 1.1 Trocar o nome "Carteira Recomendada", no site e no app (pedido do dono, 04/11)
 
-**Onde:** no Android 1.4.1, o detalhe do ativo → aba **Fundamentos** tem:
-- **Preço justo — 3 métodos** (Bazin, Graham e Gordon), com fórmula e margem;
-- **Snowflake** (5 dimensões);
-- **Comparação com pares**;
-- **Safety score**.
+**O problema:** o nome sugere que o Virtus recomenda ativos, o que não é permitido sem o credenciamento adequado. Ele também contradiz o aviso da própria página ("Não realizamos quaisquer recomendações de compra, venda ou manutenção"). Outros sites que não fazem recomendação usam nomes como "Radar" ou "Oportunidade".
 
-No site, o detalhe do mesmo ativo (`/ativo/…`) mostra só P/L, P/VP, DY e ROE.
+**Nome sugerido: Titãs da Renda.** Tem personalidade, descreve o foco em renda passiva e não promete resultado futuro.
 
-**Por que é prioritário:** a página de planos do site anuncia no Premium "**Preços justos pelos métodos de Bazin, Graham e Gordon**". Quem assina pelo site não encontra a função no site.
+| Opção | Comentário |
+|---|---|
+| **Titãs da Renda** (sugerido) | Forte, próprio, liga com o foco em proventos |
+| Elite da Renda | Boa alternativa, um pouco mais genérica |
+| Imperadoras | Único e memorável, mas não diz do que se trata; pediria um subtítulo |
+| Campeãs do Virtus / Vencedoras | Têm personalidade, mas "vencedoras" pode soar como promessa de resultado |
+| Radar / Mapa | Evitar: já existem "Radar de insiders" e "Mapa de Dividendos" |
 
-**Sugestão:** levar a aba Fundamentos inteira para a web, com o mesmo cálculo e as mesmas fontes do app, para os números baterem entre as plataformas.
+Antes de lançar, vale checar se o nome escolhido está livre (marca e lojas de apps).
 
-### 🔴 1.2 Total de proventos caiu mais do que as duplicatas apontadas (novo, 28/10)
+**Onde trocar:**
 
-A deduplicação do item 1.1 da rodada anterior foi feita. O CSV não tem mais os pares duplicados, e as parcelas legítimas de PETR4 e KLBN11 continuam lá ✔. Mas a queda passou do que tinha sido identificado:
+| Plataforma | Local | Hoje |
+|---|---|---|
+| Site | Barra lateral, seção Premium | "Recomendada" |
+| Site | Título da página | "Carteira Recomendada" |
+| Site | Análises → Análises premium | "Carteira Recomendada" |
+| Site | Endereço | `/carteira-recomendada` → novo endereço, com redirecionamento 301 do antigo |
+| App (Android e iOS) | Análises → card | "Carteira Recomendada" |
+| App (Android e iOS) | Título da tela, notificações e deep links | conferir |
+| Fora do app | Lojas, e-mails, tela de assinatura, textos de ajuda | conferir |
 
-| | Antes (19/10) | Agora (28/10) | Diferença | Esperado pelas duplicatas apontadas |
-|---|---|---|---|---|
-| Total recebido (histórico) | R$ 25.043,61 | R$ 24.015,12 | **−R$ 1.028,49** | −R$ 639,55 (R$ 498,79 + R$ 140,76 inconclusivos de ITSA4) |
-| ITSA4 (total do ativo) | R$ 2.690,59 | R$ 2.275,26 | −R$ 415,33 | −R$ 238,11 |
-| PETR4 (total do ativo) | R$ 4.292,67 | R$ 3.962,47 | −R$ 330,20 | −R$ 103,02 |
-| JCP bruto 2026 (Virtus IR) | R$ 1.272,84 | R$ 1.155,75 | −R$ 117,09 | −R$ 97,35 |
+**Só o nome não resolve.** O conteúdo da página também usa termos de recomendação:
+- "**peso sugerido 20%**" → por exemplo, "participação no estudo: 20%";
+- "**Tese de investimento**" → por exemplo, "Por que está na lista";
+- "**Encaixe na carteira**" → por exemplo, "Perfil de renda";
+- subtítulo novo: "Estudo por setor com base no método VRE. Não é recomendação de investimento."
 
-Além disso, entre 19/10 e 28/10 entraram pagamentos novos (BTLG11 e XPML11 em 23/10), o que deveria ter **aumentado** o total.
+**Vale passar pelo jurídico:** um nome diferente não muda o enquadramento se a página continuar indicando ativos e pesos. Verificar com o advogado as regras da CVM para analistas e consultores (Resoluções CVM 20 e 19).
 
-**Pergunta para o desenvolvedor:**
-- Que outros registros de ITSA4 e PETR4 foram removidos além dos listados?
-- Eles eram mesmo duplicados na fonte oficial?
-- Exemplo: hoje PETR4 com data-com 27/04/2023 aparece **cinco** vezes no CSV, em 19/05, 16/06 (duas vezes cada) e 27/12/2023. Antes eram duas.
+### 🟡 1.2 P/VP não bate com o VPA usado no Graham (novo, 04/11)
 
-### 🟡 1.3 Ranking com DY fora da realidade (novo, 28/10)
+Web → detalhe de BBSE3: **P/VP 7,37**, cotação R$ 37,99 e, na mesma tela, **VPA R$ 5,61** (fórmula de Graham). R$ 37,99 ÷ 5,61 = **6,77**. O 7,37 implica VPA de R$ 5,15. O P/L já foi alinhado (8,03 = 37,99 ÷ 4,73); falta fazer o mesmo com o P/VP.
 
-Web → **Melhores Pagadoras**: o 8º colocado, **BVAR11**, aparece com "**DY 5a >999%**" e score 86. É um outlier de dado (provavelmente um evento de capital ou uma cotação errada). **Sugestão:** limitar o DY, por exemplo excluindo eventos acima de 100% ao ano da média de 5 anos, e não dar score a ativos com dado inconsistente.
+### 🟡 1.3 Android: botão "Todos" quebra em duas linhas (novo, 04/11)
 
-### 🟡 1.4 Safety score: "Payout 13" ao lado de "payout implícito ≈ 100%" (novo, 28/10)
+Detalhe do ativo → Movimentação da diretoria: o filtro aparece como "Todo / s". **Sugestão:** diminuir o espaçamento dos três botões ou permitir rolagem horizontal.
 
-Android → BBSE3 → Safety score: o subtítulo diz "payout implícito ≈ 100%" e a barra de componente diz "Payout **13**". Para o usuário parece contradição. **Sugestão:** deixar claro na barra que 13 é a **nota** do componente (de 0 a 100) e que o payout medido é ≈ 100%. Por exemplo: "Payout (≈100%) · nota 13".
+### 🟡 1.4 Android: botão "Adicionar" cobre o gráfico da tela inicial (novo, 04/11)
 
-### ⚪ 1.5 Conferir (inconclusivo, para o desenvolvedor)
+Carteira → Rentabilidade · 12 meses: ao abrir o app, o botão flutuante fica sobre a parte final do gráfico, justamente os dias mais recentes. **Sugestão:** recolher o botão para só o ícone "+" ao rolar, ou reposicioná-lo fora da área do gráfico.
 
-- **Comparação com pares (Android):**
-  - todos os DY aparecem como números inteiros (16,00 · 14,00 · 11,00 · 10,00 · 9,00), o que sugere valor estimado ou arredondado;
-  - BSLI3 aparece com P/L 1,72 e P/VP 0,30.
-  - Vale conferir a fonte e a data desses números.
-- **Graham (BBSE3):** o preço justo aparece como **R$ 24,44**.
-  - Com VPA R$ 5,61 e o LPA implícito no P/L de 9,11 a R$ 41,57 (LPA ≈ 4,56), a fórmula √(22,5 × LPA × VPA) dá **≈ R$ 23,99**.
-  - Diferença de ~2%, provavelmente porque o LPA vem de um período diferente do usado no P/L. Vale usar o mesmo LPA nos dois lugares.
-  - Bazin (R$ 76,50) e Gordon (R$ 67,54) conferem com dividendos de 12 meses de ≈ R$ 4,59 por ação.
-- **"Inspirado em Simply Wall St."** aparece na tela do Snowflake. É menção a marca de terceiro; vale avaliar com o jurídico.
+### 🟡 1.5 Site no celular: "Passe o mouse para ver cada dia" (novo, 04/11)
 
-### ⚪ 1.6 Não verificados desde 24/09
+Carteira → Visão geral, em tela de celular. Não há mouse no celular. **Sugestão:** "Toque no gráfico para ver cada dia".
+
+### 🟡 1.6 Radar de insiders: termos e nomes (novo, 04/11)
+
+- "**148,35 bp do valor**" é jargão. Sugestão: "1,48% do valor de mercado".
+- KLBN11 aparece como "**Klabin SA Ctf de Deposito de Acoes Cons of 1 Sh + 4 Pfd Shs**". Sugestão: usar o nome curto da empresa.
+- No card, com tudo zerado, o saldo aparece como "+R$ 0". Sugestão: "R$ 0".
+
+### ⚪ 1.7 Para o desenvolvedor conferir (inconclusivo)
+
+- **Dietz × TWR (Android, Análises → Métricas de carteira):** "TWR 13,88%" e "Dietz 45,83%", na mesma janela de 365 dias. Sem aportes no período, os dois deveriam ficar próximos. Os lançamentos da conta são de 2022–2023, então parece que o Dietz está usando outra janela.
+- **Site em telas de 320 px:** o seletor "Ibovespa | CDI" sai da tela e a barra inferior fica parcialmente fora da área visível (visto em simulação; em 360 e 390 px está certo).
+
+### ⚪ 1.8 Da especificação da Movimentação da diretoria, ainda não testados
+
+Assinante vê tudo, mas não testei com conta grátis (card borrado). Também não testei: notificação de mudança de selo, chip na Carteira e na Watchlist, PETR3 × PETR4 com o mesmo card, detector de rotina em ITUB4, textos nas lojas e o backtest da seção 2.7.
+
+### ⚪ 1.9 Não verificados desde 24/09
 
 Ficam para quando houver tempo de testar o cadastro de ponta a ponta.
 
@@ -85,7 +100,9 @@ Doc 2:
 
 ---
 
-## 2. Nova função Premium: **Movimentação da diretoria** (insiders)
+## 2. Função Premium: **Movimentação da diretoria** (insiders)
+
+**Situação em 04/11:** implementada no site e no Android 1.5.0, com card no ativo, Radar de insiders e item na página de planos. Os selos de PETR4 conferem com a tabela da 2.4 ("comprando · pouco relevante", R$ 254,3 mil × R$ 33,4 mil, 0,003 bp, controlador vendeu R$ 9 bi). Falta o que está em 1.8. A especificação fica aqui como referência.
 
 > Pedido do dono, 28/10/2026. Usa o novo endpoint da BRAPI Pro `GET /api/v2/stocks/insider-transactions` (dados oficiais da CVM desde 2018). Tudo o que está aqui foi testado na API real com PETR4, VALE3, MGLU3 e ITUB4, os tickers liberados sem token: 5.747 registros.
 
@@ -295,6 +312,13 @@ Esses números saem da API como ela respondeu em 28/10/2026 e podem mudar com re
 | BTLG11 sem corretora / "NUINV" nos filtros (Android) | 28/10 | "Fundos Imobiliários · NuInvest"; filtros "BTG Pactual", "Inter"… |
 | Ponto decimal em P/L e P/VP (web) | 28/10 | "9,11" e "7,69" |
 | Duas médias no mesmo gráfico (web) | 28/10 | "média R$ 486,82/mês" na linha e na legenda |
+| Preço justo, Snowflake, Safety score e pares só no Android | 04/11 | Agora também no detalhe do ativo no site |
+| Queda de proventos maior que as duplicatas | 04/11 | Conferido com a Yahoo: ITSA4 R$ 2.161,91 × R$ 2.159,30. TAEE11 difere R$ 90,03, exatamente os dois pagamentos de 26/11 ainda não recebidos |
+| BVAR11 com "DY 5a >999%" no Ranking | 04/11 | Saiu da lista |
+| Safety score "Payout 13" × "payout ≈ 100%" | 04/11 | "Payout ≈96% · nota 18", com legenda explicando as barras |
+| Comparação com pares com DY inteiro | 04/11 | DY com decimais (ex.: 29,54 · 23,88) |
+| LPA do Graham diferente do P/L | 04/11 | Mesmo LPA nos dois (R$ 4,73), com a data do balanço na tela |
+| "Inspirado em Simply Wall St." no Snowflake | 04/11 | Removido |
 
 ## 4. Conferido e descartado (não era erro)
 
@@ -306,3 +330,4 @@ Esses números saem da API como ela respondeu em 28/10/2026 e podem mudar com re
 | "Contexto macro": IPCA 12m 4,58%, CDI 13,65% (19/10) | Conferem com as séries 13522 e 4389 do BCB |
 | PETR4 e KLBN11 com o mesmo provento pago 2–3 vezes (19/10) | São parcelas de um mesmo evento |
 | Preço justo Bazin R$ 76,50 e Gordon R$ 67,54 (BBSE3, 28/10) | Batem com dividendos de 12 meses de ≈ R$ 4,59 por ação: 4,59 ÷ 6% e 4,59 × 1,03 ÷ (10% − 3%) |
+| "Sem negociações" em BBSE3 com vendas na lista (04/11) | As vendas são de mar/2026 ou antes, fora da janela de 6 meses por data de divulgação |

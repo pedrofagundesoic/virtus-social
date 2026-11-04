@@ -7,3 +7,4 @@ social/compose/out/
 social/compose/screens/**/*.png
 social/compose/photos/*.jpg
 social/compose/photos/qa/
+social/stories/*-preview.png
