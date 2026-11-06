@@ -1,11 +1,11 @@
 {
  "social_state": {
   "emptyNoticeDate": "2026-09-24",
-  "lastRunDate": "2026-11-05",
-  "lastSlug": "2026-11-04-snowflake",
-  "startedAt": "2026-11-05T23:50:33.671Z",
+  "lastRunDate": "2026-11-06",
+  "lastSlug": "2026-11-05-watchlist-web",
+  "startedAt": "2026-11-06T23:29:21.181Z",
   "attempts": 0,
-  "attemptsDate": "2026-11-05"
+  "attemptsDate": "2026-11-06"
  },
  "social_post_log": {
   "2026-09-25-provaveis-pagadores": {
@@ -367,6 +367,16 @@
    "count": 1,
    "fb": "1337364702788353_122132409597469153",
    "ig": "18182378320433443"
+  },
+  "2026-11-05-watchlist-web": {
+   "date": "2026-11-06",
+   "at": "2026-11-06T23:29:11.364Z",
+   "image": "https://pedrofagundesoic.github.io/virtus-social/social/2026-11-05-watchlist-web.png",
+   "kind": "queue",
+   "count": 1,
+   "fb": "1337364702788353_122132724381469153",
+   "ig": null,
+   "igError": "17841435716820111/media_publish: Media ID is not available"
   }
  }
 }
