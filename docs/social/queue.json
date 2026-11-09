@@ -2,36 +2,6 @@
  "_readme": "Fila diária. posts = datados ainda não publicados, em ordem (postados uma vez quando vencem). evergreen = banco: nunca postado primeiro, depois o menos recente com ≥ SOCIAL_REPEAT_DAYS (21). Já publicados ficam só em social/compose/posts.json. Gerado por build.py --queue — nunca editar à mão.",
  "posts": [
   {
-   "slug": "2026-11-03-metas-no-celular",
-   "image": "2026-11-03-metas-no-celular.png",
-   "caption": "Meta que você não vê, você esquece.\n\nNo Virtus, as metas de patrimônio e de renda passiva ficam a um toque. Na imagem: 45% da meta de patrimônio (R$ 67.970,60 de R$ 150.000,00), 49% da meta de renda (R$ 5.841,89 de R$ 12.000,00) e aporte necessário de R$ 1.640,59 por mês.\n\nNo celular, direto pelo navegador.\n\nCrie sua conta gratuita — virtusapp.com.br, link na bio.\n\nDados de amostra. Não é recomendação de investimento.\n\n#metasfinanceiras #rendapassiva #investimentos #dividendos #planejamentofinanceiro",
-   "date": "2026-11-03"
-  },
-  {
-   "slug": "2026-11-04-snowflake",
-   "image": "2026-11-04-snowflake.png",
-   "caption": "Uma nota só esconde muita coisa. Cinco mostram onde a empresa é forte e onde é fraca.\n\nO Snowflake do Virtus avalia cada ação em cinco dimensões. Na imagem: 16 de 30 pontos — histórico 6/6 e proventos 6/6, mas saúde 0/6 e futuro 1/6.\n\nQuando falta dado, a dimensão pontua zero: o app não inventa número.\n\nCrie sua conta gratuita — virtusapp.com.br, link na bio.\n\nDados de amostra. Não é recomendação de investimento.\n\n#analisefundamentalista #acoes #dividendos #investimentos #b3",
-   "date": "2026-11-04"
-  },
-  {
-   "slug": "2026-11-05-watchlist-web",
-   "image": "2026-11-05-watchlist-web.png",
-   "caption": "Nem todo ativo que te interessa já está na carteira.\n\nNa Watchlist do Virtus, você acompanha ações brasileiras e americanas sem misturar com o que já comprou. Na imagem, 5 ativos acompanhados — de BBAS3 ao VOO, cotado em dólar.\n\nNo computador ou no celular, com a mesma conta.\n\nCrie sua conta gratuita — virtusapp.com.br, link na bio.\n\nDados de amostra. Não é recomendação de investimento.\n\n#watchlist #investimentos #acoes #bolsadevalores #b3",
-   "date": "2026-11-05"
-  },
-  {
-   "slug": "2026-11-06-ranking-notebook",
-   "image": "2026-11-06-ranking-notebook.png",
-   "caption": "Pagar dividendo num ano bom é fácil. Pagar por décadas é outra história.\n\nO ranking Melhores Pagadoras do Virtus dá um score de 0 a 100 a partir do histórico de proventos desde o Plano Real, ajustado por desdobramentos e corrigido pelo IPCA. Na imagem, no topo: CGRA4 com score 89 e 27 anos pagando.\n\nRentabilidade passada não garante resultados futuros.\n\nCrie sua conta gratuita — virtusapp.com.br, link na bio.\n\nDados de amostra. Não é recomendação de investimento.\n\n#dividendos #ranking #rendapassiva #investimentos #b3",
-   "date": "2026-11-06"
-  },
-  {
-   "slug": "2026-11-07-safety-score",
-   "image": "2026-11-07-safety-score.png",
-   "caption": "Dividend yield alto chama atenção. Mas ele vai continuar?\n\nO Safety score do Virtus resume a segurança do dividendo em uma nota de 0 a 100. Na imagem: 57, classificado como médio, com 14 anos consecutivos pagando — histórico 100, sanidade do yield 75 e crescimento 66.\n\nO ícone (i) explica como cada componente é calculado.\n\nCrie sua conta gratuita — virtusapp.com.br, link na bio.\n\nDados de amostra. Não é recomendação de investimento.\n\n#dividendos #rendapassiva #analisefundamentalista #investimentos #b3",
-   "date": "2026-11-07"
-  },
-  {
    "slug": "2026-11-08-mapa-no-celular",
    "image": "2026-11-08-mapa-no-celular.png",
    "caption": "Renda mensal começa sabendo quem paga todo mês.\n\nNo Mapa de Dividendos do Virtus, as empresas do Ibovespa aparecem mês a mês, com cinco anos de histórico, e os pagadores mensais ganham o selo M. Na imagem, entre os bancos: ITUB4, BBDC4 e BBDC3.\n\nNo celular, direto pelo navegador.\n\nCrie sua conta gratuita — virtusapp.com.br, link na bio.\n\nDados de amostra. Não é recomendação de investimento.\n\n#dividendos #rendamensal #calendariodedividendos #rendapassiva #b3",
@@ -90,6 +60,61 @@
    "image": "2026-11-18-bateu-o-cdi.png",
    "caption": "Correr risco na bolsa e ficar atrás da renda fixa acontece.\n\nNo app do Virtus, a tela inicial responde: na imagem, R$ 8.657,65 em 12 meses, +13,88%, o que dá 97% do CDI. Essa carteira ficou um pouco atrás.\n\nCom o número na tela, fica mais fácil avaliar a própria carteira.\n\nCrie sua conta gratuita — virtusapp.com.br, link na bio.\n\nDados de amostra. Não é recomendação de investimento.\n\n#cdi #rendafixa #investimentos #carteiradeinvestimentos #b3",
    "date": "2026-11-18"
+  },
+  {
+   "slug": "2026-11-19-mapa-calendario",
+   "image": "2026-11-19-mapa-calendario.png",
+   "caption": "Dezembro está chegando. Quem costuma pagar nesse mês?\n\nO Mapa de Dividendos do Virtus mostra, empresa por empresa, os meses em que os pagamentos costumam acontecer, com base nos últimos 5 anos. Quanto mais vivo o verde, mais frequente o pagamento naquele mês. O selo M marca os pagadores mensais.\n\nNa imagem, os bancos, com a coluna de dezembro em destaque.\n\nCrie sua conta gratuita — virtusapp.com.br, link na bio.\n\nHistórico não garante pagamentos futuros. Não é recomendação de investimento.\n\n#dividendos #calendariodedividendos #rendapassiva #rendamensal #b3",
+   "date": "2026-11-19"
+  },
+  {
+   "slug": "2026-11-20-anunciado-ou-provavel",
+   "image": "2026-11-20-anunciado-ou-provavel.png",
+   "caption": "Nem todo provento esperado já foi anunciado. Faz diferença saber qual é qual.\n\nNos Prováveis Pagadores do Virtus, a lista do mês vem separada. Na imagem, novembro: 44 pagamentos anunciados e 308 com alta probabilidade histórica. E um toque em \"Só minha carteira\" mostra apenas os seus ativos.\n\nProbabilidade não é garantia de pagamento.\n\nCrie sua conta gratuita — virtusapp.com.br, link na bio.\n\nDados de amostra. Não é recomendação de investimento.\n\n#dividendos #proventos #rendapassiva #investimentos #b3",
+   "date": "2026-11-20"
+  },
+  {
+   "slug": "2026-11-21-yield-on-cost",
+   "image": "2026-11-21-yield-on-cost.png",
+   "caption": "O dividend yield olha o preço de hoje. O yield on cost olha o preço que você pagou.\n\nNo app do Virtus, cada ativo mostra os dois lados. Na imagem: preço médio de R$ 27,90, R$ 918,02 em proventos nos últimos 12 meses e yield on cost de 16,45%.\n\nCrie sua conta gratuita — virtusapp.com.br, link na bio.\n\nDados de amostra. Não é recomendação de investimento.\n\n#yieldoncost #dividendos #proventos #rendapassiva #investimentos",
+   "date": "2026-11-21"
+  },
+  {
+   "slug": "2026-11-22-ir-proventos",
+   "image": "2026-11-22-ir-proventos.png",
+   "caption": "Na hora de declarar, dividendo e JCP não entram no mesmo lugar.\n\nO Virtus IR soma os proventos do ano por tipo, a partir dos seus lançamentos. Na imagem: R$ 1.512,00 em dividendos e R$ 1.155,26 de JCP bruto.\n\nConfira sempre com o seu contador e com o programa oficial da Receita Federal.\n\nCrie sua conta gratuita — virtusapp.com.br, link na bio.\n\nDados de amostra. Não é recomendação de investimento.\n\n#impostoderenda #dividendos #jcp #investimentos #b3",
+   "date": "2026-11-22"
+  },
+  {
+   "slug": "2026-11-23-voce-recebe",
+   "image": "2026-11-23-voce-recebe.png",
+   "caption": "A melhor notícia da carteira é a próxima que vai cair na conta.\n\nAssim que você abre o Virtus, um aviso mostra o próximo pagamento. Na imagem: cerca de R$ 132,70 em 7 dias, somando os ativos que pagam na data.\n\nNo celular, direto pelo navegador.\n\nCrie sua conta gratuita — virtusapp.com.br, link na bio.\n\nDados de amostra. Não é recomendação de investimento.\n\n#proventos #dividendos #rendapassiva #fiis #investimentos",
+   "date": "2026-11-23"
+  },
+  {
+   "slug": "2026-11-24-proventos-do-ativo",
+   "image": "2026-11-24-proventos-do-ativo.png",
+   "caption": "Quanto aquele ativo já te pagou, pagamento por pagamento?\n\nNo app do Virtus, a aba Proventos de cada ativo mostra o histórico completo. Na imagem: 13 pagamentos e R$ 3.205,37 recebidos desde a primeira compra, com o valor por cota de cada um.\n\nCrie sua conta gratuita — virtusapp.com.br, link na bio.\n\nDados de amostra. Não é recomendação de investimento.\n\n#proventos #dividendos #rendapassiva #investimentos #b3",
+   "date": "2026-11-24"
+  },
+  {
+   "slug": "2026-11-25-agenda-do-mes",
+   "image": "2026-11-25-agenda-do-mes.png",
+   "caption": "Data ex, data de pagamento e valor por cota, sem abrir o site de cada empresa.\n\nNa aba Proventos do app, os próximos pagamentos aparecem em ordem. Na imagem: 12 proventos anunciados, cerca de R$ 491,35 estimados na posição atual, e R$ 23.721,40 recebidos em 495 pagamentos desde a primeira compra.\n\nCrie sua conta gratuita — virtusapp.com.br, link na bio.\n\nDados de amostra. Não é recomendação de investimento.\n\n#proventos #dividendos #dataex #rendapassiva #fiis",
+   "date": "2026-11-25"
+  },
+  {
+   "slug": "2026-11-26-podio-proventos",
+   "image": "2026-11-26-podio-proventos.png",
+   "caption": "Qual ativo mais pagou na sua carteira até hoje?\n\nO app do Virtus monta o ranking sozinho. Na imagem: MXRF11 com R$ 4.588,00, PETR4 com R$ 3.977,21 e BBSE3 com R$ 3.205,37.\n\nÉ um retrato do que já foi recebido nessa carteira de amostra.\n\nCrie sua conta gratuita — virtusapp.com.br, link na bio.\n\nDados de amostra. Não é recomendação de investimento.\n\n#proventos #dividendos #rendapassiva #fiis #investimentos",
+   "date": "2026-11-26"
+  },
+  {
+   "slug": "2026-11-27-watchlist-instagram",
+   "image": "2026-11-27-watchlist-instagram.png",
+   "caption": "Nem todo ativo que te interessa já está na carteira.\n\nNa Watchlist do Virtus, você acompanha ações brasileiras e americanas sem misturar com o que já comprou. Na imagem, 5 ativos acompanhados — de BBAS3 ao VOO, cotado em dólar.\n\nNo computador ou no celular, com a mesma conta.\n\nCrie sua conta gratuita — virtusapp.com.br, link na bio.\n\nDados de amostra. Não é recomendação de investimento.\n\n#watchlist #investimentos #acoes #bolsadevalores #b3",
+   "date": "2026-11-27",
+   "only": "ig"
   }
  ],
  "evergreen": []

@@ -17,46 +17,50 @@ Substitui `SUGESTOES-APP.md`, `-2`, `-3` e `-4` (rodadas de 24/09, 29/09, 07/10 
 
 ## 1. Em aberto
 
-### 🔴 1.1 Titãs da Renda: página teórica e educacional, sem texto por empresa até o advogado opinar
+### 🔴 1.1 Titãs da Renda: transformar em carteira teórica por regra, com backtest
 
-**Decisão do dono:** o Virtus não tem CNPI nem analista contratado, então não há quem assine. A página deve deixar claro que é uma carteira teórica e educacional, e ganhar um FAQ, como em meusdividendos.com/carteiras.
+**Decisão do dono (09/11):** o Virtus não tem CNPI, analista contratado nem advogado. A página deve seguir o modelo das carteiras teóricas de mercado, como meusdividendos.com/carteiras: resultado de regras e dados públicos, sem texto opinativo por empresa.
 
-**Atenção antes de publicar:** só o aviso não resolve o ponto levantado.
-- O art. 1º, §1º da Resolução CVM 20 chama de relatório de análise "quaisquer textos, relatórios de acompanhamento, estudos ou análises sobre valores mobiliários específicos ou sobre emissores de valores mobiliários determinados que possam auxiliar ou influenciar investidores". Não exige recomendação, e não encontrei na norma exceção para conteúdo "teórico" ou "educacional".
-- O art. 2º torna a atividade privativa de credenciados. Por isso a alternativa indicada na mensagem do desenvolvedor (tirar os textos por empresa) é a mais segura.
-- **A página de referência é diferente da nossa:** a Meus Dividendos mostra um backtest por regra (top 10 de cada tese, peso igual, rebalanceamento mensal), com posições e números. Na parte que li não há texto próprio por empresa. Os Titãs têm "Por que está na lista", "Perfil de renda" e "Principais riscos" para cada uma das 13 empresas, que é justamente o que se encaixa na definição.
+**Por quê:** o art. 1º, §1º da Resolução CVM 20 inclui "quaisquer textos [...] sobre valores mobiliários específicos ou sobre emissores [...] determinados que possam auxiliar ou influenciar investidores", e o art. 2º reserva essa atividade a analistas credenciados. O aviso de "carteira teórica" sozinho não muda o que os textos são.
 
-**Implementação sugerida:**
-1. **Tirar da página, por enquanto, os textos por empresa** (Por que está na lista, Perfil de renda, Principais riscos).
-2. **Manter a parte por regra:** setores, composição gerada pelo método VRE, notas e números.
-3. **Publicar a metodologia:** critérios, frequência de atualização e, se possível, um backtest com custos declarados.
-4. **Levar ao advogado** duas perguntas: uma lista teórica por regra, com nomes de empresas e sem texto, fica fora do art. 1º, §1º? E se a resposta permitir, em que condições os textos poderiam voltar?
+**O que fazer (site e app):**
+1. **Remover** "Por que está na lista", "Perfil de renda" e "Principais riscos" das 13 empresas, e parar de gerar esses textos. Não deixar textos antigos acessíveis por endereço ou API.
+2. **Mostrar só o resultado da regra:** setor, ticker, nota do método VRE, pilares numéricos e participação calculada.
+3. **Publicar as regras na página** (seção "Como a carteira é montada"): universo, critérios e pesos do VRE, setores, quantidade de ativos, regra de participação e frequência de rebalanceamento. A seleção precisa sair da regra, sem escolha manual de ativo.
+4. **Criar o backtest** (abaixo).
+5. **Trocar "participação no estudo"** por "peso na carteira teórica".
+6. **Colocar o texto do topo e o FAQ** (abaixo).
+7. **Não usar na divulgação** frases como "as melhores", "para comprar" ou resultado do backtest como promessa.
 
-**Texto para o topo da página** (escrito pelo Virtus; hoje o aviso é idêntico ao da Meus Dividendos):
+**Backtest (requisitos):**
+- Janela de 5 anos ou mais, com a composição recalculada em cada data apenas com dados disponíveis naquela data (sem olhar o futuro).
+- Mesma regra de hoje, aplicada desde o início; sem trocar a regra para melhorar o resultado passado.
+- Empresas que saíram da bolsa no período continuam na conta (sem viés de sobrevivência).
+- Proventos incluídos e reinvestidos, com ajuste de desdobramentos e bonificações.
+- Comparação com Ibovespa, IDIV e CDI: retorno acumulado, retorno anual, maior queda e volatilidade.
+- Mostrar a tabela de operações, como faz a referência.
+- Declarar na tela: "Backtest teórico com dados públicos, sem custos de corretagem, impostos ou slippage" (ou incluir esses custos).
 
-> **Carteira teórica, com finalidade educacional.** Os Titãs da Renda são uma simulação gerada automaticamente pelo método VRE, com apoio de inteligência artificial, a partir de dados públicos. A seleção busca, em teoria, empresas de setores perenes com histórico consistente de proventos.
+**Texto para o topo da página** (redação própria; hoje o aviso é idêntico ao da Meus Dividendos):
+
+> **Carteira teórica, com finalidade educacional.** Os Titãs da Renda são o resultado automático de regras públicas (método VRE), aplicadas a dados públicos de empresas de setores perenes com histórico de proventos.
 >
-> Não é recomendação de compra, venda ou manutenção, não considera o seu perfil ou objetivos e não foi elaborada por analista de valores mobiliários. Rentabilidade e proventos passados não garantem resultados futuros. As decisões de investimento são de responsabilidade de cada investidor.
-
-*Observação:* evitei "poderia ter um melhor retorno", porque soa como promessa. Se a frase do apoio de IA for mantida, ela só informa a origem do conteúdo; não muda o enquadramento.
+> Não é recomendação de compra, venda ou manutenção, não considera o seu perfil ou objetivos e não é um relatório de analista. Resultados simulados e rentabilidade passada não garantem resultados futuros. As decisões de investimento são de responsabilidade de cada investidor.
 
 **FAQ para o fim da página:**
 
-- **O que são os Titãs da Renda?** Uma carteira teórica, gerada por regras a partir de dados públicos, para estudar empresas de setores perenes com histórico de proventos.
+- **O que são os Titãs da Renda?** Uma carteira teórica, gerada por regras a partir de dados públicos, para estudar como empresas de setores perenes se comportariam.
 - **Isso é uma recomendação de investimento?** Não. A carteira não indica compra, venda ou manutenção de nenhum ativo.
-- **Posso copiar essa carteira?** Ela não foi feita para ser copiada. Não considera o seu perfil, patrimônio, prazo ou momento de entrada.
-- **Como as empresas são escolhidas?** Pelo método VRE. *(Inserir os critérios e pesos reais.)*
-- **Com que frequência ela muda?** *(Inserir a frequência real.)*
-- **Qual é o papel da inteligência artificial?** *(Descrever o que ela faz de fato.)*
-- **Um analista revisa o conteúdo?** Não. O conteúdo é gerado automaticamente e não passa por analista de valores mobiliários.
-- **Os resultados são garantidos?** Não. Rentabilidade e proventos passados não garantem resultados futuros.
-- **A carteira considera custos e impostos?** *(Responder conforme o cálculo real.)*
+- **Posso investir nessa carteira?** Ela não é um produto nem foi feita para ser copiada. Não considera o seu perfil, patrimônio, prazo ou momento de entrada.
+- **Como as empresas são escolhidas?** Por regras fixas e públicas do método VRE. Nenhum ativo é incluído manualmente. *(Inserir critérios e pesos reais.)*
+- **Com que frequência a carteira muda?** *(Inserir a frequência real.)*
+- **O que é o backtest?** Uma simulação de como a regra teria se comportado no passado. Não representa operações reais.
+- **O resultado considera custos, impostos e dividendos?** *(Responder conforme o cálculo real.)*
+- **Como a carteira se compara ao Ibovespa, ao IDIV e ao CDI?** *(Apontar para a tabela do backtest.)*
+- **Os resultados são garantidos?** Não. Resultados simulados e rentabilidade passada não garantem resultados futuros.
+- **A inteligência artificial escolhe as empresas?** *(Responder conforme o funcionamento real. Se a seleção vem só das regras, dizer isso.)*
 
-**Conferir também:** o selo "Premium" e os textos de venda não devem apresentar os Titãs como indicação de ativos. O mesmo texto e o FAQ valem para o site e o app.
-
-### 🔴 1.2 Instagram: post de 05/11 saiu só no Facebook (publicador, sem ação do desenvolvedor do app)
-
-O post "De olho antes de comprar" recebeu "Media ID is not available" ao publicar no Instagram. O Instagram estava processando a imagem e o script publicou mesmo sem confirmação de que estava pronta. Correção de nossa parte, no publicador do social.
+**Limite desta sugestão:** ela segue o modelo usado no mercado e reduz o risco, mas não é parecer jurídico nem garante que a CVM concorde com o enquadramento.
 
 ### 🟡 1.3 Site no celular: "Passe o mouse para ver cada dia"
 

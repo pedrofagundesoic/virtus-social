@@ -93,20 +93,22 @@ export function createPublisher({ loadData, saveData, env = process.env, log = c
     if (dry) return { posted: false, dry: true, today, next: entry, meta };
     const prev = logData[entry.slug] || {};
     const result = { date: today, at: new Date().toISOString(), image: entry.image, kind: entry.kind, count: (prev.count || 0) + 1, fb: null, ig: null };
-    try {
+    if (entry.only !== 'ig') try {
       const fb = await graphPost(`${FB_PAGE_ID}/photos`, { url: entry.image, message: entry.caption || '' });
       result.fb = fb.post_id || fb.id;
     } catch (err) { result.fbError = err.message; log.error('📣 social FB failed:', err.message); }
-    try {
+    if (entry.only !== 'fb') try {
       const container = await graphPost(`${IG_USER_ID}/media`, { image_url: entry.image, caption: entry.caption || '' });
-      for (let i = 0; i < 6; i++) { // Instagram needs a moment to ingest the image
+      for (let i = 0; i < 24; i++) { // Instagram needs a moment to ingest the image (up to 2 min)
         const st = await fetch(`${GRAPH}/${container.id}?fields=status_code&access_token=${FB_TOKEN}`).then(r => r.json());
         if (st.status_code === 'FINISHED') break;
         if (st.status_code === 'ERROR') throw new Error('IG container ERROR');
         await new Promise(r => setTimeout(r, 5000));
       }
-      const pub = await graphPost(`${IG_USER_ID}/media_publish`, { creation_id: container.id });
-      result.ig = pub.id;
+      for (let i = 0; ; i++) { // "Media ID is not available" can follow FINISHED for a few seconds
+        try { result.ig = (await graphPost(`${IG_USER_ID}/media_publish`, { creation_id: container.id })).id; break; }
+        catch (err) { if (i >= 4 || !/not available/i.test(err.message)) throw err; await new Promise(r => setTimeout(r, 15000)); }
+      }
     } catch (err) { result.igError = err.message; log.error('📣 social IG failed:', err.message); }
     if (!result.fb && !result.ig) {
       log.error(`📣 social (${reason}): "${entry.slug}" failed on both platforms — not consumed`);

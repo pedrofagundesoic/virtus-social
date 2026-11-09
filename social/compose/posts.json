@@ -806,10 +806,10 @@
     "variant": "web",
     "platform": "web",
     "shots": [
-      "d-ir-v2.png"
+      "d-ir-proventos.png"
     ],
     "shot_h": 600,
-    "fade": 88,
+    "fade": 96,
     "date": "2026-11-22",
     "kicker": "VIRTUS IR · PREMIUM",
     "headline": "Dividendo e JCP, <em>cada um na sua linha</em>",
@@ -875,5 +875,22 @@
     "headline": "O pódio <em>da sua renda</em>",
     "sub": "Os cinco ativos que mais pagaram proventos na história da sua carteira.",
     "caption": "Qual ativo mais pagou na sua carteira até hoje?\n\nO app do Virtus monta o ranking sozinho. Na imagem: MXRF11 com R$ 4.588,00, PETR4 com R$ 3.977,21 e BBSE3 com R$ 3.205,37.\n\nÉ um retrato do que já foi recebido nessa carteira de amostra.\n\nCrie sua conta gratuita — virtusapp.com.br, link na bio.\n\nDados de amostra. Não é recomendação de investimento.\n\n#proventos #dividendos #rendapassiva #fiis #investimentos"
+  },
+  {
+    "slug": "2026-11-27-watchlist-instagram",
+    "family": "app",
+    "variant": "web",
+    "platform": "web",
+    "shots": [
+      "d-watchlist-v2.png"
+    ],
+    "shot_h": 600,
+    "fade": 90,
+    "date": "2026-11-27",
+    "kicker": "WATCHLIST",
+    "headline": "De olho antes <em>de comprar</em>",
+    "sub": "Ações brasileiras e americanas acompanhadas fora da carteira, com cotação e variação do dia.",
+    "caption": "Nem todo ativo que te interessa já está na carteira.\n\nNa Watchlist do Virtus, você acompanha ações brasileiras e americanas sem misturar com o que já comprou. Na imagem, 5 ativos acompanhados — de BBAS3 ao VOO, cotado em dólar.\n\nNo computador ou no celular, com a mesma conta.\n\nCrie sua conta gratuita — virtusapp.com.br, link na bio.\n\nDados de amostra. Não é recomendação de investimento.\n\n#watchlist #investimentos #acoes #bolsadevalores #b3",
+    "only": "ig"
   }
 ]

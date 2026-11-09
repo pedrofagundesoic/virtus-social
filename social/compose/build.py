@@ -207,6 +207,7 @@ def build(posts):
     done = published()
     posts = [p for p in posts if p.get('evergreen') or p['slug'] not in done]   # publicados não são re-renderizados
     for p in posts:
+        if p.get('prebuilt'): continue   # PNG já aprovado em out/ (reposição de post)
         h = render_app(p) if p['family'] == 'app' else render_life(p)
         open(os.path.join(OUT, p['slug'] + '.html'), 'w', encoding='utf-8').write(h)
     print('html written:', len(posts), '→', OUT)
@@ -233,6 +234,7 @@ def queue(posts):
         shutil.copy(png, os.path.join(WEB, p['slug'] + '.png'))
         e = {'slug': p['slug'], 'image': p['slug'] + '.png', 'caption': p['caption']}  # relativo ao queue.json
         if p.get('date'): e['date'] = p['date']
+        if p.get('only'): e['only'] = p['only']   # ig|fb: publica só nessa rede (reposição de falha parcial)
         (man['evergreen'] if p.get('evergreen') else man['posts']).append(e)
     json.dump(man, open(os.path.join(WEB, 'queue.json'), 'w', encoding='utf-8'), indent=1, ensure_ascii=False)
     keep = {e['image'] for e in man['posts'] + man['evergreen']}
