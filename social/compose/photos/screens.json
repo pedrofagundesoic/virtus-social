@@ -605,5 +605,65 @@
    2597,
    4511
   ]
+ },
+ "life-pagadores-nov": {
+  "photo": "rPiRUrKPY_o",
+  "shot": "m-pagadores-nov.png",
+  "radius": 0.08,
+  "chroma": true,
+  "quad": [
+   [
+    1095,
+    436
+   ],
+   [
+    1577,
+    347
+   ],
+   [
+    1870,
+    1342
+   ],
+   [
+    1379,
+    1469
+   ]
+  ],
+  "crop": [
+   520,
+   100,
+   2444,
+   1900
+  ]
+ },
+ "life-banner-recebe": {
+  "photo": "6vEp7y83y2M",
+  "shot": "m-carteira-banner.png",
+  "radius": 0.08,
+  "chroma": true,
+  "quad": [
+   [
+    1392,
+    368
+   ],
+   [
+    1846,
+    368
+   ],
+   [
+    1868,
+    1262
+   ],
+   [
+    1380,
+    1262
+   ]
+  ],
+  "crop": [
+   650,
+   0,
+   2455,
+   1688
+  ]
  }
 }

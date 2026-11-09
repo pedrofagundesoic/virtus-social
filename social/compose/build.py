@@ -148,11 +148,15 @@ def render_life(p):
         mock = phone(scr(p['shots'][0]), 330, 700, 640); hw = 610
     elif dev == 'browser':
         mock = browser(scr_path(p['shots'][0]), 460, 620, 900, url, p.get('shot_h', 420), img_w=460, offset_y=p.get('offset', 0)); hw = 545
+    elif dev == 'tabela':  # recorte real do app em destaque sobre a foto; mark = coluna realçada (left/width em %), mark_label = etiqueta
+        ml = f'<div class="tmark" style="left:{p["mark"][0]}%;width:{p["mark"][1]}%"><i>{p.get("mark_label", "")}</i></div>' if p.get('mark') else ''
+        mock = f'<div class="tcard"><img src="{scr(p["shots"][0])}">{ml}</div>'; hw = 968
     elif dev == 'inphoto':  # print já encaixado na tela da foto (photo-screen.py); texto embaixo, largura toda
         mock = ''; hw = 968
     else:
         mock = tablet(scr(p['shots'][0]), 460, 620, 920, crop=p.get('crop')); hw = 545
     kick, head, sub = (130, 164, 400) if p.get('text_top') else (700, 734, 940)
+    if dev == 'tabela': kick, head, sub = (136, 172, 318)
     css = LIFE_CSS.replace('__KICK__', str(kick)).replace('__HEAD__', str(head)).replace('__SUB__', str(sub)).replace('__HW__', str(hw))
     text = f'''<div class="kicker">{p.get('kicker', '')}</div>
 <div class="headline">{p['headline']}</div>
@@ -167,8 +171,13 @@ def render_life(p):
             css += (f'.bg{{inset:auto;top:0;left:0;right:0;height:{h}px;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 82%,transparent 100%);'
                     f'mask-image:linear-gradient(180deg,#000 0,#000 82%,transparent 100%)}}'
                     f'.shade{{background:linear-gradient(180deg,rgba(5,8,7,.25) 0%,rgba(5,8,7,0) 14%,rgba(5,8,7,0) {int(h/13.5*0.8)}%,rgba(5,8,7,.9) {int(h/13.5)}%,rgba(5,8,7,.98) 100%)}}')
+    if dev == 'tabela':
+        css += ('.shade{background:linear-gradient(180deg,rgba(5,8,7,.9) 0,rgba(5,8,7,.8) 27%,rgba(5,8,7,0) 38%,rgba(5,8,7,0) 52%,rgba(5,8,7,.9) 64%,rgba(5,8,7,.98) 100%)}.foot{width:968px}'
+                '.tcard{position:absolute;left:56px;right:56px;top:__CT__px;border-radius:20px;box-shadow:0 24px 70px rgba(0,0,0,.6),0 0 0 2px rgba(227,191,130,.55)}.tcard img{width:100%;display:block;border-radius:20px}'
+                '.tmark{position:absolute;top:-8px;bottom:-8px;border:4px solid #E3BF82;border-radius:12px;box-shadow:0 0 26px rgba(227,191,130,.8)}'
+                '.tmark i{position:absolute;bottom:100%;left:50%;transform:translate(-50%,-8px);font:700 21px Inter;color:#0B0F0D;background:#E3BF82;padding:5px 13px;border-radius:999px;white-space:nowrap}').replace('__CT__', str(p.get('card_top', 770)))
     return f'''<!DOCTYPE html><html><head><meta charset="utf-8">{FONTS}<style>{css}</style></head><body><div class="stage">
-<div class="bg"><img src="{photo(p['photo'])}" style="object-position:{p.get('focal', 'center')}"></div><div class="shade"></div>
+<div class="bg"><img src="{photo(p['photo'])}" style="object-position:{p.get('focal', 'center')};transform:translateY({p.get('photo_y', 0)}px)"></div><div class="shade"></div>
 <div class="top">{lockup()}</div>
 {pills(p.get('platform', 'iphone'))}
 {text}

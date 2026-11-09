@@ -44,3 +44,7 @@ barra roxa da tela original na base do aparelho. Já publicado; fica como evidê
 - **Não mostrar "Recomendada" nos prints:** o nome está em troca (`APP-CORRECOES.md`, item 1.1). No site, capturar com largura ≤ 1000 px, que esconde a barra lateral, ou no celular.
 - **Conferir o print antes:** "Todos" quebrado no Android e "BVAR11 >999%" apareciam em telas candidatas. Se o defeito é do app, trocar a tela ou a plataforma.
 
+## 2026-11-09 · Aprendizado deste lote (não chegou a publicar)
+
+- **`--detect-green` erra quando a mão corta um lado da tela:** o reflexo verde na pele entra na região e o quad abre para fora. O aviso de SOBRA DE TELA não pega isso. Olhar sempre a folha do `qa-photo.py`; se um lado do contorno vermelho sair do aparelho, corrigir o canto à mão.
+

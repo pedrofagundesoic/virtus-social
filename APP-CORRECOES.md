@@ -2,11 +2,11 @@
 
 Substitui `SUGESTOES-APP.md`, `-2`, `-3` e `-4` (rodadas de 24/09, 29/09, 07/10 e 13/10/2026; o texto completo de cada uma está no histórico do git).
 
-**Última verificação:** 04/11/2026.
+**Última verificação:** 09/11/2026.
 - **Web:** desktop 1440×900 e celular 390×844.
-- **Android:** **v1.5.0** (Galaxy S25).
+- **Android:** **v1.5.1** (Galaxy S25).
 - **Conta de testes:** 15 ativos em 4 corretoras, compras de 2022–2023.
-- **Fontes de conferência:** CSV exportado pelo próprio app, Yahoo Finance, Banco Central (séries 432, 433, 4389 e 13522) e API da BRAPI.
+- **Fontes de conferência:** CSV exportado pelo próprio app, Yahoo Finance, Banco Central, API da BRAPI e texto consolidado da Resolução CVM 20.
 
 **Como usar:**
 1. **Seção 1:** o que falta corrigir.
@@ -17,63 +17,62 @@ Substitui `SUGESTOES-APP.md`, `-2`, `-3` e `-4` (rodadas de 24/09, 29/09, 07/10 
 
 ## 1. Em aberto
 
-### 🔴 1.1 Trocar o nome "Carteira Recomendada", no site e no app (pedido do dono, 04/11)
+### 🔴 1.1 Titãs da Renda: página teórica e educacional, sem texto por empresa até o advogado opinar
 
-**O problema:** o nome sugere que o Virtus recomenda ativos, o que não é permitido sem o credenciamento adequado. Ele também contradiz o aviso da própria página ("Não realizamos quaisquer recomendações de compra, venda ou manutenção"). Outros sites que não fazem recomendação usam nomes como "Radar" ou "Oportunidade".
+**Decisão do dono:** o Virtus não tem CNPI nem analista contratado, então não há quem assine. A página deve deixar claro que é uma carteira teórica e educacional, e ganhar um FAQ, como em meusdividendos.com/carteiras.
 
-**Nome sugerido: Titãs da Renda.** Tem personalidade, descreve o foco em renda passiva e não promete resultado futuro.
+**Atenção antes de publicar:** só o aviso não resolve o ponto levantado.
+- O art. 1º, §1º da Resolução CVM 20 chama de relatório de análise "quaisquer textos, relatórios de acompanhamento, estudos ou análises sobre valores mobiliários específicos ou sobre emissores de valores mobiliários determinados que possam auxiliar ou influenciar investidores". Não exige recomendação, e não encontrei na norma exceção para conteúdo "teórico" ou "educacional".
+- O art. 2º torna a atividade privativa de credenciados. Por isso a alternativa indicada na mensagem do desenvolvedor (tirar os textos por empresa) é a mais segura.
+- **A página de referência é diferente da nossa:** a Meus Dividendos mostra um backtest por regra (top 10 de cada tese, peso igual, rebalanceamento mensal), com posições e números. Na parte que li não há texto próprio por empresa. Os Titãs têm "Por que está na lista", "Perfil de renda" e "Principais riscos" para cada uma das 13 empresas, que é justamente o que se encaixa na definição.
 
-| Opção | Comentário |
-|---|---|
-| **Titãs da Renda** (sugerido) | Forte, próprio, liga com o foco em proventos |
-| Elite da Renda | Boa alternativa, um pouco mais genérica |
-| Imperadoras | Único e memorável, mas não diz do que se trata; pediria um subtítulo |
-| Campeãs do Virtus / Vencedoras | Têm personalidade, mas "vencedoras" pode soar como promessa de resultado |
-| Radar / Mapa | Evitar: já existem "Radar de insiders" e "Mapa de Dividendos" |
+**Implementação sugerida:**
+1. **Tirar da página, por enquanto, os textos por empresa** (Por que está na lista, Perfil de renda, Principais riscos).
+2. **Manter a parte por regra:** setores, composição gerada pelo método VRE, notas e números.
+3. **Publicar a metodologia:** critérios, frequência de atualização e, se possível, um backtest com custos declarados.
+4. **Levar ao advogado** duas perguntas: uma lista teórica por regra, com nomes de empresas e sem texto, fica fora do art. 1º, §1º? E se a resposta permitir, em que condições os textos poderiam voltar?
 
-Antes de lançar, vale checar se o nome escolhido está livre (marca e lojas de apps).
+**Texto para o topo da página** (escrito pelo Virtus; hoje o aviso é idêntico ao da Meus Dividendos):
 
-**Onde trocar:**
+> **Carteira teórica, com finalidade educacional.** Os Titãs da Renda são uma simulação gerada automaticamente pelo método VRE, com apoio de inteligência artificial, a partir de dados públicos. A seleção busca, em teoria, empresas de setores perenes com histórico consistente de proventos.
+>
+> Não é recomendação de compra, venda ou manutenção, não considera o seu perfil ou objetivos e não foi elaborada por analista de valores mobiliários. Rentabilidade e proventos passados não garantem resultados futuros. As decisões de investimento são de responsabilidade de cada investidor.
 
-| Plataforma | Local | Hoje |
-|---|---|---|
-| Site | Barra lateral, seção Premium | "Recomendada" |
-| Site | Título da página | "Carteira Recomendada" |
-| Site | Análises → Análises premium | "Carteira Recomendada" |
-| Site | Endereço | `/carteira-recomendada` → novo endereço, com redirecionamento 301 do antigo |
-| App (Android e iOS) | Análises → card | "Carteira Recomendada" |
-| App (Android e iOS) | Título da tela, notificações e deep links | conferir |
-| Fora do app | Lojas, e-mails, tela de assinatura, textos de ajuda | conferir |
+*Observação:* evitei "poderia ter um melhor retorno", porque soa como promessa. Se a frase do apoio de IA for mantida, ela só informa a origem do conteúdo; não muda o enquadramento.
 
-**Só o nome não resolve.** O conteúdo da página também usa termos de recomendação:
-- "**peso sugerido 20%**" → por exemplo, "participação no estudo: 20%";
-- "**Tese de investimento**" → por exemplo, "Por que está na lista";
-- "**Encaixe na carteira**" → por exemplo, "Perfil de renda";
-- subtítulo novo: "Estudo por setor com base no método VRE. Não é recomendação de investimento."
+**FAQ para o fim da página:**
 
-**Vale passar pelo jurídico:** um nome diferente não muda o enquadramento se a página continuar indicando ativos e pesos. Verificar com o advogado as regras da CVM para analistas e consultores (Resoluções CVM 20 e 19).
+- **O que são os Titãs da Renda?** Uma carteira teórica, gerada por regras a partir de dados públicos, para estudar empresas de setores perenes com histórico de proventos.
+- **Isso é uma recomendação de investimento?** Não. A carteira não indica compra, venda ou manutenção de nenhum ativo.
+- **Posso copiar essa carteira?** Ela não foi feita para ser copiada. Não considera o seu perfil, patrimônio, prazo ou momento de entrada.
+- **Como as empresas são escolhidas?** Pelo método VRE. *(Inserir os critérios e pesos reais.)*
+- **Com que frequência ela muda?** *(Inserir a frequência real.)*
+- **Qual é o papel da inteligência artificial?** *(Descrever o que ela faz de fato.)*
+- **Um analista revisa o conteúdo?** Não. O conteúdo é gerado automaticamente e não passa por analista de valores mobiliários.
+- **Os resultados são garantidos?** Não. Rentabilidade e proventos passados não garantem resultados futuros.
+- **A carteira considera custos e impostos?** *(Responder conforme o cálculo real.)*
 
-### 🟡 1.2 P/VP não bate com o VPA usado no Graham (novo, 04/11)
+**Conferir também:** o selo "Premium" e os textos de venda não devem apresentar os Titãs como indicação de ativos. O mesmo texto e o FAQ valem para o site e o app.
 
-Web → detalhe de BBSE3: **P/VP 7,37**, cotação R$ 37,99 e, na mesma tela, **VPA R$ 5,61** (fórmula de Graham). R$ 37,99 ÷ 5,61 = **6,77**. O 7,37 implica VPA de R$ 5,15. O P/L já foi alinhado (8,03 = 37,99 ÷ 4,73); falta fazer o mesmo com o P/VP.
+### 🔴 1.2 Instagram: post de 05/11 saiu só no Facebook (publicador, sem ação do desenvolvedor do app)
 
-### 🟡 1.3 Android: botão "Todos" quebra em duas linhas (novo, 04/11)
+O post "De olho antes de comprar" recebeu "Media ID is not available" ao publicar no Instagram. O Instagram estava processando a imagem e o script publicou mesmo sem confirmação de que estava pronta. Correção de nossa parte, no publicador do social.
 
-Detalhe do ativo → Movimentação da diretoria: o filtro aparece como "Todo / s". **Sugestão:** diminuir o espaçamento dos três botões ou permitir rolagem horizontal.
+### 🟡 1.3 Site no celular: "Passe o mouse para ver cada dia"
 
-### 🟡 1.4 Android: botão "Adicionar" cobre o gráfico da tela inicial (novo, 04/11)
+Continua em Carteira → Visão geral. **Sugestão:** "Toque no gráfico para ver cada dia".
 
-Carteira → Rentabilidade · 12 meses: ao abrir o app, o botão flutuante fica sobre a parte final do gráfico, justamente os dias mais recentes. **Sugestão:** recolher o botão para só o ícone "+" ao rolar, ou reposicioná-lo fora da área do gráfico.
+### 🟡 1.4 Movimentação da diretoria: "em 1 mês diferente"
 
-### 🟡 1.5 Site no celular: "Passe o mouse para ver cada dia" (novo, 04/11)
+PETR4 (Android): "comprou R$ 206,1 mil e vendeu R$ 13,5 mil em ações da empresa, em 1 mês diferente." **Sugestão:** no singular, "em 1 mês".
 
-Carteira → Visão geral, em tela de celular. Não há mouse no celular. **Sugestão:** "Toque no gráfico para ver cada dia".
+### 🟡 1.5 Top 5 (Android): ticker repetido
 
-### 🟡 1.6 Radar de insiders: termos e nomes (novo, 04/11)
+"MXRF11 / MXRF11" e "TAEE11 / TAEE11": quando não há nome da empresa, a segunda linha repete o ticker. **Sugestão:** usar o nome curto ou esconder a linha.
 
-- "**148,35 bp do valor**" é jargão. Sugestão: "1,48% do valor de mercado".
-- KLBN11 aparece como "**Klabin SA Ctf de Deposito de Acoes Cons of 1 Sh + 4 Pfd Shs**". Sugestão: usar o nome curto da empresa.
-- No card, com tudo zerado, o saldo aparece como "+R$ 0". Sugestão: "R$ 0".
+### 🟡 1.6 Calendário como função do plano grátis? (ideia, 09/11)
+
+O público de dividendos quer saber quando as empresas pagam, e o Mapa de Dividendos é só Premium. **Sugestão a avaliar:** mostrar no plano grátis as 5 primeiras linhas, ou apenas o mês atual, com o restante borrado.
 
 ### ⚪ 1.7 Para o desenvolvedor conferir (inconclusivo)
 
@@ -319,6 +318,11 @@ Esses números saem da API como ela respondeu em 28/10/2026 e podem mudar com re
 | Comparação com pares com DY inteiro | 04/11 | DY com decimais (ex.: 29,54 · 23,88) |
 | LPA do Graham diferente do P/L | 04/11 | Mesmo LPA nos dois (R$ 4,73), com a data do balanço na tela |
 | "Inspirado em Simply Wall St." no Snowflake | 04/11 | Removido |
+| "Carteira Recomendada" trocado por "Titãs da Renda" | 09/11 | Site e app; endereço antigo redireciona; "peso sugerido", "Tese" e "Encaixe" renomeados |
+| P/VP diferente do VPA do Graham | 09/11 | 5,54 = cotação ÷ VPA R$ 6,94 |
+| Botão "Todos" quebrado (Android) | 09/11 | Em uma linha |
+| "Adicionar" cobrindo o gráfico (Android) | 09/11 | Foi para o topo da tela |
+| Radar: "bp" e nome longo da Klabin | 09/11 | "2,13% do valor de mercado"; "Klabin SA" |
 
 ## 4. Conferido e descartado (não era erro)
 
@@ -331,3 +335,4 @@ Esses números saem da API como ela respondeu em 28/10/2026 e podem mudar com re
 | PETR4 e KLBN11 com o mesmo provento pago 2–3 vezes (19/10) | São parcelas de um mesmo evento |
 | Preço justo Bazin R$ 76,50 e Gordon R$ 67,54 (BBSE3, 28/10) | Batem com dividendos de 12 meses de ≈ R$ 4,59 por ação: 4,59 ÷ 6% e 4,59 × 1,03 ÷ (10% − 3%) |
 | "Sem negociações" em BBSE3 com vendas na lista (04/11) | As vendas são de mar/2026 ou antes, fora da janela de 6 meses por data de divulgação |
+| Proventos R$ 0,00 no período "Mês" (Android, 09/11) | Em novembro ainda não houve pagamento nessa carteira; os primeiros são em 12 e 16/11 |
