@@ -818,16 +818,18 @@
   },
   {
     "slug": "2026-11-23-voce-recebe",
-    "family": "life",
-    "device": "inphoto",
+    "family": "app",
     "platform": "web",
-    "photo": "life-banner-recebe",
-    "photo_h": 1010,
     "date": "2026-11-23",
     "kicker": "PRÓXIMO PAGAMENTO",
     "headline": "Quanto cai <em>e quando</em>",
     "sub": "Ao abrir a carteira, um aviso mostra o próximo pagamento e a estimativa de quanto vai cair.",
-    "caption": "A melhor notícia da carteira é a próxima que vai cair na conta.\n\nAssim que você abre o Virtus, um aviso mostra o próximo pagamento. Na imagem: cerca de R$ 132,70 em 7 dias, somando os ativos que pagam na data.\n\nNo celular, direto pelo navegador.\n\nCrie sua conta gratuita — virtusapp.com.br, link na bio.\n\nDados de amostra. Não é recomendação de investimento.\n\n#proventos #dividendos #rendapassiva #fiis #investimentos"
+    "caption": "A melhor notícia da carteira é a próxima que vai cair na conta.\n\nAssim que você abre o Virtus, um aviso mostra o próximo pagamento. Na imagem: cerca de R$ 132,70 em 7 dias, somando os ativos que pagam na data.\n\nNo celular, direto pelo navegador.\n\nCrie sua conta gratuita — virtusapp.com.br, link na bio.\n\nDados de amostra. Não é recomendação de investimento.\n\n#proventos #dividendos #rendapassiva #fiis #investimentos",
+    "variant": "phone",
+    "shots": [
+      "m-carteira-banner.png"
+    ],
+    "fade": 86
   },
   {
     "slug": "2026-11-24-proventos-do-ativo",
