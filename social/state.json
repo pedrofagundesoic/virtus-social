@@ -1,11 +1,11 @@
 {
  "social_state": {
   "emptyNoticeDate": "2026-09-24",
-  "lastRunDate": "2026-11-08",
-  "lastSlug": "2026-11-07-safety-score",
-  "startedAt": "2026-11-08T22:27:02.973Z",
+  "lastRunDate": "2026-11-09",
+  "lastSlug": "2026-11-08-mapa-no-celular",
+  "startedAt": "2026-11-10T01:45:48.964Z",
   "attempts": 0,
-  "attemptsDate": "2026-11-08"
+  "attemptsDate": "2026-11-09"
  },
  "social_post_log": {
   "2026-09-25-provaveis-pagadores": {
@@ -395,6 +395,15 @@
    "count": 1,
    "fb": "1337364702788353_122133343707469153",
    "ig": "17913275466309340"
+  },
+  "2026-11-08-mapa-no-celular": {
+   "date": "2026-11-09",
+   "at": "2026-11-10T01:45:37.287Z",
+   "image": "https://pedrofagundesoic.github.io/virtus-social/social/2026-11-08-mapa-no-celular.png",
+   "kind": "queue",
+   "count": 1,
+   "fb": "1337364702788353_122133717177469153",
+   "ig": "17983619028126012"
   }
  }
 }
