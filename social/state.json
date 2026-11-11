@@ -1,8 +1,8 @@
 {
  "social_state": {
   "emptyNoticeDate": "2026-09-24",
-  "lastRunDate": "2026-11-10",
-  "lastSlug": "2026-11-09-cotacao-5-anos",
+  "lastRunDate": "2026-11-11",
+  "lastSlug": "2026-11-11-radar-insiders",
   "startedAt": "2026-11-10T23:41:23.169Z",
   "attempts": 0,
   "attemptsDate": "2026-11-10"
@@ -413,6 +413,15 @@
    "count": 1,
    "fb": "1337364702788353_122133963681469153",
    "ig": "18079521533439549"
+  },
+  "2026-11-11-radar-insiders": {
+   "date": "2026-11-11",
+   "at": "2026-11-11T22:58:45.512Z",
+   "image": "https://pedrofagundesoic.github.io/virtus-social/social/2026-11-11-radar-insiders.png",
+   "kind": "queue",
+   "count": 1,
+   "fb": "1337364702788353_122134319979469153",
+   "ig": "18394825654167712"
   }
  }
 }
