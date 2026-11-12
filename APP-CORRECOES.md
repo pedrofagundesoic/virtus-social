@@ -2,11 +2,11 @@
 
 Substitui `SUGESTOES-APP.md`, `-2`, `-3` e `-4` (rodadas de 24/09, 29/09, 07/10 e 13/10/2026; o texto completo de cada uma está no histórico do git).
 
-**Última verificação:** 09/11/2026.
+**Última verificação:** 12/11/2026.
 - **Web:** desktop 1440×900 e celular 390×844.
-- **Android:** **v1.5.1** (Galaxy S25).
+- **Android:** **v1.5.3** (Galaxy S25).
 - **Conta de testes:** 15 ativos em 4 corretoras, compras de 2022–2023.
-- **Fontes de conferência:** CSV exportado pelo próprio app, Yahoo Finance, Banco Central, API da BRAPI e texto consolidado da Resolução CVM 20.
+- **Fontes de conferência:** Yahoo Finance, Banco Central (série 12), resolvedores de DNS públicos e texto consolidado da Resolução CVM 20.
 
 **Como usar:**
 1. **Seção 1:** o que falta corrigir.
@@ -17,71 +17,43 @@ Substitui `SUGESTOES-APP.md`, `-2`, `-3` e `-4` (rodadas de 24/09, 29/09, 07/10 
 
 ## 1. Em aberto
 
-### 🔴 1.1 Titãs da Renda: transformar em carteira teórica por regra, com backtest
+### 🔴 1.1 Site e app fora do ar em algumas redes: o DNS de operadoras não resolve o endereço da Railway (novo, 12/11)
 
-**Decisão do dono (09/11):** o Virtus não tem CNPI, analista contratado nem advogado. A página deve seguir o modelo das carteiras teóricas de mercado, como meusdividendos.com/carteiras: resultado de regras e dados públicos, sem texto opinativo por empresa.
+**Sintoma:** em 12/11, o app e o site não carregam no Wi-Fi do dono (operadora Vero), mas funcionam nos dados móveis (TIM). Quem está numa rede afetada vê o Virtus como fora do ar.
 
-**Por quê:** o art. 1º, §1º da Resolução CVM 20 inclui "quaisquer textos [...] sobre valores mobiliários específicos ou sobre emissores [...] determinados que possam auxiliar ou influenciar investidores", e o art. 2º reserva essa atividade a analistas credenciados. O aviso de "carteira teórica" sozinho não muda o que os textos são.
+**Causa medida:**
+- `www.virtusapp.com.br` é um CNAME para `zodj065f.up.railway.app`.
+- O resolvedor de DNS da Vero responde **SERVFAIL** para qualquer nome em `up.railway.app` (testado com o nome do Virtus e com `up.railway.app` puro). O mesmo resolvedor resolve `railway.app`, `vercel.com` e o próprio CNAME sem problema.
+- Google (8.8.8.8), Cloudflare (1.1.1.1) e OpenDNS resolvem normalmente para `153.52.255.42`, e o site responde 200 nesse IP.
+- `virtusapp.com.br` (sem www) aponta para a Vercel e resolve, mas só redireciona para o `www`, que falha.
 
-**O que fazer (site e app):**
-1. **Remover** "Por que está na lista", "Perfil de renda" e "Principais riscos" das 13 empresas, e parar de gerar esses textos. Não deixar textos antigos acessíveis por endereço ou API.
-2. **Mostrar só o resultado da regra:** setor, ticker, nota do método VRE, pilares numéricos e participação calculada.
-3. **Publicar as regras na página** (seção "Como a carteira é montada"): universo, critérios e pesos do VRE, setores, quantidade de ativos, regra de participação e frequência de rebalanceamento. A seleção precisa sair da regra, sem escolha manual de ativo.
-4. **Criar o backtest** (abaixo).
-5. **Trocar "participação no estudo"** por "peso na carteira teórica".
-6. **Colocar o texto do topo e o FAQ** (abaixo).
-7. **Não usar na divulgação** frases como "as melhores", "para comprar" ou resultado do backtest como promessa.
+**O que não sei:** desde quando acontece, se é temporário e quantas operadoras são afetadas. Em 09/11 o mesmo Wi-Fi funcionava.
 
-**Backtest (requisitos):**
-- Janela de 5 anos ou mais, com a composição recalculada em cada data apenas com dados disponíveis naquela data (sem olhar o futuro).
-- Mesma regra de hoje, aplicada desde o início; sem trocar a regra para melhorar o resultado passado.
-- Empresas que saíram da bolsa no período continuam na conta (sem viés de sobrevivência).
-- Proventos incluídos e reinvestidos, com ajuste de desdobramentos e bonificações.
-- Comparação com Ibovespa, IDIV e CDI: retorno acumulado, retorno anual, maior queda e volatilidade.
-- Mostrar a tabela de operações, como faz a referência.
-- Declarar na tela: "Backtest teórico com dados públicos, sem custos de corretagem, impostos ou slippage" (ou incluir esses custos).
+**Sugestão (em ordem de preferência):**
+1. **Colocar o domínio atrás de um proxy com IP próprio**, por exemplo Cloudflare com proxy ligado. O visitante passa a resolver só `virtusapp.com.br`, e a consulta a `up.railway.app` deixa de depender do DNS de cada operadora.
+2. **Ou servir o `www` pela Vercel** (que já atende o domínio sem www) com rewrite ou proxy para a Railway.
+3. **O app não deve depender só do `www`:** usar um endereço de API que siga a mesma solução e mostrar uma mensagem clara quando não conseguir conectar ("Sem conexão com o servidor. Tente outra rede."), em vez de ficar carregando.
+4. **Monitorar de fora:** um verificador externo que teste o site por resolvedores de operadoras brasileiras, ou ao menos por mais de um DNS.
 
-**Texto para o topo da página** (redação própria; hoje o aviso é idêntico ao da Meus Dividendos):
+### 🟡 1.2 Nota VRE: app mostra 1 ponto a menos que o site (novo, 12/11)
 
-> **Carteira teórica, com finalidade educacional.** Os Titãs da Renda são o resultado automático de regras públicas (método VRE), aplicadas a dados públicos de empresas de setores perenes com histórico de proventos.
->
-> Não é recomendação de compra, venda ou manutenção, não considera o seu perfil ou objetivos e não é um relatório de analista. Resultados simulados e rentabilidade passada não garantem resultados futuros. As decisões de investimento são de responsabilidade de cada investidor.
+Titãs da Renda, mesma hora: PSSA3 **79** no site e **78** no app; CPFE3 70 × 69; SAPR11 85 × 84; PETR4 58 × 57; KLBN11 52 × 51. Os pilares também (BBDC4: Qual. 45 × 44, Valor 54 × 53). Parece arredondamento diferente (um arredonda, o outro trunca). **Sugestão:** usar a mesma regra nas duas plataformas.
 
-**FAQ para o fim da página:**
+### 🟡 1.3 Titãs da Renda: pontos a completar (12/11)
 
-- **O que são os Titãs da Renda?** Uma carteira teórica, gerada por regras a partir de dados públicos, para estudar como empresas de setores perenes se comportariam.
-- **Isso é uma recomendação de investimento?** Não. A carteira não indica compra, venda ou manutenção de nenhum ativo.
-- **Posso investir nessa carteira?** Ela não é um produto nem foi feita para ser copiada. Não considera o seu perfil, patrimônio, prazo ou momento de entrada.
-- **Como as empresas são escolhidas?** Por regras fixas e públicas do método VRE. Nenhum ativo é incluído manualmente. *(Inserir critérios e pesos reais.)*
-- **Com que frequência a carteira muda?** *(Inserir a frequência real.)*
-- **O que é o backtest?** Uma simulação de como a regra teria se comportado no passado. Não representa operações reais.
-- **O resultado considera custos, impostos e dividendos?** *(Responder conforme o cálculo real.)*
-- **Como a carteira se compara ao Ibovespa, ao IDIV e ao CDI?** *(Apontar para a tabela do backtest.)*
-- **Os resultados são garantidos?** Não. Resultados simulados e rentabilidade passada não garantem resultados futuros.
-- **A inteligência artificial escolhe as empresas?** *(Responder conforme o funcionamento real. Se a seleção vem só das regras, dizer isso.)*
+A página nova segue o que foi pedido (ver seção 3). Faltam detalhes:
+- **Nota × composição:** a nota mostrada parece ser a de hoje, e a composição é a do rebalanceamento de 01/10. Dizer na tela qual é qual ("nota em 12/11" e "nota no rebalanceamento"), para ninguém estranhar se uma empresa fora da carteira passar a ter nota maior.
+- **Textos antigos:** confirmar que os textos por empresa não ficaram acessíveis por API, cache ou versões antigas do app.
+- **Divulgação:** a página de planos diz "carteira teórica com backtest desde 2016", que está adequado. Manter sem citar o retorno do backtest em anúncios.
 
-**Limite desta sugestão:** ela segue o modelo usado no mercado e reduz o risco, mas não é parecer jurídico nem garante que a CVM concorde com o enquadramento.
+### 🟡 1.4 Calendário como função do plano grátis? (ideia, 09/11)
 
-### 🟡 1.3 Site no celular: "Passe o mouse para ver cada dia"
+O público de dividendos quer saber quando as empresas pagam, e o Mapa de Dividendos é só Premium. **Sugestão a avaliar:** mostrar no plano grátis as 5 primeiras linhas, ou apenas o mês atual, com o restante borrado. Não testei com conta grátis.
 
-Continua em Carteira → Visão geral. **Sugestão:** "Toque no gráfico para ver cada dia".
+### ⚪ 1.5 Para o desenvolvedor conferir (inconclusivo)
 
-### 🟡 1.4 Movimentação da diretoria: "em 1 mês diferente"
-
-PETR4 (Android): "comprou R$ 206,1 mil e vendeu R$ 13,5 mil em ações da empresa, em 1 mês diferente." **Sugestão:** no singular, "em 1 mês".
-
-### 🟡 1.5 Top 5 (Android): ticker repetido
-
-"MXRF11 / MXRF11" e "TAEE11 / TAEE11": quando não há nome da empresa, a segunda linha repete o ticker. **Sugestão:** usar o nome curto ou esconder a linha.
-
-### 🟡 1.6 Calendário como função do plano grátis? (ideia, 09/11)
-
-O público de dividendos quer saber quando as empresas pagam, e o Mapa de Dividendos é só Premium. **Sugestão a avaliar:** mostrar no plano grátis as 5 primeiras linhas, ou apenas o mês atual, com o restante borrado.
-
-### ⚪ 1.7 Para o desenvolvedor conferir (inconclusivo)
-
-- **Dietz × TWR (Android, Análises → Métricas de carteira):** "TWR 13,88%" e "Dietz 45,83%", na mesma janela de 365 dias. Sem aportes no período, os dois deveriam ficar próximos. Os lançamentos da conta são de 2022–2023, então parece que o Dietz está usando outra janela.
-- **Site em telas de 320 px:** o seletor "Ibovespa | CDI" sai da tela e a barra inferior fica parcialmente fora da área visível (visto em simulação; em 360 e 390 px está certo).
+- **Site em telas de 320 px:** o seletor "Ibovespa | CDI" sai da tela e a barra inferior fica parcialmente fora da área visível (visto em simulação em 04/11; não refiz).
+- **"em 1 mês diferente":** hoje PETR4 mostra "em 2 meses diferentes", então não deu para ver se o singular foi corrigido.
 
 ### ⚪ 1.8 Da especificação da Movimentação da diretoria, ainda não testados
 
@@ -327,6 +299,10 @@ Esses números saem da API como ela respondeu em 28/10/2026 e podem mudar com re
 | Botão "Todos" quebrado (Android) | 09/11 | Em uma linha |
 | "Adicionar" cobrindo o gráfico (Android) | 09/11 | Foi para o topo da tela |
 | Radar: "bp" e nome longo da Klabin | 09/11 | "2,13% do valor de mercado"; "Klabin SA" |
+| Titãs da Renda como carteira teórica por regra | 12/11 | Site e app 1.5.3: textos por empresa removidos; regras, pesos e universo publicados; backtest desde 04/2016 com operações; texto do topo e FAQ. Conferido: Ibovespa +240,65% (Yahoo +240,64%) e CDI +164,68% (BCB +164,82%) |
+| "Passe o mouse" no site pelo celular | 12/11 | "Toque no gráfico para ver cada dia" |
+| Top 5 com ticker repetido (Android) | 12/11 | Mostra o nome do fundo ou da empresa |
+| Dietz muito diferente do TWR (Android) | 12/11 | TWR 11,22% e Dietz 11,72% na mesma janela |
 
 ## 4. Conferido e descartado (não era erro)
 
