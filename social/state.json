@@ -1,11 +1,11 @@
 {
  "social_state": {
   "emptyNoticeDate": "2026-09-24",
-  "lastRunDate": "2026-11-12",
-  "lastSlug": "2026-11-12-o-que-vai-cair",
-  "startedAt": "2026-11-10T23:41:23.169Z",
+  "lastRunDate": "2026-11-13",
+  "lastSlug": "2026-11-13-comparacao-pares",
+  "startedAt": "2026-11-13T23:50:24.238Z",
   "attempts": 0,
-  "attemptsDate": "2026-11-10"
+  "attemptsDate": "2026-11-13"
  },
  "social_post_log": {
   "2026-09-25-provaveis-pagadores": {
@@ -431,6 +431,15 @@
    "count": 1,
    "fb": "1337364702788353_122134585977469153",
    "ig": "18122228158946292"
+  },
+  "2026-11-13-comparacao-pares": {
+   "date": "2026-11-13",
+   "at": "2026-11-13T23:50:00.842Z",
+   "image": "https://pedrofagundesoic.github.io/virtus-social/social/2026-11-13-comparacao-pares.png",
+   "kind": "queue",
+   "count": 1,
+   "fb": "1337364702788353_122134958949469153",
+   "ig": "18237349234324715"
   }
  }
 }
