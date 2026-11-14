@@ -1,11 +1,11 @@
 {
  "social_state": {
   "emptyNoticeDate": "2026-09-24",
-  "lastRunDate": "2026-11-13",
-  "lastSlug": "2026-11-13-comparacao-pares",
-  "startedAt": "2026-11-13T23:50:24.238Z",
+  "lastRunDate": "2026-11-14",
+  "lastSlug": "2026-11-14-preco-justo-site",
+  "startedAt": "2026-11-14T22:43:07.526Z",
   "attempts": 0,
-  "attemptsDate": "2026-11-13"
+  "attemptsDate": "2026-11-14"
  },
  "social_post_log": {
   "2026-09-25-provaveis-pagadores": {
@@ -440,6 +440,15 @@
    "count": 1,
    "fb": "1337364702788353_122134958949469153",
    "ig": "18237349234324715"
+  },
+  "2026-11-14-preco-justo-site": {
+   "date": "2026-11-14",
+   "at": "2026-11-14T22:42:45.472Z",
+   "image": "https://pedrofagundesoic.github.io/virtus-social/social/2026-11-14-preco-justo-site.png",
+   "kind": "queue",
+   "count": 1,
+   "fb": "1337364702788353_122135253537469153",
+   "ig": "17994333420081447"
   }
  }
 }
