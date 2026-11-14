@@ -26,6 +26,9 @@ Publisher = GitHub Actions (Opção B). Fila pública = GitHub Pages (`docs/soci
 4. Nunca editar `docs/social/queue.json` à mão; sempre `build.py --queue`.
 5. Antes de montar um lote, ler `social/compose/QUALIDADE.md` (falhas já publicadas e como evitar).
 
+## Toda sessão, por último
+Limpar a pasta: `py -3.12 build.py --prune`, apagar `social/compose/__pycache__` e `photos/qa/`, esvaziar o scratchpad da sessão e `git gc --prune=now`. Nunca apagar o que está pendente na fila nem a memória do projeto. Dizer ao dono quanto foi liberado.
+
 ## Pipeline de reabastecimento
 ```powershell
 cd C:\dev\Virtus\social\compose
