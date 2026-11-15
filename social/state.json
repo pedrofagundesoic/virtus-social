@@ -1,11 +1,11 @@
 {
  "social_state": {
   "emptyNoticeDate": "2026-09-24",
-  "lastRunDate": "2026-11-14",
-  "lastSlug": "2026-11-14-preco-justo-site",
-  "startedAt": "2026-11-14T22:43:07.526Z",
+  "lastRunDate": "2026-11-15",
+  "lastSlug": "2026-11-15-movimentacao-diretoria",
+  "startedAt": "2026-11-15T23:08:52.994Z",
   "attempts": 0,
-  "attemptsDate": "2026-11-14"
+  "attemptsDate": "2026-11-15"
  },
  "social_post_log": {
   "2026-09-25-provaveis-pagadores": {
@@ -449,6 +449,15 @@
    "count": 1,
    "fb": "1337364702788353_122135253537469153",
    "ig": "17994333420081447"
+  },
+  "2026-11-15-movimentacao-diretoria": {
+   "date": "2026-11-15",
+   "at": "2026-11-15T23:08:32.677Z",
+   "image": "https://pedrofagundesoic.github.io/virtus-social/social/2026-11-15-movimentacao-diretoria.png",
+   "kind": "queue",
+   "count": 1,
+   "fb": "1337364702788353_122135542857469153",
+   "ig": "18131357578884226"
   }
  }
 }
