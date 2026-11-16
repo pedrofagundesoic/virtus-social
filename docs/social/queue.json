@@ -2,48 +2,6 @@
  "_readme": "Fila diária. posts = datados ainda não publicados, em ordem (postados uma vez quando vencem). evergreen = banco: nunca postado primeiro, depois o menos recente com ≥ SOCIAL_REPEAT_DAYS (21). Já publicados ficam só em social/compose/posts.json. Gerado por build.py --queue — nunca editar à mão.",
  "posts": [
   {
-   "slug": "2026-11-08-mapa-no-celular",
-   "image": "2026-11-08-mapa-no-celular.png",
-   "caption": "Renda mensal começa sabendo quem paga todo mês.\n\nNo Mapa de Dividendos do Virtus, as empresas do Ibovespa aparecem mês a mês, com cinco anos de histórico, e os pagadores mensais ganham o selo M. Na imagem, entre os bancos: ITUB4, BBDC4 e BBDC3.\n\nNo celular, direto pelo navegador.\n\nCrie sua conta gratuita — virtusapp.com.br, link na bio.\n\nDados de amostra. Não é recomendação de investimento.\n\n#dividendos #rendamensal #calendariodedividendos #rendapassiva #b3",
-   "date": "2026-11-08"
-  },
-  {
-   "slug": "2026-11-09-cotacao-5-anos",
-   "image": "2026-11-09-cotacao-5-anos.png",
-   "caption": "Uma queda de uma semana assusta. Em cinco anos, ela pode nem aparecer.\n\nNo app do Virtus, cada ativo tem o gráfico de cotação com preço diário e cinco janelas: 1M, 3M, 6M, 1A e 5A. Logo abaixo, a sua posição, os proventos e as movimentações.\n\nCrie sua conta gratuita — virtusapp.com.br, link na bio.\n\nDados de amostra. Não é recomendação de investimento.\n\n#investimentos #acoes #bolsadevalores #longoprazo #b3",
-   "date": "2026-11-09"
-  },
-  {
-   "slug": "2026-11-11-radar-insiders",
-   "image": "2026-11-11-radar-insiders.png",
-   "caption": "Diretores e conselheiros precisam informar à CVM quando negociam ações da própria empresa. A informação é pública, mas fica espalhada.\n\nO Radar de insiders do Virtus junta tudo em uma lista: 251 empresas acompanhadas, janela de 6 meses, com filtros para quem está comprando ou vendendo e para a sua carteira.\n\nNegociações podem ter motivos pessoais e não indicam, por si só, a direção do preço.\n\nCrie sua conta gratuita — virtusapp.com.br, link na bio.\n\nDados de amostra. Não é recomendação de investimento.\n\n#insiders #cvm #investimentos #acoes #bolsadevalores #b3",
-   "date": "2026-11-11"
-  },
-  {
-   "slug": "2026-11-12-o-que-vai-cair",
-   "image": "2026-11-12-o-que-vai-cair.png",
-   "caption": "Você sabe o que vai cair na sua conta nas próximas semanas?\n\nNo Virtus, os proventos já anunciados aparecem em ordem de data, com tipo, valor por cota e estimativa pela sua posição. Na imagem: 9 anunciados, cerca de R$ 466,41 no total.\n\nNo celular, direto pelo navegador.\n\nCrie sua conta gratuita — virtusapp.com.br, link na bio.\n\nDados de amostra. Não é recomendação de investimento.\n\n#proventos #dividendos #rendapassiva #fiis #investimentos #b3",
-   "date": "2026-11-12"
-  },
-  {
-   "slug": "2026-11-13-comparacao-pares",
-   "image": "2026-11-13-comparacao-pares.png",
-   "caption": "Um P/L sozinho diz pouco. Ao lado das outras empresas do setor, diz bem mais.\n\nNo Virtus, a aba Fundamentos de cada ativo traz a comparação com pares: P/L, P/VP, dividend yield e ROE, lado a lado. Na imagem, o setor de energia.\n\nLogo abaixo, o Safety score, que na imagem marca 83, com 9 anos consecutivos pagando.\n\nCrie sua conta gratuita — virtusapp.com.br, link na bio.\n\nDados de amostra. Não é recomendação de investimento.\n\n#analisefundamentalista #acoes #dividendos #investimentos #b3",
-   "date": "2026-11-13"
-  },
-  {
-   "slug": "2026-11-14-preco-justo-site",
-   "image": "2026-11-14-preco-justo-site.png",
-   "caption": "O preço justo pelos métodos de Bazin, Graham e Gordon agora também está no site do Virtus.\n\nNa imagem, os três métodos para o mesmo ativo: R$ 76,50, R$ 24,44 e R$ 67,54. Métodos diferentes chegam a números diferentes, e por isso cada um vem com a fórmula e os dados usados.\n\nNa mesma página, Snowflake, Safety score e a movimentação da diretoria.\n\nCrie sua conta gratuita — virtusapp.com.br, link na bio.\n\nDados de amostra. Não é recomendação de investimento.\n\n#precojusto #bazin #graham #valuation #dividendos #b3",
-   "date": "2026-11-14"
-  },
-  {
-   "slug": "2026-11-15-movimentacao-diretoria",
-   "image": "2026-11-15-movimentacao-diretoria.png",
-   "caption": "Comprou ou vendeu não basta. Também importa o tamanho.\n\nNo detalhe de cada ação, o Virtus mostra as negociações da administração divulgadas à CVM, mês a mês, e compara com o valor de mercado. Na imagem: R$ 254,3 mil em compras, R$ 33,4 mil em vendas e o selo \"pouco relevante\".\n\nNegociações podem ter motivos pessoais e não indicam, por si só, a direção do preço.\n\nCrie sua conta gratuita — virtusapp.com.br, link na bio.\n\nDados de amostra. Não é recomendação de investimento.\n\n#insiders #cvm #acoes #investimentos #b3",
-   "date": "2026-11-15"
-  },
-  {
    "slug": "2026-11-16-ganhando-do-ibovespa",
    "image": "2026-11-16-ganhando-do-ibovespa.png",
    "caption": "Sua carteira está ganhando do Ibovespa? Dá para responder sem planilha.\n\nNo Virtus, o gráfico de 12 meses mostra a sua rentabilidade contra o índice. Na imagem: carteira +13,86% e Ibovespa +11,11%.\n\nEssa comparação faz parte do plano grátis.\n\nCrie sua conta gratuita — virtusapp.com.br, link na bio.\n\nDados de amostra. Não é recomendação de investimento.\n\n#ibovespa #investimentos #carteiradeinvestimentos #dividendos #b3",
@@ -115,6 +73,54 @@
    "caption": "Nem todo ativo que te interessa já está na carteira.\n\nNa Watchlist do Virtus, você acompanha ações brasileiras e americanas sem misturar com o que já comprou. Na imagem, 5 ativos acompanhados — de BBAS3 ao VOO, cotado em dólar.\n\nNo computador ou no celular, com a mesma conta.\n\nCrie sua conta gratuita — virtusapp.com.br, link na bio.\n\nDados de amostra. Não é recomendação de investimento.\n\n#watchlist #investimentos #acoes #bolsadevalores #b3",
    "date": "2026-11-27",
    "only": "ig"
+  },
+  {
+   "slug": "2026-11-28-resultado-trimestre",
+   "image": "2026-11-28-resultado-trimestre.png",
+   "caption": "Saiu o balanço. A empresa cresceu ou encolheu?\n\nNa página de cada ação do Virtus, o resultado do trimestre vem comparado ao mesmo trimestre do ano anterior. Na imagem, PETR4 no 3T26: receita de R$ 169,4 bi e lucro líquido de R$ 39,8 bi. Logo acima, a data de divulgação, com link para o documento entregue à CVM.\n\nCrie sua conta gratuita — virtusapp.com.br, link na bio.\n\nDemonstrações das companhias via BRAPI. Não é recomendação de investimento.\n\n#resultados #balanco #acoes #investimentos #b3",
+   "date": "2026-11-28"
+  },
+  {
+   "slug": "2026-11-29-contexto-macro",
+   "image": "2026-11-29-contexto-macro.png",
+   "caption": "A carteira rendeu 9,67% em um ano. Isso é muito ou pouco? Depende do cenário.\n\nNo app do Virtus, o desempenho vem junto do contexto: Selic meta de 13,75%, IPCA de 4,63% em 12 meses e CDI de 13,65% ao ano, com dados do Banco Central. Logo abaixo, as métricas de 365 dias: TWR de 9,67%, máximo drawdown de −13,32% e Dietz de 10,19%.\n\nO TWR mede a carteira sem o efeito dos aportes; o Dietz pondera pelo dinheiro investido.\n\nCrie sua conta gratuita — virtusapp.com.br, link na bio.\n\nDados de amostra. Rentabilidade passada não garante rentabilidade futura. Não é recomendação de investimento.\n\n#rentabilidade #selic #cdi #ipca #investimentos",
+   "date": "2026-11-29"
+  },
+  {
+   "slug": "2026-11-30-sub-carteiras",
+   "image": "2026-11-30-sub-carteiras.png",
+   "caption": "Aposentadoria, reserva, renda passiva: cada objetivo pode ter a sua carteira.\n\nNo Virtus, você cria sub-carteiras na aba Conta. Na imagem, a Carteira Principal, que recebe os lançamentos por padrão, e a Renda Passiva. Dá para renomear, trocar a padrão ou excluir — e excluir não apaga nada: os lançamentos voltam para a carteira padrão.\n\nNo celular, direto pelo navegador.\n\nCrie sua conta gratuita — virtusapp.com.br, link na bio.\n\nNão é recomendação de investimento.\n\n#carteiradeinvestimentos #rendapassiva #organizacaofinanceira #investimentos #dividendos",
+   "date": "2026-11-30"
+  },
+  {
+   "slug": "2026-12-01-data-ex",
+   "image": "2026-12-01-data-ex.png",
+   "caption": "Quem compra a partir da data ex não recebe aquele provento. Por isso ela importa tanto quanto a data de pagamento.\n\nNa agenda do app do Virtus, cada provento anunciado traz as duas datas. Na imagem, o HGLG11: data ex em 30/10, pagamento em 16/11, R$ 1,17 por cota — R$ 23,40 para a posição da carteira.\n\nCrie sua conta gratuita — virtusapp.com.br, link na bio.\n\nDados de amostra. Não é recomendação de investimento.\n\n#dataex #dividendos #proventos #fiis #rendapassiva",
+   "date": "2026-12-01"
+  },
+  {
+   "slug": "2026-12-02-distribuicao",
+   "image": "2026-12-02-distribuicao.png",
+   "caption": "Diversificar começa por saber onde o dinheiro está.\n\nNa aba Análises do Virtus, a distribuição da carteira aparece logo de cara. Na imagem: 15 ativos, 2 classes com Ações BR em 71,6%, 4 instituições e a maior posição, PETR4, com 13,5% da carteira.\n\nCrie sua conta gratuita — virtusapp.com.br, link na bio.\n\nDados de amostra. Não é recomendação de investimento.\n\n#diversificacao #carteiradeinvestimentos #investimentos #acoes #b3",
+   "date": "2026-12-02"
+  },
+  {
+   "slug": "2026-12-03-bloqueio-biometrico",
+   "image": "2026-12-03-bloqueio-biometrico.png",
+   "caption": "Carteira de investimentos é assunto pessoal.\n\nCom o bloqueio biométrico do app do Virtus ligado, a digital ou o Face ID é pedido sempre que você volta depois de 30 minutos fora do app. Uma camada a mais para quando o celular fica sobre a mesa ou passa de mão em mão.\n\nCrie sua conta gratuita — virtusapp.com.br, link na bio.\n\nNão é recomendação de investimento.\n\n#seguranca #investimentos #financaspessoais #dividendos #app",
+   "date": "2026-12-03"
+  },
+  {
+   "slug": "2026-12-04-corrigir-lancamento",
+   "image": "2026-12-04-corrigir-lancamento.png",
+   "caption": "Digitou o preço errado? Esqueceu a taxa? Acontece.\n\nNa página de cada ativo do Virtus, as movimentações ficam listadas. Na imagem, uma compra de 200 ações a R$ 25,30, em 12 de abril de 2023. Um toque no lápis corrige data, quantidade, preço, taxas ou observações; a lixeira exclui.\n\nNo celular, direto pelo navegador.\n\nCrie sua conta gratuita — virtusapp.com.br, link na bio.\n\nDados de amostra. Não é recomendação de investimento.\n\n#controlefinanceiro #carteiradeinvestimentos #investimentos #acoes #b3",
+   "date": "2026-12-04"
+  },
+  {
+   "slug": "2026-12-05-aplicado-e-retorno",
+   "image": "2026-12-05-aplicado-e-retorno.png",
+   "caption": "O resultado da carteira não é só a cotação de hoje.\n\nNo app do Virtus, um toque em detalhes abre a conta do patrimônio. Na imagem: R$ 61.508,50 aplicados, R$ 23.887,96 em proventos recebidos e resultado de +R$ 27.653,91 (+44,96%), somando valorização e proventos.\n\nCrie sua conta gratuita — virtusapp.com.br, link na bio.\n\nDados de amostra. Rentabilidade passada não garante rentabilidade futura. Não é recomendação de investimento.\n\n#patrimonio #dividendos #proventos #rendapassiva #investimentos",
+   "date": "2026-12-05"
   }
  ],
  "evergreen": []
