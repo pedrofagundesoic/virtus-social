@@ -635,5 +635,95 @@
    2444,
    1900
   ]
+ },
+ "life-subcarteiras": {
+  "photo": "Fn9knMAITSk",
+  "shot": "m-subcarteiras.png",
+  "radius": 0.03,
+  "chroma": true,
+  "quad": [
+   [
+    1243,
+    118
+   ],
+   [
+    1954,
+    129
+   ],
+   [
+    1954,
+    1618
+   ],
+   [
+    1251,
+    1633
+   ]
+  ],
+  "crop": [
+   697,
+   0,
+   2503,
+   1688
+  ]
+ },
+ "life-concentracao": {
+  "photo": "IfTfxx26uKE",
+  "shot": "d-analises-concentracao.png",
+  "radius": 0.01,
+  "chroma": true,
+  "quad": [
+   [
+    970,
+    356
+   ],
+   [
+    2380,
+    401
+   ],
+   [
+    2336,
+    1230
+   ],
+   [
+    936,
+    1130
+   ]
+  ],
+  "crop": [
+   757,
+   0,
+   2563,
+   1688
+  ]
+ },
+ "life-movimentacoes": {
+  "photo": "2aGN-B-AdWg",
+  "shot": "m-movimentacoes.png",
+  "radius": 0.03,
+  "chroma": true,
+  "quad": [
+   [
+    1501,
+    1258
+   ],
+   [
+    2428,
+    1661
+   ],
+   [
+    1609,
+    3588
+   ],
+   [
+    662,
+    3180
+   ]
+  ],
+  "crop": [
+   235,
+   1190,
+   2855,
+   3640
+  ]
  }
 }

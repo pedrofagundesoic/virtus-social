@@ -11,7 +11,7 @@ Famílias:  app  = cartão + screenshots reais em moldura. variant: phone | phon
            life = foto de pessoa real + aparelho sobreposto. device: phone | browser | tablet
                   | inphoto (print real já encaixado na tela da própria foto por photo-screen.py)
 Chaves do post: slug, family, variant/device, platform (iphone|android|web), shots[], photo, focal, kicker,
-                headline (<em> permitido, ≤ 2 linhas), sub, caption, date | evergreen:true, photo_h (inphoto: altura px da foto no topo),
+                headline (<em> permitido, ≤ 2 linhas), sub, caption, date | evergreen:true, photo_h (inphoto: altura px da foto no topo), fine (letra miúda própria),
                 fade, crop, shot_h, offset, url, text_top (life)
 Rodar:  py -3.12 build.py            py -3.12 build.py --queue      py -3.12 build.py --prune
 """
@@ -92,9 +92,9 @@ def photo(pid):
     if not os.path.exists(p): raise SystemExit(f'missing photo {p}')
     return fileurl(p)
 
-def footer():
+def footer(p=None):
     return (f'<div class="foot"><b>{B["footer_bold"]}</b> <span>{B["footer_rest"]}</span></div>'
-            f'<div class="fine">{B["fine_print"]}</div>')
+            f'<div class="fine">{(p or {}).get("fine") or B["fine_print"]}</div>')
 
 # ───────────── família A: cartão ─────────────
 APP_CSS = BASE_CSS + themed('''
@@ -124,7 +124,7 @@ def render_app(p):
 <div class="sub">{p['sub']}</div>
 <div class="hero">{hero}</div>
 <div class="pillrow">{pills(p.get('platform', 'iphone'))}</div>
-{footer()}
+{footer(p)}
 </div></body></html>'''
 
 # ───────────── família B: foto de pessoa ─────────────
@@ -182,7 +182,7 @@ def render_life(p):
 {pills(p.get('platform', 'iphone'))}
 {text}
 {mock}
-{footer()}
+{footer(p)}
 </div></body></html>'''
 
 AI_WORDS = re.compile(r'(?<![\w#])(ia|ai|i\.a\.)(?!\w)|#ia\b|#ai\b|intelig[êe]ncia artificial|artificial intelligence', re.I)

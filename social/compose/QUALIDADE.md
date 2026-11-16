@@ -48,3 +48,11 @@ barra roxa da tela original na base do aparelho. Já publicado; fica como evidê
 
 - **`--detect-green` erra quando a mão corta um lado da tela:** o reflexo verde na pele entra na região e o quad abre para fora. O aviso de SOBRA DE TELA não pega isso. Olhar sempre a folha do `qa-photo.py`; se um lado do contorno vermelho sair do aparelho, corrigir o canto à mão.
 
+
+## 2026-11-16 · Aprendizados deste lote (não chegou a publicar)
+
+- **Notebook prateado:** o aviso de SOBRA DE TELA dispara por causa da moldura clara, mesmo com a tela coberta. Nesse caso, quem decide é a folha do `qa-photo.py`: se não houver verde nem tela antiga do lado de fora do contorno, o aviso é falso.
+- **Friso verde de 1 px na borda:** o quad do `--detect-green` fica um pouco para dentro. Ampliar 7–10 px a partir do centro. Com `chroma: true`, o print só entra onde a foto é verde, então ampliar não invade a moldura.
+- **Raio dos cantos com tela verde:** usar raio pequeno (0,03) e deixar o verde da foto recortar os cantos. Com raio maior que o da tela, sobram cantos verdes.
+- **Print do site no computador vira texto miúdo no post:** para mostrar números, usar o site no celular (variant `phone`) e recortar só o card.
+- **Dados reais de empresa (balanço):** usar letra miúda própria (`fine`) em vez de "Dados de amostra", e citar na legenda só o que bate com a fonte oficial.

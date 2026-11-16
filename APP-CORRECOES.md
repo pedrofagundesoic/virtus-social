@@ -2,11 +2,11 @@
 
 Substitui `SUGESTOES-APP.md`, `-2`, `-3` e `-4` (rodadas de 24/09, 29/09, 07/10 e 13/10/2026; o texto completo de cada uma está no histórico do git).
 
-**Última verificação:** 12/11/2026.
+**Última verificação:** 16/11/2026.
 - **Web:** desktop 1440×900 e celular 390×844.
-- **Android:** **v1.5.3** (Galaxy S25).
+- **Android:** **v1.5.4** (Galaxy S25).
 - **Conta de testes:** 15 ativos em 4 corretoras, compras de 2022–2023.
-- **Fontes de conferência:** Yahoo Finance, Banco Central (série 12), resolvedores de DNS públicos e texto consolidado da Resolução CVM 20.
+- **Fontes de conferência:** Yahoo Finance, Banco Central (séries 432, 433, 4389 e 13522), notícias do balanço 3T26 da Petrobras, resolvedores de DNS públicos e texto consolidado da Resolução CVM 20.
 
 **Como usar:**
 1. **Seção 1:** o que falta corrigir.
@@ -17,34 +17,50 @@ Substitui `SUGESTOES-APP.md`, `-2`, `-3` e `-4` (rodadas de 24/09, 29/09, 07/10 
 
 ## 1. Em aberto
 
-### 🔴 1.1 Site e app fora do ar em algumas redes: o DNS de operadoras não resolve o endereço da Railway (novo, 12/11)
+### 🟡 1.1 Resultado do trimestre: holding com "Receita R$ 0" e variação de lucro "0,0%" (novo, 16/11)
 
-**Sintoma:** em 12/11, o app e o site não carregam no Wi-Fi do dono (operadora Vero), mas funcionam nos dados móveis (TIM). Quem está numa rede afetada vê o Virtus como fora do ar.
+**Onde:** página do ativo, card "Resultado do trimestre".
 
-**Causa medida:**
-- `www.virtusapp.com.br` é um CNAME para `zodj065f.up.railway.app`.
-- O resolvedor de DNS da Vero responde **SERVFAIL** para qualquer nome em `up.railway.app` (testado com o nome do Virtus e com `up.railway.app` puro). O mesmo resolvedor resolve `railway.app`, `vercel.com` e o próprio CNAME sem problema.
-- Google (8.8.8.8), Cloudflare (1.1.1.1) e OpenDNS resolvem normalmente para `153.52.255.42`, e o site responde 200 nesse IP.
-- `virtusapp.com.br` (sem www) aponta para a Vercel e resolve, mas só redireciona para o `www`, que falha.
+**O que aparece em BBSE3 (3T26):**
+- "Receita R$ 0". BB Seguridade é holding e não informa receita no formato das demais empresas.
+- "Lucro 0,0% vs 3T25", o que é improvável.
 
-**O que não sei:** desde quando acontece, se é temporário e quantas operadoras são afetadas. Em 09/11 o mesmo Wi-Fi funcionava.
+**Sugestão:**
+- Esconder a linha quando o valor vier zerado, ou mostrar "não se aplica".
+- Conferir o cálculo da variação de lucro.
 
-**Sugestão (em ordem de preferência):**
-1. **Colocar o domínio atrás de um proxy com IP próprio**, por exemplo Cloudflare com proxy ligado. O visitante passa a resolver só `virtusapp.com.br`, e a consulta a `up.railway.app` deixa de depender do DNS de cada operadora.
-2. **Ou servir o `www` pela Vercel** (que já atende o domínio sem www) com rewrite ou proxy para a Railway.
-3. **O app não deve depender só do `www`:** usar um endereço de API que siga a mesma solução e mostrar uma mensagem clara quando não conseguir conectar ("Sem conexão com o servidor. Tente outra rede."), em vez de ficar carregando.
-4. **Monitorar de fora:** um verificador externo que teste o site por resolvedores de operadoras brasileiras, ou ao menos por mais de um DNS.
+**Conferência em PETR4 3T26 (balanço de 10/11):**
+- Receita R$ 169,4 bi e lucro R$ 39,8 bi batem com o divulgado.
+- Duas diferenças:
+  - **Variação do lucro:** o app mostra +21,1%; a imprensa traz +21,5%. Provavelmente usam bases diferentes, como lucro atribuível aos acionistas versus lucro total.
+  - **EBITDA:** o app mostra R$ 82,5 bi; a companhia divulga EBITDA ajustado de R$ 85,8 bi.
+- **Sugestão:** dizer na tela qual medida é usada ("EBITDA", não ajustado) e a fonte da base de comparação.
 
-### 🟡 1.2 Nota VRE: app mostra 1 ponto a menos que o site (novo, 12/11)
+### 🟡 1.6 "Por instituição": Android e site usam bases diferentes (novo, 16/11)
 
-Titãs da Renda, mesma hora: PSSA3 **79** no site e **78** no app; CPFE3 70 × 69; SAPR11 85 × 84; PETR4 58 × 57; KLBN11 52 × 51. Os pilares também (BBDC4: Qual. 45 × 44, Valor 54 × 53). Parece arredondamento diferente (um arredonda, o outro trunca). **Sugestão:** usar a mesma regra nas duas plataformas.
+O Android calcula pelo valor de mercado: XP 36,9%, R$ 24.058,90. O site calcula pelo valor aplicado: XP 38,1%, R$ 23.440,00. Com a mesma conta, o usuário vê dois números. O card "Instituições" das Análises no site também mostra 38,1%.
 
-### 🟡 1.3 Titãs da Renda: pontos a completar (12/11)
+**Sugestão:** usar a mesma base nas duas plataformas, de preferência o valor de mercado, como já faz o gráfico "Por classe de ativo", e escrever a base na legenda.
 
-A página nova segue o que foi pedido (ver seção 3). Faltam detalhes:
-- **Nota × composição:** a nota mostrada parece ser a de hoje, e a composição é a do rebalanceamento de 01/10. Dizer na tela qual é qual ("nota em 12/11" e "nota no rebalanceamento"), para ninguém estranhar se uma empresa fora da carteira passar a ter nota maior.
+### 🟡 1.7 Assistente do Android: resposta diz que não há custo de aquisição (novo, 16/11)
+
+Pergunta testada: "como está minha carteira?".
+- **Pontos certos:** recusou recomendar compra ou venda e deu o aviso correto. Os YoC citados batem com o app: PETR4 11,78% e BBSE3 16,45%.
+- **Erro:** afirmou que "o custo de aquisição e o resultado de cada ativo individualmente não estão na carteira cadastrada". O preço médio existe em cada ativo.
+
+**Sugestão:**
+- Incluir no contexto enviado ao assistente o preço médio e o resultado por ativo.
+- Revisar com o responsável de conformidade o texto e os limites do assistente. Ele responde sobre a carteira de cada pessoa, o que fica perto de recomendação personalizada.
+
+### 🟡 1.2 Nota VRE: app mostra 1 ponto a menos que o site (12/11; site conferido em 16/11)
+
+Titãs da Renda, mesma hora: PSSA3 **79** no site e **78** no app; CPFE3 70 × 69; SAPR11 85 × 84; PETR4 58 × 57; KLBN11 52 × 51. Os pilares também (BBDC4: Qual. 45 × 44, Valor 54 × 53). Parece arredondamento diferente (um arredonda, o outro trunca). Em 16/11 o site mostra PSSA3 79, CPFE3 70 e SAPR11 85; o app ainda não foi reconferido. **Sugestão:** usar a mesma regra nas duas plataformas.
+
+### 🟡 1.3 Titãs da Renda: pontos a completar (12/11; atualizado 16/11)
+
+- **Nota × composição: resolvido.** A tela agora diz "Nota VRE e pilares calculados no rebalanceamento de 01/10/2026".
 - **Textos antigos:** confirmar que os textos por empresa não ficaram acessíveis por API, cache ou versões antigas do app.
-- **Divulgação:** a página de planos diz "carteira teórica com backtest desde 2016", que está adequado. Manter sem citar o retorno do backtest em anúncios.
+- **Divulgação:** manter sem citar o retorno do backtest em anúncios.
 
 ### 🟡 1.4 Calendário como função do plano grátis? (ideia, 09/11)
 
@@ -72,6 +88,12 @@ Doc 1:
 
 Doc 2:
 - **#10:** data cortada em "Pagamentos recentes" no celular.
+
+### ⚪ 1.10 Pequenos pontos (novo, 16/11)
+
+- **"Alertas de concentração":** "Classe · Ações Brasil = 71,6% do patrimônio" aparece em vermelho, sem dizer o limite usado. **Sugestão:** "acima de X% em uma só classe" e um link para explicar.
+- **Próximos pagamentos:** em 16/11, os pagamentos do próprio dia seguem na lista de próximos e também já contam como recebidos. É só exibição; o total não está duplicado. **Sugestão:** tirar da lista a partir da data de pagamento, ou marcar "hoje".
+- **Tipo de provento:** a lista "Proventos recebidos" de PETR4 no site mostra um "Rendimento" de R$ 4,08 em 22/06/2026. Ação não paga rendimento (isso é de FII). Conferir se é lançamento da conta de testes ou classificação errada da fonte.
 
 ---
 
@@ -260,6 +282,10 @@ Esses números saem da API como ela respondeu em 28/10/2026 e podem mudar com re
 
 | Item | Resolvido em | Como ficou |
 |---|---|---|
+| Site e app fora do ar no Wi-Fi da Vero (DNS de `up.railway.app`) | 16/11 | Domínio no Cloudflare; `www` resolve em todas as redes testadas |
+| "Melhores Pagadoras" | 16/11 | Renomeado para "Ranking de Proventos" |
+| Titãs: nota de hoje × composição do rebalanceamento | 16/11 | "Nota VRE e pilares calculados no rebalanceamento de 01/10/2026" |
+| Dica "Toque no gráfico" | 16/11 | Presente no site (celular) e no Titãs |
 | Lançamento ia sempre para a carteira padrão | 07/10 | Campo "Carteira" no formulário |
 | Gerenciar carteiras | 07/10 | Renomear, definir padrão e excluir em Conta |
 | "Editar ordens" escondido | 07/10 | Seção Movimentações no detalhe do ativo |
