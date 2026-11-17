@@ -1,11 +1,11 @@
 {
  "social_state": {
   "emptyNoticeDate": "2026-09-24",
-  "lastRunDate": "2026-11-15",
-  "lastSlug": "2026-11-15-movimentacao-diretoria",
-  "startedAt": "2026-11-15T23:08:52.994Z",
+  "lastRunDate": "2026-11-16",
+  "lastSlug": "2026-11-16-ganhando-do-ibovespa",
+  "startedAt": "2026-11-17T02:02:59.689Z",
   "attempts": 0,
-  "attemptsDate": "2026-11-15"
+  "attemptsDate": "2026-11-16"
  },
  "social_post_log": {
   "2026-09-25-provaveis-pagadores": {
@@ -458,6 +458,15 @@
    "count": 1,
    "fb": "1337364702788353_122135542857469153",
    "ig": "18131357578884226"
+  },
+  "2026-11-16-ganhando-do-ibovespa": {
+   "date": "2026-11-16",
+   "at": "2026-11-17T02:02:41.418Z",
+   "image": "https://pedrofagundesoic.github.io/virtus-social/social/2026-11-16-ganhando-do-ibovespa.png",
+   "kind": "queue",
+   "count": 1,
+   "fb": "1337364702788353_122135867505469153",
+   "ig": "17994354066114835"
   }
  }
 }
