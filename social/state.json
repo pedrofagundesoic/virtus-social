@@ -1,11 +1,11 @@
 {
  "social_state": {
   "emptyNoticeDate": "2026-09-24",
-  "lastRunDate": "2026-11-16",
-  "lastSlug": "2026-11-16-ganhando-do-ibovespa",
-  "startedAt": "2026-11-17T02:02:59.689Z",
+  "lastRunDate": "2026-11-17",
+  "lastSlug": "2026-11-17-como-usar",
+  "startedAt": "2026-11-18T01:16:28.856Z",
   "attempts": 0,
-  "attemptsDate": "2026-11-16"
+  "attemptsDate": "2026-11-17"
  },
  "social_post_log": {
   "2026-09-25-provaveis-pagadores": {
@@ -467,6 +467,15 @@
    "count": 1,
    "fb": "1337364702788353_122135867505469153",
    "ig": "17994354066114835"
+  },
+  "2026-11-17-como-usar": {
+   "date": "2026-11-17",
+   "at": "2026-11-18T01:16:10.140Z",
+   "image": "https://pedrofagundesoic.github.io/virtus-social/social/2026-11-17-como-usar.png",
+   "kind": "queue",
+   "count": 1,
+   "fb": "1337364702788353_122136116895469153",
+   "ig": "17871555294693730"
   }
  }
 }
