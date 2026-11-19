@@ -1,11 +1,11 @@
 {
  "social_state": {
   "emptyNoticeDate": "2026-09-24",
-  "lastRunDate": "2026-11-17",
-  "lastSlug": "2026-11-17-como-usar",
-  "startedAt": "2026-11-18T01:16:28.856Z",
+  "lastRunDate": "2026-11-18",
+  "lastSlug": "2026-11-18-bateu-o-cdi",
+  "startedAt": "2026-11-19T00:43:06.614Z",
   "attempts": 0,
-  "attemptsDate": "2026-11-17"
+  "attemptsDate": "2026-11-18"
  },
  "social_post_log": {
   "2026-09-25-provaveis-pagadores": {
@@ -476,6 +476,15 @@
    "count": 1,
    "fb": "1337364702788353_122136116895469153",
    "ig": "17871555294693730"
+  },
+  "2026-11-18-bateu-o-cdi": {
+   "date": "2026-11-18",
+   "at": "2026-11-19T00:42:53.982Z",
+   "image": "https://pedrofagundesoic.github.io/virtus-social/social/2026-11-18-bateu-o-cdi.png",
+   "kind": "queue",
+   "count": 1,
+   "fb": "1337364702788353_122136386637469153",
+   "ig": "18029147873870081"
   }
  }
 }
