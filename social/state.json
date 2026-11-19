@@ -1,8 +1,8 @@
 {
  "social_state": {
   "emptyNoticeDate": "2026-09-24",
-  "lastRunDate": "2026-11-18",
-  "lastSlug": "2026-11-18-bateu-o-cdi",
+  "lastRunDate": "2026-11-19",
+  "lastSlug": "2026-11-19-mapa-calendario",
   "startedAt": "2026-11-19T00:43:06.614Z",
   "attempts": 0,
   "attemptsDate": "2026-11-18"
@@ -485,6 +485,15 @@
    "count": 1,
    "fb": "1337364702788353_122136386637469153",
    "ig": "18029147873870081"
+  },
+  "2026-11-19-mapa-calendario": {
+   "date": "2026-11-19",
+   "at": "2026-11-19T22:59:24.444Z",
+   "image": "https://pedrofagundesoic.github.io/virtus-social/social/2026-11-19-mapa-calendario.png",
+   "kind": "queue",
+   "count": 1,
+   "fb": "1337364702788353_122136621213469153",
+   "ig": "18101350001434349"
   }
  }
 }
