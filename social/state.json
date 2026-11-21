@@ -1,11 +1,11 @@
 {
  "social_state": {
   "emptyNoticeDate": "2026-09-24",
-  "lastRunDate": "2026-11-20",
-  "lastSlug": "2026-11-20-anunciado-ou-provavel",
-  "startedAt": "2026-11-21T00:10:01.430Z",
+  "lastRunDate": "2026-11-21",
+  "lastSlug": "2026-11-21-yield-on-cost",
+  "startedAt": "2026-11-21T23:34:07.938Z",
   "attempts": 0,
-  "attemptsDate": "2026-11-20"
+  "attemptsDate": "2026-11-21"
  },
  "social_post_log": {
   "2026-09-25-provaveis-pagadores": {
@@ -503,6 +503,15 @@
    "count": 1,
    "fb": "1337364702788353_122136900285469153",
    "ig": "17966353524216550"
+  },
+  "2026-11-21-yield-on-cost": {
+   "date": "2026-11-21",
+   "at": "2026-11-21T23:33:54.664Z",
+   "image": "https://pedrofagundesoic.github.io/virtus-social/social/2026-11-21-yield-on-cost.png",
+   "kind": "queue",
+   "count": 1,
+   "fb": "1337364702788353_122137147191469153",
+   "ig": "18109090994252686"
   }
  }
 }
