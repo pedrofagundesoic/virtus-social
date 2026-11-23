@@ -1,11 +1,11 @@
 {
  "social_state": {
   "emptyNoticeDate": "2026-09-24",
-  "lastRunDate": "2026-11-22",
-  "lastSlug": "2026-11-22-ir-proventos",
-  "startedAt": "2026-11-22T23:47:10.102Z",
+  "lastRunDate": "2026-11-23",
+  "lastSlug": "2026-11-23-voce-recebe",
+  "startedAt": "2026-11-23T21:38:31.443Z",
   "attempts": 0,
-  "attemptsDate": "2026-11-22"
+  "attemptsDate": "2026-11-23"
  },
  "social_post_log": {
   "2026-09-25-provaveis-pagadores": {
@@ -521,6 +521,15 @@
    "count": 1,
    "fb": "1337364702788353_122137458681469153",
    "ig": "18102764699539733"
+  },
+  "2026-11-23-voce-recebe": {
+   "date": "2026-11-23",
+   "at": "2026-11-23T21:38:10.771Z",
+   "image": "https://pedrofagundesoic.github.io/virtus-social/social/2026-11-23-voce-recebe.png",
+   "kind": "queue",
+   "count": 1,
+   "fb": "1337364702788353_122137697391469153",
+   "ig": "18137902811498929"
   }
  }
 }
