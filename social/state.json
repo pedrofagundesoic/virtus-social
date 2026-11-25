@@ -1,11 +1,11 @@
 {
  "social_state": {
   "emptyNoticeDate": "2026-09-24",
-  "lastRunDate": "2026-11-23",
-  "lastSlug": "2026-11-23-voce-recebe",
-  "startedAt": "2026-11-23T21:38:31.443Z",
+  "lastRunDate": "2026-11-24",
+  "lastSlug": "2026-11-24-proventos-do-ativo",
+  "startedAt": "2026-11-25T02:45:42.103Z",
   "attempts": 0,
-  "attemptsDate": "2026-11-23"
+  "attemptsDate": "2026-11-24"
  },
  "social_post_log": {
   "2026-09-25-provaveis-pagadores": {
@@ -530,6 +530,15 @@
    "count": 1,
    "fb": "1337364702788353_122137697391469153",
    "ig": "18137902811498929"
+  },
+  "2026-11-24-proventos-do-ativo": {
+   "date": "2026-11-24",
+   "at": "2026-11-25T02:45:23.949Z",
+   "image": "https://pedrofagundesoic.github.io/virtus-social/social/2026-11-24-proventos-do-ativo.png",
+   "kind": "queue",
+   "count": 1,
+   "fb": "1337364702788353_122138021649469153",
+   "ig": "18028918622924728"
   }
  }
 }
