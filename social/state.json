@@ -1,11 +1,11 @@
 {
  "social_state": {
   "emptyNoticeDate": "2026-09-24",
-  "lastRunDate": "2026-11-25",
-  "lastSlug": "2026-11-25-agenda-do-mes",
-  "startedAt": "2026-11-26T01:56:37.195Z",
+  "lastRunDate": "2026-11-26",
+  "lastSlug": "2026-11-26-podio-proventos",
+  "startedAt": "2026-11-27T01:54:49.008Z",
   "attempts": 0,
-  "attemptsDate": "2026-11-25"
+  "attemptsDate": "2026-11-26"
  },
  "social_post_log": {
   "2026-09-25-provaveis-pagadores": {
@@ -548,6 +548,15 @@
    "count": 1,
    "fb": "1337364702788353_122138251167469153",
    "ig": "18178336651456160"
+  },
+  "2026-11-26-podio-proventos": {
+   "date": "2026-11-26",
+   "at": "2026-11-27T01:54:36.477Z",
+   "image": "https://pedrofagundesoic.github.io/virtus-social/social/2026-11-26-podio-proventos.png",
+   "kind": "queue",
+   "count": 1,
+   "fb": "1337364702788353_122138520813469153",
+   "ig": "18116082413075055"
   }
  }
 }
