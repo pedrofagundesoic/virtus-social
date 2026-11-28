@@ -16,10 +16,14 @@ if (arg === '--dry') {
 } else if (!pub.configured) {
   console.error('missing FB_PAGE_ID / FB_PAGE_TOKEN / IG_USER_ID / SOCIAL_MANIFEST_URL'); process.exitCode = 2;
 } else if (arg === '--force') {
+  const already = await pub.postedTodayOnPlatforms();
+  if (already.length) { console.log(`already posted today per the platforms: ${already.join('; ')} — not posting again`); }
+  else {
   const r = await pub.publish({ reason: 'manual' });
   if (r.posted) await store.saveData('social_state', { ...(await store.loadData('social_state') || {}), lastRunDate: r.date, lastSlug: r.slug });
   console.log(JSON.stringify(r, null, 1));
   process.exitCode = r.posted ? 0 : 1;
+  }
 } else {
   const posted = await pub.tick();
   console.log(posted ? 'posted' : `nothing to do at ${JSON.stringify(pub.localNow())}`);

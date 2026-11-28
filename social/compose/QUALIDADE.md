@@ -56,3 +56,13 @@ barra roxa da tela original na base do aparelho. Já publicado; fica como evidê
 - **Raio dos cantos com tela verde:** usar raio pequeno (0,03) e deixar o verde da foto recortar os cantos. Com raio maior que o da tela, sobram cantos verdes.
 - **Print do site no computador vira texto miúdo no post:** para mostrar números, usar o site no celular (variant `phone`) e recortar só o card.
 - **Dados reais de empresa (balanço):** usar letra miúda própria (`fine`) em vez de "Dados de amostra", e citar na legenda só o que bate com a fonte oficial.
+
+## 2026-11-27 · `2026-11-27-watchlist-instagram` — publicado DUAS vezes no Instagram
+
+**O que aconteceu:** às 22:00 o post saiu no IG (`DgRGA93DZks`). Ao salvar o `social/state.json`, o GitHub recusou o push
+("fatal error in commit_refs_rules", erro interno dele) e a execução falhou. Às 23:00 a execução seguinte leu o state antigo,
+achou o dia sem post e publicou de novo (`DgRJaMwDZOI`).
+
+**Correção (28/11):**
+- O publicador consulta o próprio Instagram e Facebook antes de postar (`postedTodayOnPlatforms`): se já há post de hoje a partir das 18:00, não posta e atualiza o state. Vale também para `--force`.
+- O passo "persist state" tenta o push até 5 vezes, com espera crescente.

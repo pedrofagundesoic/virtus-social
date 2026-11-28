@@ -120,6 +120,25 @@ export function createPublisher({ loadData, saveData, env = process.env, log = c
     return { posted: true, slug: entry.slug, ...result, meta };
   }
 
+  // Asks the platforms themselves whether something already went out today inside the window.
+  // Guards against a lost state.json (27/11: the state push failed and the next run posted the same image again).
+  async function postedTodayOnPlatforms(now = new Date()) {
+    const { date } = localNow(TZ, now);
+    const inWindow = iso => { const l = localNow(TZ, new Date(iso)); return l.date === date && l.hour >= POST_HOUR; };
+    const get = async path => {
+      const r = await fetch(`${GRAPH}/${path}${path.includes('?') ? '&' : '?'}access_token=${FB_TOKEN}`).then(x => x.json());
+      if (r.error) throw new Error(`${path.split('?')[0]}: ${r.error.message}`);
+      return r.data || [];
+    };
+    const found = [];
+    for (const [name, path, field] of [['IG', `${IG_USER_ID}/media?fields=id,timestamp&limit=5`, 'timestamp'],
+                                       ['FB', `${FB_PAGE_ID}/published_posts?fields=id,created_time&limit=5`, 'created_time']]) {
+      try { for (const m of await get(path)) if (m[field] && inWindow(m[field])) found.push(`${name} ${m.id} ${m[field]}`); }
+      catch (err) { log.error(`📣 social: could not check ${name} for today's posts:`, err.message); }
+    }
+    return found;
+  }
+
   // One tick of the daily loop. Returns true when something was posted. Safe to call every minute.
   async function tick(now = new Date()) {
     const { date, hour } = localNow(TZ, now);
@@ -127,6 +146,12 @@ export function createPublisher({ loadData, saveData, env = process.env, log = c
     const state = (await loadData('social_state')) || {};
     if (state.lastRunDate === date) return false;                              // already posted today
     if (state.attemptsDate === date && (state.attempts || 0) >= MAX_ATTEMPTS) return false;
+    const already = await postedTodayOnPlatforms(now);
+    if (already.length) {
+      log.log(`📣 social: already posted today per the platforms (${already.join('; ')}) — state.json was behind; not posting again`);
+      await saveData('social_state', { ...state, lastRunDate: date, lastSlug: state.lastSlug, recoveredFromPlatforms: already.join('; ') });
+      return false;
+    }
     const r = await publish({ reason: `${TZ} ${date} ${String(hour).padStart(2, '0')}:00`, quiet: state.emptyNoticeDate === date });
     if (r.posted) {
       await saveData('social_state', { ...state, lastRunDate: date, lastSlug: r.slug, startedAt: new Date().toISOString(), attempts: 0, attemptsDate: date });
@@ -151,5 +176,5 @@ export function createPublisher({ loadData, saveData, env = process.env, log = c
   }
 
   const configured = !!(FB_PAGE_ID && FB_TOKEN && IG_USER_ID && MANIFEST_URL);
-  return { publish, tick, checkMissed, localNow: () => localNow(TZ), configured, TZ, POST_HOUR, MANIFEST_URL };
+  return { publish, tick, checkMissed, postedTodayOnPlatforms, localNow: () => localNow(TZ), configured, TZ, POST_HOUR, MANIFEST_URL };
 }
