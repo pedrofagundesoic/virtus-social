@@ -1,11 +1,11 @@
 {
  "social_state": {
   "emptyNoticeDate": "2026-09-24",
-  "lastRunDate": "2026-11-26",
-  "lastSlug": "2026-11-26-podio-proventos",
-  "startedAt": "2026-11-27T01:54:49.008Z",
+  "lastRunDate": "2026-11-27",
+  "lastSlug": "2026-11-27-watchlist-instagram",
+  "startedAt": "2026-11-28T02:08:48.561Z",
   "attempts": 0,
-  "attemptsDate": "2026-11-26"
+  "attemptsDate": "2026-11-27"
  },
  "social_post_log": {
   "2026-09-25-provaveis-pagadores": {
@@ -557,6 +557,15 @@
    "count": 1,
    "fb": "1337364702788353_122138520813469153",
    "ig": "18116082413075055"
+  },
+  "2026-11-27-watchlist-instagram": {
+   "date": "2026-11-27",
+   "at": "2026-11-28T02:08:34.993Z",
+   "image": "https://pedrofagundesoic.github.io/virtus-social/social/2026-11-27-watchlist-instagram.png",
+   "kind": "queue",
+   "count": 1,
+   "fb": null,
+   "ig": "18116793172877053"
   }
  }
 }
